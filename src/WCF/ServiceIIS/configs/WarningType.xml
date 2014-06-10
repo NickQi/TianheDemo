@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<WarningType>
+  <Item Value="1" Text="全部告警" CValue="WarningAnalysis" keycol="datetime"  />
+  <Item Value="2" Text="通讯告警"  CValue="WarningAnalysis_TE_DI"  keycol="Recnum" />
+  <Item Value="3" Text="能耗异常告警" CValue="WarningAnalysis_TE_AI_EXT" keycol="ID"  />
+  <Item Value="4" Text="保护事件告警"  CValue="WarningAnalysis_TE_PROTECT" keycol="ID" />
+  <Item Value="5" Text="SOE告警" CValue="WarningAnalysis_TE_SOE"  keycol="ID" />
+</WarningType>

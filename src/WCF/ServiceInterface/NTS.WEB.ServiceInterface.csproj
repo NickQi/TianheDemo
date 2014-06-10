@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2CAB37FC-F1E1-4E39-9D27-4B65C22BE878}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NTS.WEB.ServiceInterface</RootNamespace>
+    <AssemblyName>NTS.WEB.ServiceInterface</AssemblyName>
+    <ProjectTypeGuids>{3D9AD99F-2412-4246-B90B-4EAA41C64699};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <StartArguments>/client:"WcfTestClient.exe"</StartArguments>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\libs\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IAlarmService.cs" />
+    <Compile Include="IAll.cs" />
+    <Compile Include="IBalanceAnalysisService.cs" />
+    <Compile Include="IChart.cs" />
+    <Compile Include="IComplexReportService.cs" />
+    <Compile Include="IEnergyContrastService.cs" />
+    <Compile Include="IFee_ApportionService.cs" />
+    <Compile Include="IIndexEnery.cs" />
+    <Compile Include="ILoadForecastService.cs" />
+    <Compile Include="IObjectTree.cs" />
+    <Compile Include="IQueryEnery.cs" />
+    <Compile Include="IUser.cs" />
+    <Compile Include="IUserGroupService.cs" />
+    <Compile Include="IWarningAnalysisService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="IAreaTreeService.cs" />
+    <Compile Include="IMenuTreeService.cs" />
+    <Compile Include="IAlarmDiagnoseService.cs" />
+    <Compile Include="ICostQueryService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NTS.WEB.DataContact\NTS.WEB.DataContact.csproj">
+      <Project>{95FB7C11-65CC-43E8-988D-41255A26B170}</Project>
+      <Name>NTS.WEB.DataContact</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NTS.WEB.Model\NTS.WEB.Model.csproj">
+      <Project>{129B15C9-9A75-4016-96D5-6ED4CDE03920}</Project>
+      <Name>NTS.WEB.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ResultView\NTS.WEB.ResultView.csproj">
+      <Project>{A771590B-9242-484D-8EA5-912C38D81E34}</Project>
+      <Name>NTS.WEB.ResultView</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{3D9AD99F-2412-4246-B90B-4EAA41C64699}">
+        <WcfProjectProperties>
+          <AutoStart>True</AutoStart>
+        </WcfProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

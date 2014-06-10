@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7F3A92FE-DBB7-40E6-A83C-B13145AB5CC2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NTS.WEB.BLL</RootNamespace>
+    <AssemblyName>NTS.WEB.BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\libs\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Framework.Common">
+      <HintPath>..\libs\Framework.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Framework.Configuration">
+      <HintPath>..\libs\Framework.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Framework.Processing.Utility">
+      <HintPath>..\..\..\..\..\..\测试服务\Framework.Processing.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.0.8.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NTS.WEB.WebService">
+      <HintPath>..\libs\NTS.WEB.WebService.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account.cs" />
+    <Compile Include="Alarm.cs" />
+    <Compile Include="AlarmDiagnose.cs" />
+    <Compile Include="AreaTree.cs" />
+    <Compile Include="BalanceAnalysis.cs" />
+    <Compile Include="BaseLayerObject.cs" />
+    <Compile Include="BaseTool.cs" />
+    <Compile Include="BaseTree.cs" />
+    <Compile Include="Charts.cs" />
+    <Compile Include="ComplexReport.cs" />
+    <Compile Include="EnergyContrast.cs" />
+    <Compile Include="Fee_Apportion.cs" />
+    <Compile Include="IndexEnery.cs" />
+    <Compile Include="Itemcode.cs" />
+    <Compile Include="LayerObjects.cs" />
+    <Compile Include="LoadForecast.cs" />
+    <Compile Include="MenuTree.cs" />
+    <Compile Include="MonthDataObject.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryEnery.cs" />
+    <Compile Include="QuotaAnalyse.cs" />
+    <Compile Include="Real.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="UserGroup.cs" />
+    <Compile Include="WarningAnalysis.cs" />
+    <Compile Include="XmlHelper.cs" />
+    <Compile Include="CostQuery.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NTS.WEB.Base.Data\NTS.WEB.ProductInteface.csproj">
+      <Project>{F062028E-381B-47AE-A5F5-7E3703EC2F63}</Project>
+      <Name>NTS.WEB.ProductInteface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NTS.WEB.Common\NTS.WEB.Common.csproj">
+      <Project>{E3D8759A-C5EB-402D-9F10-F5C6029A8D1A}</Project>
+      <Name>NTS.WEB.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NTS.WEB.DAL\NTS.WEB.DAL.csproj">
+      <Project>{90EE0C97-B276-4EAC-B1A3-167A8E232807}</Project>
+      <Name>NTS.WEB.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NTS.WEB.DataContact\NTS.WEB.DataContact.csproj">
+      <Project>{95FB7C11-65CC-43E8-988D-41255A26B170}</Project>
+      <Name>NTS.WEB.DataContact</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NTS.WEB.Model\NTS.WEB.Model.csproj">
+      <Project>{129B15C9-9A75-4016-96D5-6ED4CDE03920}</Project>
+      <Name>NTS.WEB.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ResultView\NTS.WEB.ResultView.csproj">
+      <Project>{A771590B-9242-484D-8EA5-912C38D81E34}</Project>
+      <Name>NTS.WEB.ResultView</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

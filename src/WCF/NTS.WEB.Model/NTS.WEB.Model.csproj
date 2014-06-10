@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{129B15C9-9A75-4016-96D5-6ED4CDE03920}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NTS.WEB.Model</RootNamespace>
+    <AssemblyName>NTS.WEB.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\libs\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Framework.Configuration">
+      <HintPath>..\libs\Framework.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Framework.DataConfiguration">
+      <HintPath>..\libs\Framework.DataConfiguration.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account.cs" />
+    <Compile Include="AreaTypeDirctory.cs" />
+    <Compile Include="BalanceAnalysisModel.cs" />
+    <Compile Include="BaseDataModel.cs" />
+    <Compile Include="BaseDataModelNew.cs" />
+    <Compile Include="BaseLayerObject.cs" />
+    <Compile Include="BaseListModel.cs" />
+    <Compile Include="BaseQueryModel.cs" />
+    <Compile Include="BaseReportModel.cs" />
+    <Compile Include="BaseResult.cs" />
+    <Compile Include="ChartShowType.cs" />
+    <Compile Include="ChartType.cs" />
+    <Compile Include="ChartUnit.cs" />
+    <Compile Include="CondictionModel.cs" />
+    <Compile Include="Device.cs" />
+    <Compile Include="EnumColor.cs" />
+    <Compile Include="Itemcode.cs" />
+    <Compile Include="MonthSumData.cs" />
+    <Compile Include="PageModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportModelNew.cs" />
+    <Compile Include="TB_Alloction_Config.cs" />
+    <Compile Include="TB_AreaInfo.cs" />
+    <Compile Include="Tree.cs" />
+    <Compile Include="UserGroupModel.cs" />
+    <Compile Include="UserList.cs" />
+    <Compile Include="WarningAnalysisModel.cs" />
+    <Compile Include="WarningTypeModel.cs" />
+    <Compile Include="QuotaAnalyseModel.cs" />
+    <Compile Include="AlarmDiagnoseModel.cs" />
+    <Compile Include="CostQueryModel.cs" />
+    <Compile Include="StepSettingModel.cs" />
+    <Compile Include="MenuModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NTS.WEB.DataContact\NTS.WEB.DataContact.csproj">
+      <Project>{95FB7C11-65CC-43E8-988D-41255A26B170}</Project>
+      <Name>NTS.WEB.DataContact</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ReportType>
+  <Item reporttype="1" reportname="总能耗报表" counttype="-1" ></Item>
+  <Item reporttype="2" reportname="电能耗报表" counttype="01000" ></Item>
+  <Item reporttype="2" reportname="水能耗报表" counttype="02000" ></Item>
+  <Item reporttype="2" reportname="气能耗报表" counttype="03000" ></Item>
+  <Item reporttype="2" reportname="暖能耗报表" counttype="04000" ></Item>
+  <Item reporttype="2" reportname="照明用电" counttype="01A00" ></Item>
+  <Item reporttype="2" reportname="空调用电" counttype="01B00" ></Item>
+  <Item reporttype="2" reportname="插座用电" counttype="01C00" ></Item>
+  <Item reporttype="2" reportname="特殊电" counttype="01D00" ></Item>
+</ReportType>

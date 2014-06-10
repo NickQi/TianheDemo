@@ -1,0 +1,512 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Symbols xmlns="http://schemas.postsharp.org/2.0/symbols">
+  <Class Class="#1=T:[Framework.Common]Framework.Common.CustomExceptionAttribute">
+    <Instance Declaration="#2=M:[ServiceLibrary]ServiceLibrary.AlarmDiagnoseService::GetAlarmDiagnose(NTS.WEB.DataContact.QueryAlarm)" Id="eb6125a505148193">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3=Wrapped by advice(s) OnException" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#4=M:[ServiceLibrary]ServiceLibrary.IndexEnery::GetIndexWindowResult(NTS.WEB.DataContact.QueryIndexWindow)" Id="eb6125a56c068a2a">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#5=M:[ServiceLibrary]ServiceLibrary.IndexEnery::GetIndexMonthEneryResult()" Id="eb6125a5eea5e02c">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#6=M:[ServiceLibrary]ServiceLibrary.IndexEnery::GetIndexCompareEnery()" Id="eb6125a58eb46c35">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#7=M:[ServiceLibrary]ServiceLibrary.IndexEnery::GetIndexCompareEneryNew()" Id="eb6125a57c0d10f1">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#8=M:[ServiceLibrary]ServiceLibrary.IndexEnery::GetIndexShopOrder()" Id="eb6125a5f39e366b">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#9=M:[ServiceLibrary]ServiceLibrary.IndexEnery::GetIndexLimit()" Id="eb6125a57208fc6f">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#10=M:[ServiceLibrary]ServiceLibrary.MenuTreeService::GetMenus(System.String)" Id="eb6125a59f229c62">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#11=M:[ServiceLibrary]ServiceLibrary.WarningAnalysisService::GetWarningListByPage(NTS.WEB.Model.WarningAnalysisModel)" Id="eb6125a5953f2b67">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#12=M:[ServiceLibrary]ServiceLibrary.User::UserLogin(NTS.WEB.DataContact.QueryLogin)" Id="eb6125a51e00a223">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#13=M:[ServiceLibrary]ServiceLibrary.User::Logout()" Id="eb6125a5e5abef0b">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#14=M:[ServiceLibrary]ServiceLibrary.User::GetUsers()" Id="eb6125a5b112fc64">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#15=M:[ServiceLibrary]ServiceLibrary.User::GetSingleUser(System.Int32)" Id="eb6125a550bb648d">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#16=M:[ServiceLibrary]ServiceLibrary.User::AddUser(NTS.WEB.DataContact.QueryUser)" Id="eb6125a5ffb60ad4">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#17=M:[ServiceLibrary]ServiceLibrary.User::UpdateUser(NTS.WEB.DataContact.QueryUser)" Id="eb6125a52489358c">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#18=M:[ServiceLibrary]ServiceLibrary.User::DeleteUser(System.Int32)" Id="eb6125a5113fca9f">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#19=M:[ServiceLibrary]ServiceLibrary.User::GetSingleUserMenu(System.String)" Id="eb6125a526033266">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#20=M:[ServiceLibrary]ServiceLibrary.User::GetUserGroupID(System.String)" Id="eb6125a50f12ac8f">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#21=M:[ServiceLibrary]ServiceLibrary.AlarmService::GetAlarmType(System.String)" Id="eb6125a5aa8768ac">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#22=M:[ServiceLibrary]ServiceLibrary.AlarmService::GetAlarmList(NTS.WEB.DataContact.QueryAlarmNew)" Id="eb6125a565e7a32e">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#23=M:[ServiceLibrary]ServiceLibrary.AlarmService::GetAlarmIndexCount()" Id="eb6125a5bcd47a37">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#24=M:[ServiceLibrary]ServiceLibrary.CostQueryService::GetCostQuery(NTS.WEB.DataContact.QueryCost)" Id="eb6125a577b1e2d8">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#25=M:[ServiceLibrary]ServiceLibrary.UserGroupService::GetUserGroups()" Id="eb6125a5108f954e">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#26=M:[ServiceLibrary]ServiceLibrary.UserGroupService::GetSingleUserGroup(System.Int32)" Id="eb6125a5ede61e18">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#27=M:[ServiceLibrary]ServiceLibrary.UserGroupService::AddUserGroup(NTS.WEB.DataContact.QueryUserGroup)" Id="eb6125a5b4e127d4">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#28=M:[ServiceLibrary]ServiceLibrary.UserGroupService::UpdateUserGroup(NTS.WEB.DataContact.QueryUserGroup)" Id="eb6125a5ddb02d26">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#29=M:[ServiceLibrary]ServiceLibrary.UserGroupService::DeleteUserGroup(System.Int32)" Id="eb6125a5b78978b3">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#30=M:[ServiceLibrary]ServiceLibrary.EnergyContrastService::GetCompareChart(NTS.WEB.DataContact.QueryOrderObjects)" Id="eb6125a52b23082c">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#31=M:[ServiceLibrary]ServiceLibrary.EnergyContrastService::GetPersonNumCompareChart(NTS.WEB.DataContact.QueryOrderObjects)" Id="eb6125a50a809266">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#32=M:[ServiceLibrary]ServiceLibrary.EnergyContrastService::GetAreaCompareChart(NTS.WEB.DataContact.QueryOrderObjects)" Id="eb6125a5865294c2">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#33=M:[ServiceLibrary]ServiceLibrary.EnergyContrastService::GetPeriodsCompareChart(NTS.WEB.DataContact.QueryContrastPeriods)" Id="eb6125a5cbf716d6">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#34=M:[ServiceLibrary]ServiceLibrary.EnergyContrastService::GetPersonNumPeriodsCompareChart(NTS.WEB.DataContact.QueryContrastPeriods)" Id="eb6125a569c92f81">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#35=M:[ServiceLibrary]ServiceLibrary.EnergyContrastService::GetAreaPeriodsCompareChart(NTS.WEB.DataContact.QueryContrastPeriods)" Id="eb6125a53dd63a90">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#36=M:[ServiceLibrary]ServiceLibrary.LoadForecastService::GetLoadForecastChart(NTS.WEB.DataContact.QueryLoadForecast)" Id="eb6125a5284b75e6">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#37=M:[ServiceLibrary]ServiceLibrary.Charts::IndexElectricityLineChart()" Id="eb6125a56979ccb8">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#38=M:[ServiceLibrary]ServiceLibrary.Charts::IndexAvgElectricityLineChart()" Id="eb6125a52a660403">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#39=M:[ServiceLibrary]ServiceLibrary.Charts::IndexElectricityRealLineChart()" Id="eb6125a5e57a9004">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#40=M:[ServiceLibrary]ServiceLibrary.Charts::GetQueryPieChart(NTS.WEB.DataContact.BasicQuery)" Id="eb6125a58d9049cd">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#41=M:[ServiceLibrary]ServiceLibrary.Charts::GetQueryLineChart(NTS.WEB.DataContact.BasicQuery)" Id="eb6125a5d6b07112">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#42=M:[ServiceLibrary]ServiceLibrary.Charts::GetCompareChart(NTS.WEB.DataContact.QueryCompare)" Id="eb6125a57f2aa897">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#43=M:[ServiceLibrary]ServiceLibrary.Charts::GetAreaCompareChart(NTS.WEB.DataContact.QueryCompare)" Id="eb6125a548d83806">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#44=M:[ServiceLibrary]ServiceLibrary.Charts::RealChart(NTS.WEB.DataContact.RealQuery)" Id="eb6125a5330fbc91">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#45=M:[ServiceLibrary]ServiceLibrary.Charts::DeviceRealChart(NTS.WEB.DataContact.RealQuery)" Id="eb6125a5398ecec0">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#46=M:[ServiceLibrary]ServiceLibrary.Charts::IndexItems(NTS.WEB.DataContact.QueryEnergyIterm)" Id="eb6125a59407a8d1">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#47=M:[ServiceLibrary]ServiceLibrary.Charts::GetEnergyAnalyseLineChart(NTS.WEB.DataContact.QueryAnalyse)" Id="eb6125a5bc629778">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#48=M:[ServiceLibrary]ServiceLibrary.Charts::GetEnergyAnalyseCompare(NTS.WEB.DataContact.QueryAnalyse)" Id="eb6125a5f940081a">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#49=M:[ServiceLibrary]ServiceLibrary.Charts::GetEnergyAnalysePie(NTS.WEB.DataContact.QueryAnalyse)" Id="eb6125a51cf42d24">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#50=M:[ServiceLibrary]ServiceLibrary.Charts::GetQuotaAnalyseChart(NTS.WEB.DataContact.QueryQuota)" Id="eb6125a58ed4d964">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#51=M:[ServiceLibrary]ServiceLibrary.BalanceAnalysisService::GetBalanaceValueByMonth(NTS.WEB.Model.BalanceAnalysisModel)" Id="eb6125a5b9f02d17">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#52=M:[ServiceLibrary]ServiceLibrary.QueryEnery::GetQueryEneryTotal(NTS.WEB.DataContact.BasicQuery)" Id="eb6125a521364ab5">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#53=M:[ServiceLibrary]ServiceLibrary.QueryEnery::GetShopOrder(NTS.WEB.DataContact.QueryOrder)" Id="eb6125a51db4e225">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#54=M:[ServiceLibrary]ServiceLibrary.QueryEnery::GetShopOrderNew(NTS.WEB.DataContact.QueryOrderObjects)" Id="eb6125a5ebd34633">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#55=M:[ServiceLibrary]ServiceLibrary.QueryEnery::GetRealTime(NTS.WEB.DataContact.RealQuery)" Id="eb6125a587063d01">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+  </Class>
+  <Class Class="#56=T:[Framework.Common]Framework.Common.LogAttribute">
+    <Instance Declaration="#2" Id="eb6125a5b2b0b1a2">
+      <Target>
+        <JoinPoint Advising="#56" Description="#57=Wrapped by advice(s) OnEntry, OnSuccess, OnException, OnExit" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#4" Id="eb6125a583ab7f40">
+      <Target>
+        <JoinPoint Advising="#56" Description="#57" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#5" Id="eb6125a5c53c7f1d">
+      <Target>
+        <JoinPoint Advising="#56" Description="#57" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#6" Id="eb6125a55d21a3a9">
+      <Target>
+        <JoinPoint Advising="#56" Description="#57" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#7" Id="eb6125a56d8fcddb">
+      <Target>
+        <JoinPoint Advising="#56" Description="#57" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#8" Id="eb6125a5400d4279">
+      <Target>
+        <JoinPoint Advising="#56" Description="#57" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#9" Id="eb6125a599605f67">
+      <Target>
+        <JoinPoint Advising="#56" Description="#57" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#10" Id="eb6125a594056c13">
+      <Target>
+        <JoinPoint Advising="#56" Description="#57" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#11" Id="eb6125a53fab2335">
+      <Target>
+        <JoinPoint Advising="#56" Description="#57" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#12" Id="eb6125a548dce16c">
+      <Target>
+        <JoinPoint Advising="#56" Description="#57" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#13" Id="eb6125a5c8d4f0ee">
+      <Target>
+        <JoinPoint Advising="#56" Description="#57" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#14" Id="eb6125a507a16bc5">
+      <Target>
+        <JoinPoint Advising="#56" Description="#57" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#15" Id="eb6125a5246b3ba0">
+      <Target>
+        <JoinPoint Advising="#56" Description="#57" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#16" Id="eb6125a54eaa339b">
+      <Target>
+        <JoinPoint Advising="#56" Description="#57" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#17" Id="eb6125a592f9d5a4">
+      <Target>
+        <JoinPoint Advising="#56" Description="#57" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#18" Id="eb6125a56e76b4d8">
+      <Target>
+        <JoinPoint Advising="#56" Description="#57" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#19" Id="eb6125a5f7d05471">
+      <Target>
+        <JoinPoint Advising="#56" Description="#57" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#20" Id="eb6125a55c1bbdeb">
+      <Target>
+        <JoinPoint Advising="#56" Description="#57" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#24" Id="eb6125a5c5158547">
+      <Target>
+        <JoinPoint Advising="#56" Description="#57" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#25" Id="eb6125a5703c1bdf">
+      <Target>
+        <JoinPoint Advising="#56" Description="#57" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#26" Id="eb6125a51c0aa763">
+      <Target>
+        <JoinPoint Advising="#56" Description="#57" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#27" Id="eb6125a541efcf6d">
+      <Target>
+        <JoinPoint Advising="#56" Description="#57" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#28" Id="eb6125a51001443f">
+      <Target>
+        <JoinPoint Advising="#56" Description="#57" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#29" Id="eb6125a58f1c2d16">
+      <Target>
+        <JoinPoint Advising="#56" Description="#57" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#30" Id="eb6125a54ca21648">
+      <Target>
+        <JoinPoint Advising="#56" Description="#57" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#31" Id="eb6125a54f2632f1">
+      <Target>
+        <JoinPoint Advising="#56" Description="#57" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#32" Id="eb6125a5cd5ae293">
+      <Target>
+        <JoinPoint Advising="#56" Description="#57" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#33" Id="eb6125a517058791">
+      <Target>
+        <JoinPoint Advising="#56" Description="#57" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#34" Id="eb6125a548088923">
+      <Target>
+        <JoinPoint Advising="#56" Description="#57" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#35" Id="eb6125a51c3cbe02">
+      <Target>
+        <JoinPoint Advising="#56" Description="#57" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#37" Id="eb6125a54bf5e076">
+      <Target>
+        <JoinPoint Advising="#56" Description="#57" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#38" Id="eb6125a5fe13cb9d">
+      <Target>
+        <JoinPoint Advising="#56" Description="#57" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#39" Id="eb6125a542eec5a8">
+      <Target>
+        <JoinPoint Advising="#56" Description="#57" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#40" Id="eb6125a59f8fea94">
+      <Target>
+        <JoinPoint Advising="#56" Description="#57" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#41" Id="eb6125a5c7b08fa3">
+      <Target>
+        <JoinPoint Advising="#56" Description="#57" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#42" Id="eb6125a5c9de0045">
+      <Target>
+        <JoinPoint Advising="#56" Description="#57" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#43" Id="eb6125a54e3e1415">
+      <Target>
+        <JoinPoint Advising="#56" Description="#57" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#44" Id="eb6125a5152f1190">
+      <Target>
+        <JoinPoint Advising="#56" Description="#57" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#45" Id="eb6125a5d6e9fcbe">
+      <Target>
+        <JoinPoint Advising="#56" Description="#57" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#47" Id="eb6125a5125feb36">
+      <Target>
+        <JoinPoint Advising="#56" Description="#57" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#48" Id="eb6125a59f17b77c">
+      <Target>
+        <JoinPoint Advising="#56" Description="#57" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#49" Id="eb6125a579ebe818">
+      <Target>
+        <JoinPoint Advising="#56" Description="#57" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#50" Id="eb6125a5951f5113">
+      <Target>
+        <JoinPoint Advising="#56" Description="#57" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#51" Id="eb6125a5fb175fb0">
+      <Target>
+        <JoinPoint Advising="#56" Description="#57" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#52" Id="eb6125a5aba74f72">
+      <Target>
+        <JoinPoint Advising="#56" Description="#57" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#53" Id="eb6125a55445d91d">
+      <Target>
+        <JoinPoint Advising="#56" Description="#57" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#54" Id="eb6125a566b8b0dd">
+      <Target>
+        <JoinPoint Advising="#56" Description="#57" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#55" Id="eb6125a5202a0357">
+      <Target>
+        <JoinPoint Advising="#56" Description="#57" Ordinal="2" />
+      </Target>
+    </Instance>
+  </Class>
+</Symbols>
