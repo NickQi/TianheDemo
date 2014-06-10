@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{303BD02C-C2DE-44AE-B42B-4FFC0E50F533}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NTS.WEB.AjaxController</RootNamespace>
+    <AssemblyName>NTS.WEB.AjaxController</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Framework.Common, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Framework.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Framework.Configuration, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Framework.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Framework.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Framework.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Framework.DataConfiguration, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Framework.DataConfiguration.dll</HintPath>
+    </Reference>
+    <Reference Include="FrameWork.Service">
+      <HintPath>..\Libs\FrameWork.Service.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>..\..\WCF\libs\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NTS.WEB.BLL">
+      <HintPath>..\..\WCF\libs\NTS.WEB.BLL.dll</HintPath>
+    </Reference>
+    <Reference Include="NTS.WEB.Common, Version=3.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\WCF\libs\NTS.WEB.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="NTS.WEB.DataContact, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\WCF\libs\NTS.WEB.DataContact.dll</HintPath>
+    </Reference>
+    <Reference Include="NTS.WEB.Model, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\WCF\libs\NTS.WEB.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="NTS.WEB.ProductInteface, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\WCF\libs\NTS.WEB.ProductInteface.dll</HintPath>
+    </Reference>
+    <Reference Include="NTS.WEB.ResultView, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\WCF\libs\NTS.WEB.ResultView.dll</HintPath>
+    </Reference>
+    <Reference Include="NTS.WEB.ServiceInterface, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\WCF\libs\NTS.WEB.ServiceInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="PostSharp, Version=2.1.0.0, Culture=neutral, PublicKeyToken=b13fd38b8f9c99d7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\PostSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PostSharp.Laos, Version=2.1.0.0, Culture=neutral, PublicKeyToken=b13fd38b8f9c99d7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\PostSharp.Laos.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\WCF\libs\ServiceLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AjaxBalanceAnalysis.cs" />
+    <Compile Include="AjaxChart.cs" />
+    <Compile Include="AjaxComplexReport.cs" />
+    <Compile Include="AjaxEnergyContrast.cs" />
+    <Compile Include="AjaxFee_Apportion.cs" />
+    <Compile Include="AjaxIndex.cs" />
+    <Compile Include="AjaxLoadForecast.cs" />
+    <Compile Include="AjaxProject.cs" />
+    <Compile Include="AjaxRealTime.cs" />
+    <Compile Include="AjaxShopOrder.cs" />
+    <Compile Include="AjaxTree.cs" />
+    <Compile Include="AjaxUser.cs" />
+    <Compile Include="AjaxWarningAnalysis.cs" />
+    <Compile Include="BaseTree.cs" />
+    <Compile Include="EneryQuery.cs" />
+    <Compile Include="ExportHelper.cs" />
+    <Compile Include="JsonForHightCharts.cs" />
+    <Compile Include="JsonForHightChartsNew.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TableView.cs" />
+    <Compile Include="TableViewsTool.cs" />
+    <Compile Include="AjaxAreaTree.cs" />
+    <Compile Include="AjaxMenuTree.cs" />
+    <Compile Include="AjaxUserGroup.cs" />
+    <Compile Include="AjaxAlarm.cs" />
+    <Compile Include="AjaxCostQuery.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\NTS.WEB.ResultView.ExecuteProcess.datasource" />
+    <None Include="Properties\DataSources\NTS.WEB.ResultView.SingleUserResult.datasource" />
+    <None Include="Properties\DataSources\NTS.WEB.ResultView.UserListResult.datasource" />
+    <None Include="Properties\DataSources\NTS.WEB.ResultView.UserResult.datasource" />
+    <None Include="Properties\DataSources\ResultView.LoginCookiesInfo.datasource" />
+    <None Include="Properties\DataSources\ResultView.LoginResult.datasource" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

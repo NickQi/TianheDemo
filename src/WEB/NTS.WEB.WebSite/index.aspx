@@ -1,0 +1,1 @@
+﻿<%@ Page Inherits="NTS.WEB.VM.BasePage" %>

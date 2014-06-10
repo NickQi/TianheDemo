@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<link rel="stylesheet" href="/css/common.css">
+  	<link rel="stylesheet" href="/css/main.css">
+	<title>电拓扑图-变压器</title>
+</head>
+<body style="background:#2f4356">
+<div class="wrapper">
+  <!-- header start -->
+  <div id="header">
+    <a class="brand"></a>
+    <span class="f15 ml10 software">天河机场能源管理系统</span>
+    <div class="pull-right">
+      <div class="hd-logout">
+        <i class="s-icon"></i><a href="main.htm">返回总系统</a>
+      </div>
+    </div>
+    <div id="sys-time"></div>
+  </div>
+  <!-- header end -->
+  <!-- container start -->
+  <div class="electPlotDetail">
+    <!-- menu start -->
+    <div class="electMenu">
+      <div><a href="electrical-topology.htm">返回</a></div>
+      <ul>
+        <li class="current"><a href="electrical-topology-detail-1.htm" target="main">航站楼#1站</a></li>
+        <li><a href="electrical-topology-detail-2.htm" target="main">航站楼#2站</a></li>
+        <li><a href="electrical-topology-detail-3.htm" target="main">航站楼#3站</a></li>
+        <li><a href="electrical-topology-detail-4.htm" target="main">航站楼#4站</a></li>
+      </ul>
+    </div>
+    <!-- menu end -->
+    <!-- iframe start -->
+    <div class="iframeElect"><iframe id="frame" src="electrical-topology-detail-1.htm" width="100%" height="733" frameborder="0" name="main" scrolling="no"></iframe></div>
+    <!-- iframe end -->
+  </div>
+  <!-- container end -->
+</div>
+<script src="/js/base.js"></script>
+<script src="/js/common.js"></script>
+<script src="/js/view/electrical_topology_detail_main_1.js"></script>
+</body>
+</html>

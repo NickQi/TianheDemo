@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>武汉天河机场 驾驶舱</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+<div id="header">
+	<div class="logo"><img src="../img/logo.png" alt="武汉天河机场"></div>
+    <h1>武汉天河机场</h1>
+    <div class="pull-right">
+        <div class="hd-logout">
+            <i class="s-icon"></i><a href="/login.html">安全退出</a>
+        </div>
+    </div>
+</div>
+<div id="nav" class="close">
+	<div id="nav-handler"><a href="">nav ctrl</a></div>
+    <ul>
+    	<li id="nav-1">
+        	<a href=""><span>用能规划</span></a>
+        </li>
+        <li id="nav-2">
+        	<a href=""><span>组织措施</span></a>
+        </li>
+        <li id="nav-3">
+        	<a href=""><span>用能安全</span></a>
+        </li>
+        <li id="nav-4">
+        	<a href=""><span>能耗总览</span></a>
+        </li>
+        <li id="nav-5">
+        	<a href=""><span>环境品质</span></a>
+        </li>
+    </ul>
+    <div id="nav-line"></div>
+</div>
+
+<div id="panel-1" class="panel">
+	<div class="block">
+    	<h4>用能规划</h4>
+        <div class="block-content clearfix">
+        	<div id="chart-1"></div>
+            <div class="panel-1-info">
+            	<ul>
+                	<li><span class="label">年定额值：</span><span class="val">22890.00<span class="unit">T</span></span></li>
+                    <li class="alpha"><span class="label">实际消耗值：</span><span class="val">10300.50<span class="unit">T</span></span></li>
+                    <li><span class="label">剩余值：</span><span class="val">12589.5<span class="unit">T</span></span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="panel-2" class="panel">
+	<div class="block block-l">
+    	<h4>节能组织架构</h4>
+        <div class="block-content">
+
+        </div>
+    </div>
+    <div class="block block-r">
+    	<h4>节能通告</h4>
+        <div class="block-content">
+        	<div id="notice-wrapper">
+            	<div id="notice-container" class="clearfix">
+                	<div class="item">
+                    	<p>第一季度将实施如下节能措施：</p>
+                        <p>1、完成门诊楼、住院楼LED灯改造</p>
+                        <p>2、住院楼加装太阳能热水器系统</p>
+                    </div>
+                    <div class="item">
+                    	<p>第二季度将实施如下节能措施：</p>
+                        <p>1、完成门诊楼、住院楼LED灯改造</p>
+                        <p>2、住院楼加装太阳能热水器系统</p>
+                    </div>
+                    <div class="item">
+                    	<p>第三季度将实施如下节能措施：</p>
+                        <p>1、完成门诊楼、住院楼LED灯改造</p>
+                        <p>2、住院楼加装太阳能热水器系统</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="panel-3" class="panel">
+	<div class="block">
+    	<h4>用能安全</h4>
+        <div class="block-content">
+        	<div class="content-1 clearfix">
+            	<div id="day-info">
+                	<div class="label">安全生产运行：</div>
+                    <div id="day-num" data-endnum="176">0</div>
+                </div>
+                <div class="day-unit">天</div>
+            </div>
+            <div class="content-2">
+            	<ul>
+                	<li><span class="label">重大医疗设备故障事故：</span><span class="content">0<span class="unit">起</span></span></li>
+                    <li><span class="label">重大用能设备故障事故：</span><span class="content">0<span class="unit">起</span></span></li>
+                    <li><span class="label">能源使用中断次数：</span><span class="content">0<span class="unit">次</span></span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="panel-4" class="panel">
+	<div class="block-untitle">
+    	<div class="block-content-l">
+        	<div class="content-title">用电量占比</div>
+            <div id="chart-2"></div>
+        </div>
+        <div class="block-content-r">
+        	<div class="content-title">商铺排名</div>
+            <div class="chart-title">TOP 5</div>
+            <div id="chart-3"></div>
+            <div class="chart-title">LAST 5</div>
+            <div id="chart-4"></div>
+        </div>
+    </div>
+</div>
+
+<div id="panel-5" class="panel">
+    <div class="block">
+        <h4>环境品质</h4>
+        <div class="block-content">
+            <div id="mainInfo">
+                <h5>整体环境情况：</h5>
+                <div id="mainInfoBarContainer">
+                    <div id="mainInfoBar"><div id="mainInfoArr"></div></div>
+                </div>
+                <div id="mainInfoTickmarker">
+                    <span>很差</span><span>一般</span><span>优良</span>
+                </div>
+            </div>
+            <div id="areasInfo">
+                <h5>重点区域环境情况</h5>
+                <div id="areasInfoBlock">
+                    <div id="areasInfoWrapper">
+                        <div id="areasInfoContainer">
+                            <div class="item">
+                                <div class="yAxes">
+                                    <span>好</span>
+                                    <span>一般</span>
+                                    <span>差</span>
+                                </div>
+                                <div class="colorslayer">
+                                    <div class="colorsContent">
+                                        <div class="colorsDot">
+                                            <div class="colorsInfo">
+                                                <table>
+                                                    <tr>
+                                                        <td>温度：</td>
+                                                        <td>20℃</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>湿度：</td>
+                                                        <td>45%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>CO<sub>2</sub>：</td>
+                                                        <td>307ppm</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>PM2.5：</td>
+                                                        <td>5μg/m<sup>3</sup></td>
+                                                    </tr>
+                                                </table>
+                                                <div class="colorsArr"></div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="itemName"><span>T2航站楼出发厅</span></div>
+                            </div>
+                            <div class="item">
+                                <div class="yAxes">
+                                    <span>好</span>
+                                    <span>一般</span>
+                                    <span>差</span>
+                                </div>
+                                <div class="colorslayer">
+                                    <div class="colorsContent">
+                                        <div class="colorsDot">
+                                            <div class="colorsInfo">
+                                                <table>
+                                                    <tr>
+                                                        <td>温度：</td>
+                                                        <td>20℃</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>湿度：</td>
+                                                        <td>45%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>CO<sub>2</sub>：</td>
+                                                        <td>307ppm</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>PM2.5：</td>
+                                                        <td>5μg/m<sup>3</sup></td>
+                                                    </tr>
+                                                </table>
+                                                <div class="colorsArr"></div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="itemName"><span>T1锅炉房</span></div>
+                            </div>
+                            <div class="item">
+                                <div class="yAxes">
+                                    <span>好</span>
+                                    <span>一般</span>
+                                    <span>差</span>
+                                </div>
+                                <div class="colorslayer">
+                                    <div class="colorsContent">
+                                        <div class="colorsDot">
+                                            <div class="colorsInfo">
+                                                <table>
+                                                    <tr>
+                                                        <td>温度：</td>
+                                                        <td>20℃</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>湿度：</td>
+                                                        <td>45%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>CO<sub>2</sub>：</td>
+                                                        <td>307ppm</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>PM2.5：</td>
+                                                        <td>5μg/m<sup>3</sup></td>
+                                                    </tr>
+                                                </table>
+                                                <div class="colorsArr"></div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="itemName"><span>T2锅炉房</span></div>
+                            </div>
+                            <div class="item">
+                                <div class="yAxes">
+                                    <span>好</span>
+                                    <span>一般</span>
+                                    <span>差</span>
+                                </div>
+                                <div class="colorslayer">
+                                    <div class="colorsContent">
+                                        <div class="colorsDot">
+                                            <div class="colorsInfo">
+                                                <table>
+                                                    <tr>
+                                                        <td>温度：</td>
+                                                        <td>20℃</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>湿度：</td>
+                                                        <td>45%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>CO<sub>2</sub>：</td>
+                                                        <td>307ppm</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>PM2.5：</td>
+                                                        <td>5μg/m<sup>3</sup></td>
+                                                    </tr>
+                                                </table>
+                                                <div class="colorsArr"></div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="itemName"><span>发电机房</span></div>
+                            </div>
+                            <div class="item">
+                                <div class="yAxes">
+                                    <span>好</span>
+                                    <span>一般</span>
+                                    <span>差</span>
+                                </div>
+                                <div class="colorslayer">
+                                    <div class="colorsContent">
+                                        <div class="colorsDot">
+                                            <div class="colorsInfo">
+                                                <table>
+                                                    <tr>
+                                                        <td>温度：</td>
+                                                        <td>20℃</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>湿度：</td>
+                                                        <td>45%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>CO<sub>2</sub>：</td>
+                                                        <td>307ppm</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>PM2.5：</td>
+                                                        <td>5μg/m<sup>3</sup></td>
+                                                    </tr>
+                                                </table>
+                                                <div class="colorsArr"></div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="itemName"><span>国际停车场</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="areasPrev"><a class="disabled" href=""></a></div>
+                    <div id="areasNext"><a href=""></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script data-main="../js/view/index_main.js" src="../js/lib/require.js"></script>
+</body>
+</html>

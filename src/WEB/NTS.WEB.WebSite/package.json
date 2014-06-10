@@ -1,0 +1,15 @@
+﻿{
+	"name": "nts9000",
+	"version": "0.1.0",
+	"author": "ghj@nts.com",
+	"devDependencies": {	
+		"grunt": "*",
+		"grunt-contrib-jshint": "*",
+		"grunt-contrib-uglify": "*",
+		"grunt-contrib-requirejs": "*",
+		"grunt-contrib-concat": "*",
+		"grunt-contrib-copy": "*",
+		"grunt-contrib-clean": "*",
+		"grunt-contrib-watch": "*"
+	}
+}

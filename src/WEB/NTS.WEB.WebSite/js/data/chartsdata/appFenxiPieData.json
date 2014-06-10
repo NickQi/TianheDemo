@@ -1,0 +1,66 @@
+{
+    "LayerPie": {
+        "series": [
+            {
+                "data": [
+                    {
+                        "name": "行政部",
+                        "y": 9907.03
+                    },
+                    {
+                        "name": "药剂部",
+                        "y": 9069.26
+                    },
+                    {
+                        "name": "后勤部",
+                        "y": 9025.7
+                    },
+                    {
+                        "name": "住院部",
+                        "y": 8917.22
+                    },
+                    {
+                        "name": "医技部",
+                        "y": 8888.73
+                    },
+                    {
+                        "name": "临床门诊部",
+                        "y": 6504.32
+                    }
+                ]
+            }
+        ]
+    },
+    "ItemCodePie": {
+        "series": [
+            {
+                "data": [
+                    {
+                        "name": "水",
+                        "y": 25527.3
+                    },
+                    {
+                        "name": "气",
+                        "y": 25029.3
+                    },
+                    {
+                        "name": "暖",
+                        "y": 1751.39
+                    },
+                    {
+                        "name": "电",
+                        "y": 4.28
+                    }
+                ]
+            }
+        ]
+    },
+    "ActionInfo": {
+        "Success": true,
+        "ExceptionMsg": null,
+        "ActionName": null,
+        "ActionUser": null,
+        "ActionTime": "/Date(-62135596800000+0800)/"
+    },
+    "Unit": "T"
+}

@@ -1,0 +1,234 @@
+﻿<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link rel="stylesheet" href="../css/common.css">
+            <link rel="stylesheet" href="../css/main.css">
+              <link rel="stylesheet" href="/js/lib/select2/select2.css">
+                <link rel="stylesheet" href="/js/lib/tree/css/tree.css">
+                  <link rel="stylesheet" href="/js/lib/jscrollpane/css/jscrollpane.css">
+                    <link rel="stylesheet" href="/js/lib/datepicker/css/datepicker.css">
+                      <title>告警管理</title>
+                    </head>
+  <body>
+    <div class="wrapper">
+      <!-- header start -->
+      #parse("html/header.vm")
+      <!-- header end -->
+      <div class="container">
+        <!-- sidebar start -->
+        <div id="sidebar">
+          <ul class="menu"></ul>
+        </div>
+        <!-- sidebar end -->
+        <!-- content start -->
+        <div id="content">
+          <!-- 目录树开始 -->
+          <div id="tree-box">
+            <div class="date-block">
+              <!-- add by pl 2014-3-19 -->
+              <div class="fast-select">
+                <a data-type="1" href="javascript:void(0);">当日</a>
+                <a data-type="2" href="javascript:void(0);">本周</a>
+                <a data-type="3" href="javascript:void(0);" class="current">本月</a>
+              </div>
+
+              <div class="date-picker">
+                <div class="date-input-box">
+                  <input type="text" class="input-date" readonly="" name="startDate">
+                    <i class="icon calendar"></i>
+                  </div>
+                <span class="connect">&mdash;</span>
+                <div class="date-input-box">
+                  <input type="text" class="input-date" readonly="" name="endDate">
+                    <i class="icon calendar"></i>
+                  </div>
+              </div>
+            </div>
+
+            <ul id="tree-tab">
+              <li class="first current">业态功能</li>
+              <li class="last">区域位置</li>
+            </ul>
+            <div id="tree-container">
+
+              <div id="tree-content">
+                <ul></ul>
+              </div>
+
+              <div id="areaTree-content">
+                <ul></ul>
+              </div>
+            </div>
+
+            <div id="queryBtn">
+              <a href="javascript:void(0);">查询</a>
+            </div>
+
+          </div>
+          <!-- 目录树结束 -->
+          <div id="main">
+            <!--告警开始-->
+            <div id="alarmManagement" class="module-define">
+              <div class="top">
+                <div class="left"></div>
+                <div class="right"></div>
+              </div>
+              <div class="body">
+                <!--模板头开始-->
+                <div class="module-header">
+                  <h3>
+                    <span class="areaName"></span> 告警管理
+                    <span class="series-date f12 ml10"></span>
+                  </h3>
+                  <div class="func">
+                    <span id="export-link" class="export-disabled">
+                      <i class="icon"></i>
+                      <a href="javascript:void(0);">导出</a>
+                    </span>
+                  </div>
+                </div>
+                <!--/模板头结束-->
+                <!--告警列表开始-->
+                <div class="alarmListBox">
+                  <div class="alarmList">
+                    <!--下拉选择开始-->
+                    <div class="alarm-select">
+                      <div class="alarm-select-class">
+                      </div>
+                      <div class="alarm-select-item">
+                      </div>
+                      <div class="alarm-select-status">
+                      </div>
+                    </div>
+                    <!--下拉选择结束-->
+                    <!--列表开始-->
+                    <div class="alarmNote">
+                      <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                        <thead>
+                          <tr>
+                            <th width="8%">序号</th>
+                            <th width="14%">时间</th>
+                            <th width="9%">告警对象</th>
+                            <th width="14%">位置</th>
+                            <th width="14%">信息</th>
+                            <th width="14%">告警类型</th>
+                            <th width="8%">等级</th>
+                            <th width="12%">告警状态</th>
+                            <th width="7%"></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <!-- <tr>
+                                                    <td width="8%" align="center">序号</td>
+                                                    <td width="14%">时间</td>
+                                                    <td width="9%"><span class="pl10">告警对象</td>
+                                                    <td width="14%">位置</td>
+                                                    <td width="14%">信息</td>
+                                                    <td width="14%">告警类型</td>
+                                                    <td width="8%" align="center">等级</td>
+                                                    <td width="12%"><span class="pl30">告警状态</span></td>
+                                                    <td width="7%"></td>
+                                                </tr>
+                                                <tr class="even">
+                                                    <td width="8%" align="center">序号</td>
+                                                    <td width="14%">时间</td>
+                                                    <td width="9%"><span class="pl10">告警对象</td>
+                                                    <td width="14%">位置</td>
+                                                    <td width="14%">信息</td>
+                                                    <td width="14%">告警类型</td>
+                                                    <td width="8%" align="center">等级</td>
+                                                    <td width="12%"><span class="pl30">告警状态</span></td>
+                                                    <td width="7%"></td>
+                                                </tr> -->
+                        </tbody>
+                      </table>
+                    </div>
+                    <!--列表结束-->
+                    <!--分页开始-->
+                    <div class="show-page mt30">
+                      <ul>
+                        <li class="prev-page">
+                          <a href="javascript:void(0);">上一页</a>
+                        </li>
+                        <li class="next-page">
+                          <a href="javascript:void(0);">下一页</a>
+                        </li>
+                        <li class="total-page">
+                          共<em>2</em>页
+                        </li>
+                        <li class="to-page">
+                          去第 <span class="group">
+                            <input type="text" name="pageNum" value="1" />
+                            <button name="goPage">确定</button>
+                          </span> 页
+                        </li>
+                      </ul>
+                    </div>
+                    <!--分页结束-->
+                  </div>
+                </div>
+                <!--/告警列表结束-->
+              </div>
+              <div class="bottom">
+                <div class="left"></div>
+                <div class="right"></div>
+              </div>
+            </div>
+            <!--/告警结束-->
+          </div>
+        </div>
+        <!-- content end -->
+      </div>
+      #parse("html/footer.vm")
+    </div>
+    <!-- 告警模板开始 -->
+    <script id="alarmNote" type="text/html">
+      {each data as value index}
+      {if index % 2 === 0}
+      <tr>
+        {else}
+        <tr class="even">
+          {/if}
+          <td width="8%" align="center">{index+1}</td>
+          <td width="14%" align="left">{value.Time}</td>
+          <td width="9%" align="left">
+            <span class="pl10">{value.Object}</span>
+          </td>
+          <td width="14%" align="left">{value.Position}</td>
+          <td width="14%" align="left">{value.Info}</td>
+          <td width="14%" align="left">
+            <span class="pl20">{value.AlarmItem}</span>
+          </td>
+          {if value.ClassDivide == "1"}
+          <td width="8%" align="center">
+            <span class="clred">{value.Class}</span>
+          </td>
+          {else if value.ClassDivide == "2"}
+          <td width="8%" align="center">
+            <span class="clyellow">{value.Class}</span>
+          </td>
+          {else}
+          <td width="8%" align="center">
+            <span>{value.Class}</span>
+          </td>
+          {/if}
+          <td width="12%" align="left">
+            <span class="pl30">{value.AlarmStatus}</span>
+          </td>
+          <td width="7%"></td>
+        </tr>
+        {/each}
+      </script>
+    <!-- 告警模板结束 -->
+    <script type="text/javascript">
+      var require = {
+      urlArgs: "v=@@hash"
+      }
+    </script>
+    <script data-main="/js/view/alarm_main.js" src="/js/lib/require/require.min.js"></script>
+    <input id="serverDate" type="hidden" value="$serverDate"/>
+  </body>
+</html>

@@ -1,0 +1,275 @@
+﻿<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/main.css">
+	<link rel="stylesheet" href="/js/lib/select2/select2.css">
+	<link rel="stylesheet" href="/js/lib/tree/css/tree.css">
+	<link rel="stylesheet" href="/js/lib/jscrollpane/css/jscrollpane.css">
+    <link rel="stylesheet" href="/js/lib/datepicker/css/datepicker.css">
+	<title>负荷预测-需量分析</title>
+</head>
+<body>
+	<div class="wrapper">
+      <!-- header start -->
+      #parse("html/header.vm")
+      <!-- header end -->
+		<div class="container">
+        <!-- sidebar start -->
+      <div id="sidebar">
+        <ul class="menu"></ul>
+      </div>
+        <!-- sidebar end -->
+			<!-- content start -->
+			<div id="content">
+				<!-- 目录树开始 -->
+				<div id="tree-box">
+                	<div class="date-block">
+                        <!-- add by pl 2014-3-19 -->
+                        <div class="fast-select">
+                            <a data-type="5" href="javascript:void(0);">明日</a>
+                            <a data-type="6" href="javascript:void(0);">下周</a>
+                            <a data-type="7" href="javascript:void(0);" class="current">下月</a>
+                        </div>
+                        
+                        <div class="date-picker">
+                            <div class="date-input-box"> 
+                                <input type="text" class="input-date" readonly name="startDate">
+                                <i class="icon calendar"></i>
+                            </div>
+                            <span class="connect">&mdash;</span>
+                            <div class="date-input-box">
+                                <input type="text" class="input-date" readonly name="endDate">
+                                <i class="icon calendar"></i>
+                            </div>
+                        </div>
+                    </div>
+                	
+                    <ul id="tree-tab">
+                    	<li class="first current">业态功能</li>
+                        <li class="last">区域位置</li>
+                    </ul>
+                    <div id="area-select" class="ml20 mt10">
+	                    <div>
+	            			<select name="type-diff" class="w100"></select>
+	            		</div> 
+	            		<div class="hide">
+	            			<select name="type-diff" class="w100"></select>
+	            			<select name="item-diff" class="w100"> 
+								<option></option>          
+							</select>
+	            		</div>
+            		</div>
+                    <div id="tree-container"> 
+                    	                 	                    	
+                        <div id="tree-content">                        	
+                            <ul></ul>
+                        </div>
+                        
+                        <div id="areaTree-content">
+                            <ul></ul>
+                        </div>
+                    </div>
+                    
+                    <div id="queryBtn">
+                    	<a href="javascript:void(0);">查询</a>
+                    </div>
+                    
+				</div>
+				<!-- 目录树结束 -->
+				<div id="main">
+                	<!--负荷预测图表模块表开始-->
+					<div class="module">
+						<div>
+							<div id="chartsLoad" class="module-define">
+								<div class="top"><div class="left"></div><div class="right"></div></div>
+                                <div class="body">
+                                	<div class="module-header">
+                                    	<h3><span class="areaName mr10"></span><span class="itemName">电</span>负荷预测<span class="series-date f12 ml10"></span></h3>
+                                        <div class="func">
+                                        	<span class="unit">单位：<span></span></span>
+                                        </div>
+                                    </div>
+                                    <div id="chart-load" class="module-content"></div>
+                                </div>
+                                <div class="bottom"><div class="left"></div><div class="right"></div></div>
+							</div>
+						</div>
+					</div>
+                    <!--/负荷预测图表模块表结束-->
+                    
+                    <!--排序图表工具栏模块开始-->
+                    <div class="module">
+                        <div>
+                            <div id="tool-bar" class="module-define">
+                                <div class="top"><div class="left"></div><div class="right"></div></div>
+                                <div class="body">
+                                    <div class="module-content">
+                                    	<ul class="fn">
+                                        	<li><span class="disabled clgray">预测算法选择：</span><a class="disabled clgray" href="javascript:void(0);">神经网络算法</a></li>
+                                        </ul>
+                                        <a id="default" class="chart-return-btn chart-return-btn-disabled" style="display:none;" href="">返回默认选择</a>
+                                    </div>
+                                </div>
+                                <div class="bottom"><div class="left"></div><div class="right"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/排序图表工具栏模块结束-->
+                    
+                    <!--底部横排模块开始-->
+                    <div class="row-fluid row-left-elastic">
+                    	<div class="row-left">
+                            <!--显示面板开始-->
+                            <div class="module-wide">
+                                <div>
+                                    <div id="chartsLoadTbl" class="module-define">
+                                        <div class="top"><div class="left"></div><div class="right"></div></div>
+                                        <div class="body">
+                                            <div class="module-header">
+                                                <h3>详细数据</h3>
+                                                <div class="func">
+                                                    <span id="export-link" class="export"><i class="icon"></i><a href="javascript:void(0);">导出</a></span>
+                                                </div>
+                                            </div>
+                                            <div id="chart-load-tbl" class="module-content chart-panel">
+                                            	<div id="totalEnergyVal">
+                                                	<div id="forecastTotalVal">
+                                                    	<span class="name">预测总能耗值：</span>
+                                                        <div id="forecastBar">
+                                                        	<div id="historyVal">
+                                                            	<i class="icon2"></i>
+                                                            </div>
+                                                            <div id="forecastVal">
+                                                            	<span class="col"></span>
+                                                                <span class="val"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div id="historyTotalVal">
+                                                    	<i class="icon2"></i><span class="name">历史总能耗值：</span>
+                                                        <span class="val"></span>
+                                                    </div>
+                                                </div>
+                                            	<table class="text-center list">
+                                                    <thead class="">
+                                                        <tr class="table-title bg_green cwhite f15">
+                                                            <td width="16%">序列</td>
+                                                            <td width="20%">时间</td>
+                                                            <td width="16%">预测值</td>
+                                                            <td width="16%">历史值</td>
+                                                            <td width="16%">偏差值</td>
+                                                            <td width="16%">偏差百分比</td>
+                                                        </tr>
+                                                    </thead>											
+                                                </table>
+                                                <div class="scroll-tbody list">
+                                                    <table>
+                                                    <tbody class="text-center">
+                                                    <!--
+                                                        <tr>
+                                                            <td width="16%">序列</td>
+                                                            <td width="20%">时间</td>
+                                                            <td width="16%">预测值</td>
+                                                            <td width="16%">历史值</td>
+                                                            <td width="16%">偏差值</td>
+                                                            <td width="16%">偏差百分比</td>
+                                                        </tr>
+                                                    -->
+                                                    </tbody>
+                                                    </table>
+                                                </div>
+                                            
+                                            </div>
+                                        </div>
+                                        <div class="bottom"><div class="left"></div><div class="right"></div></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/显示面板结束-->
+                            
+                            
+                        </div>
+                        
+                        <!--快捷链接开始-->
+                        <div id="quickLinks" class="module row-right">
+                            <div>
+                                <div id="" class="module-define">
+                                    <div class="top"><div class="left"></div><div class="right"></div></div>
+                                    <div class="body">
+                                        <div class="module-header">
+                                            <h3>快捷链接</h3>
+                                        </div>
+                                        <div class="module-content">
+                                        	<ul class="quick-links">
+                                            	<li>
+                                                    <a href="energy_analyses.html"><i class="q-analyses"></i><span>能耗分析</span></a>
+                                                </li>
+                                                <li>
+                                                    <a href="energy_contrast.html"><i class="q-contrast"></i><span>能耗对比</span></a>
+                                                </li>
+                                                <li>
+                                                    <a href="energy_order.html"><i class="q-order"></i><span>能耗排名</span></a>
+                                                </li>
+                                                <li>
+                                                    <a href="quota_analyses.html"><i class="q-quota"></i><span>定额分析</span></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="bottom"><div class="left"></div><div class="right"></div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/快捷链接开始-->
+                    </div>
+                    <!--/底部横排模块结束-->
+				</div>
+			</div>
+			<!-- content end -->
+		</div>
+		#parse("html/footer.vm")
+	</div>
+
+	<!-- 列表页模板 -->
+	<script id="list-tpl" type="text/html">
+	{each LoadForecast as value index}
+	{if index % 2 === 0}
+		<tr>
+	{else}
+		<tr class="even">
+	{/if}
+		<td width="16%">{value.Id}</td>
+		<td width="20%">{value.TimeArea}</td>
+		<td width="16%">{value.ForeCast}</td>
+		<td width="16%">
+		{if value.History === -9999}
+            -
+        {else}
+            {value.History}
+        {/if}
+		</td>
+		<td width="16%">
+		{if value.Deviation === -9999}
+            -
+        {else}
+            {value.Deviation}
+        {/if}
+		</td>
+		<td width="16%">{value.Pecent}</td>		
+	</tr>
+	{/each}
+	</script>
+
+<script type="text/javascript">
+var require = {
+      urlArgs: "v=@@hash"
+}
+</script>
+<script data-main="/js/view/load_forecast_main.js" src="/js/lib/require/require.min.js"></script>
+</body>
+</html>

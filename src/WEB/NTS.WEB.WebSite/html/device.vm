@@ -1,0 +1,277 @@
+﻿<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/main.css">
+	<link rel="stylesheet" href="/js/lib/select2/select2.css">
+	<link rel="stylesheet" href="/js/lib/tree/css/tree.css">
+	<link rel="stylesheet" href="/js/lib/jscrollpane/css/jscrollpane.css">
+    <link rel="stylesheet" href="/js/lib/datepicker/css/datepicker.css">
+	<title>能耗分析</title>
+</head>
+<body>
+	<div class="wrapper">
+		<!-- header start -->
+    #parse("html/header.vm")
+    <!-- header end -->
+		<div class="container">
+			<!-- sidebar start -->
+      <div id="sidebar">
+        <ul class="menu"></ul>
+      </div>
+      <!-- sidebar end -->
+			<!-- content start -->
+			<div id="content">
+				<!-- 目录树开始 -->
+				<div id="tree-box">
+                    <ul id="tree-tab" class="pt20">
+                    	<li class="first current">业态功能</li>
+                        <li class="last">区域位置</li>
+                    </ul>
+                    <div id="area-select" class="ml20 mt10">
+	                    <div>
+	            			<select name="type-diff" class="w100"></select>
+	            		</div> 
+	            		<div class="hide">
+	            			<select name="type-diff" class="w100"></select>
+	            			<select name="item-diff" class="w100"> 
+                                <option></option>          
+                            </select>
+	            		</div>
+            		</div>
+                    <div id="tree-container">                     	                 	                    	
+                        <div id="tree-content">                        	
+                            <ul></ul>
+                        </div>                        
+                        <div id="areaTree-content">
+                            <ul></ul>
+                        </div>
+                    </div>
+                    
+                    <div id="queryBtn">
+                    	<a href="javascript:void(0);">查询</a>
+                    </div>
+                    
+				</div>
+				<!-- 目录树结束 -->
+				<div id="main">
+                    <!--横排三模块开始-->
+                    <div class="row-fluid row-left-elastic mb5">
+                        <div class="row-left">                            
+                            <div class="module wide-module">
+                                <div>                                    
+                                    <!--设备列表及信息开始-->
+                                    <div id="AnalyDeviceBlock" class="module-define">
+                                        <div class="top"><div class="left"></div><div class="right"></div></div>
+                                        <div class="body">
+                                            <div id="analy-device">
+                                                <div class="inner">
+                                                    <div id="analy-device-list">
+                                                        <h4>设备选项</h4>
+                                                        <div id="analy-devices">
+                                                            <div id="ana-deviceList">
+                                                                
+                                                            </div>
+                                                            <div id="ana-deviceList-prev" class="disabled">prev</div>
+                                                            <div id="ana-deviceList-next">next</div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="analy-device-info">
+                                                        <h4>设备信息</h4>
+                                                        <div class="ana-deviceInfo">
+                                                        	<div id="device-status"></div>
+                                                            <ul class="device-info">
+                                                                <li id="Number"><label>设备ID：</label><span>--</span></li>
+                                                                <li id="Category"><label>类别：</label><span>--</span></li>
+                                                                <li id="Affiliations"><label>隶属机构：</label><span>--</span></li>
+                                                                <li id="Nature"><label>性质：</label><span>--</span></li>
+                                                                
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bottom"><div class="left"></div><div class="right"></div></div>
+                                    </div>
+                                    <!--/设备列表及信息结束-->
+                                    
+                                </div>
+                            </div>                            
+                            
+                            <div class="module thin-module">
+                                <div>
+                                    <!--设备数值开始-->
+                                    <div id="analysesInfos" class="module-define">
+                                        <div class="top"><div class="left"></div><div class="right"></div></div>
+                                        <div class="body">
+                                            <div class="module-header">
+                                                <h3>设备数值</h3>
+                                                <div class="func">
+                                                    <select id="NHfenxi-slc" name="NHfenxiSlc" class="w100">
+                                                        <option value="0" selected="selected">开关量</option>
+                                                        <option value="1">模拟量</option>
+                                                        <!-- <option value="2">脉冲量</option> -->
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div id="device-infos" class="module-content">
+                                                <table class="text-center list">
+                                                    <thead class="">
+                                                        <tr class="table-title bg_blue cwhite f15">
+                                                            <td width="15%">序号</td>
+                                                            <td width="60%">名称</td>
+                                                            <td width="25%">数值</td>
+                                                        </tr>
+                                                    </thead>											
+                                                </table>
+                                                <div class="scroll-tbody" style="height:234px;">
+                                                    <table class="text-center list">
+														<tbody id="equiplistswitch"></tbody>
+                                                        <tbody id="equiplistanalog" style="display:none"></tbody>
+                                                        <tbody id="equiplistpulse" style="display:none"></tbody>
+                                                	</table>
+                                            	</div>
+                                            </div>
+                                        </div>
+                                        <div class="bottom"><div class="left"></div><div class="right"></div></div>
+                                    </div>
+                                    <!--/能耗分解饼图结束-->
+                                    
+                                </div>
+                            </div>
+                            <!--/总能耗结束-->
+                        </div>
+                        
+                        <!--快捷链接开始-->
+                        <div id="quickLinks" class="module row-right">
+                            <div>
+                                <div id="" class="module-define">
+                                    <div class="top"><div class="left"></div><div class="right"></div></div>
+                                    <div class="body">
+                                        <div class="module-header">
+                                            <h3>快捷链接</h3>
+                                        </div>
+                                        <div class="module-content">
+                                            <ul class="quick-links">
+                                                <li>
+                                                    <a href="energy_analyses.html"><i class="q-analyses"></i><span>能耗分析</span></a>
+                                                </li>
+                                                <li>
+                                                    <a href="energy_contrast.html"><i class="q-contrast"></i><span>能耗对比</span></a>
+                                                </li>
+                                                <li>
+                                                    <a href="energy_order.html"><i class="q-order"></i><span>能耗排名</span></a>
+                                                </li>
+                                                <li>
+                                                    <a href="fee_search.html"><i class="q-fee"></i><span>费用查询</span></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="bottom"><div class="left"></div><div class="right"></div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/快捷链接开始-->
+                    </div>
+                    <!--/底部横排三模块结束-->
+
+                	<!--排序图表模块表开始-->
+					<div class="module">
+						<div>
+							<div id="chartsAnalyses" class="module-define">
+								<div class="top"><div class="left"></div><div class="right"></div></div>
+                                <div class="body">
+                                	<div class="module-header">
+                                    	<h3>设备24小时能耗走势图</h3>
+                                        <div class="func">
+                                        	<span class="unit">单位：<span>kWh</span></span>  
+                                        </div>
+                                    </div>
+                                    <div id="chart-analyses" class="module-content"></div>                                    
+                                </div>
+                                <div class="bottom"><div class="left"></div><div class="right"></div></div>
+							</div>
+						</div>
+					</div>
+                    <!--/排序图表模块表结束-->
+                    
+                    <!--排序图表工具栏模块开始-->
+                    <div class="module" style="margin-bottom:0;">
+                        <div>
+                            <div id="tool-bar" class="module-define">
+                                <div class="top"><div class="left"></div><div class="right"></div></div>
+                                <div class="body">
+                                    <div class="module-content">
+                                    	<ul class="fn">
+                                        	<li><a id="tongbi" href="">同比</a></li>
+                                            <li><a id="huanbi" href="">环比</a></li>
+                                        </ul>
+                                        <a id="default" class="chart-return-btn" href="">返回默认选择</a>
+                                    </div>
+                                </div>
+                                <div class="bottom"><div class="left"></div><div class="right"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/排序图表工具栏模块结束-->                   
+
+				</div>
+			</div>
+			<!-- content end -->
+		</div>
+    #parse("html/footer.vm")
+  </div>
+<!-- 设备数值模板 -->
+<script id="equipValueAnalog" type="text/html">
+{each Analog as value index}
+	{if index % 2 === 0}
+		<tr>
+	{else}
+		<tr class="even">
+	{/if}
+		<td width="15%">{value.Id}</td>
+		<td width="60%">{value.DataName}</td>
+		<td width="25%">{value.Value}</td>
+	</tr>
+{/each}
+</script>
+<script id="equipValuePulse" type="text/html">
+{each Pulse as value index}
+	{if index % 2 === 0}
+		<tr>
+	{else}
+		<tr class="even">
+	{/if}
+		<td width="15%">{value.Id}</td>
+		<td width="60%">{value.DataName}</td>
+		<td width="25%">{value.Value.toFixed(2)}</td>
+	</tr>
+{/each}
+</script>
+<script id="equipValueSwitch" type="text/html">
+{each Switch as value index}
+	{if index % 2 === 0}
+		<tr>
+	{else}
+		<tr class="even">
+	{/if}
+		<td width="15%">{value.Id}</td>
+		<td width="60%">{value.DataName}</td>
+		<td width="25%">{value.Value}</td>
+	</tr>
+{/each}
+</script>
+<script type="text/javascript">
+    var require = {
+        urlArgs: "v=@@hash"
+    }
+</script>
+	<script data-main="/js/view/device_main.js" src="/js/lib/require/require.min.js"></script>
+  <input id="serverDate" type="hidden" value="$serverDate"/>
+</body>
+</html>

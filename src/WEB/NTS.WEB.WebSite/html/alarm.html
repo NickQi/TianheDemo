@@ -1,0 +1,165 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="/js/lib/datepicker/css/datepicker.css">
+<title>告警管理</title>
+</head>
+<body>
+<div class="wrapper"> 
+	<!-- header start -->
+	<div id="header"> <a class="brand"></a> <span class="f14 cwhite ml10 software">用能计费系统软件V1.1</span>
+		<div class="pull-right">
+			<div class="sysflag"></div>
+			<div class="hd-userinfo">
+				<div class="user-name"> <span>您好，Admin</span> <br/>
+					2013-12-19 </div>
+			</div>
+			<div class="divide"></div>
+			<div class="hd-logout"> <a href="#">安全退出</a> </div>
+		</div>
+	</div>
+	<!-- header end -->
+	<div class="container"> 
+		<!-- sidebar start -->
+		<div id="sidebar">
+			<ul class="menu">
+				<li> <a href="index.html"> <i class="home"></i> <span class="menu-name">首　页</span> </a> </li>
+				<li> <a href="payment.html" class=""> <i class="payment"></i> <span class="menu-name">充值缴费</span> </a> </li>
+				<li> <a href="account.html"> <i class="account"></i> <span class="menu-name">账户管理</span> </a> </li>
+				<li> <a href="javascript:void(0);"> <i class="param"></i> <span class="menu-name">参数设置</span> <i class="father ml5"></i> </a>
+					<ul style="display:none;" class="sub-menu">
+						<li> <a href="paramter.html" title="设备参数"> <i class="icon"></i> 设备参数 </a> </li>
+						<li> <a href="javascript:void(0);" title="系统参数"> <i class="icon"></i> 系统参数 </a> </li>
+					</ul>
+				</li>
+				<li> <a href="javascript:void(0);"> <i class="query"></i> <span class="menu-name pl10 pr10">查 询</span> <i class="father ml5"></i> </a>
+					<ul style="display:none;" class="sub-menu">
+						<li> <a href="search-bill.html" title="账单查询"> <i class="icon"></i> 账单查询 </a> </li>
+						<li> <a href="search-account.html" title="帐户查询"> <i class="icon"></i> 帐户查询 </a> </li>
+					</ul>
+				</li>
+				<li> <a href="abnormal.html"> <i class="abnormal"></i> <span class="menu-name">异态用户</span> </a> </li>
+				<li> <a class="current" href="alarm.html"> <i class="alarm"></i> <span class="menu-name">告警管理</span> </a> </li>
+				<li> <a href="javascript:void(0);"> <i class="log"></i> <span class="menu-name">日志管理</span> <i class="father ml5"></i> </a>
+					<ul style="display:none;" class="sub-menu">
+						<li> <a href="record-pay.html" title="充缴记录"> <i class="icon"></i> 充缴记录 </a> </li>
+						<li> <a href="record-msg.html" title="短信记录"> <i class="icon"></i> 短信记录 </a> </li>
+						<li> <a href="record-operate.html" title="操作记录"> <i class="icon"></i> 操作记录 </a> </li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!-- sidebar end --> 
+		<!-- content start -->
+		<div id="content">
+			<div id="main">
+				<div class="module">
+					<div>
+						<div class="module-define h855">
+							<h3 class="title bg_green">告警管理</h3>
+							<div class="content clearfix">
+                                                <!-- add by pl 2014-3-19 -->
+                                                <div class="fast-select">
+                                                      <a data-type="1" href="javascript:void(0);">当日</a>
+                                                      <a data-type="2" href="javascript:void(0);">本周</a>
+                                                      <a data-type="3" href="javascript:void(0);">本月</a>
+                                                </div>
+								<div class="search pl80 pt20">
+									<div class="date-picker">
+										<div class="date-input-box"> 
+											<input type="text" class="input-date" name="startDate">
+											<i class="icon calendar"></i> </div>
+										<span class="connect">&mdash;</span>
+										<div class="date-input-box">
+											<input type="text" class="input-date" name="endDate">
+											<i class="icon calendar"></i> </div>
+									</div>
+									<input name="keyword" type="text" class="search-text mt20" placeholder="姓名/房号" value="" />
+									<div class="clearfix"></div>
+									<button id="search-btn" class="btn-blue btn-large mt20 mb20 pull-left">查&#12288; 询</button>
+									<div id="result" class="result ml20 mb20 hide">搜索<span id="keyword"></span>结果共 <span id="count" class="cred ml5 mr5"></span> 条<span id="no-data"></span></div>
+									<div id="operate-btns" class="pull-right table-btn bg_gray hide"> <s class="tri-angle"></s> <a href="javascript:void(0);" class="print ml80">打&nbsp;印</a> <a href="javascript:void(0);" class="export ml10">导 &nbsp;出</a> </div>
+								</div>
+                                                <div style="display:none;" id="list">
+      								<table id="alarm-list" class="text-center list">
+      									<thead>
+      										<tr class="table-title">
+      											<td width="5%">序号</td>
+      											<td width="8%">时间</td>
+      											<td width="8%">工程</td>
+      											<td width="10%">厂站 </td>
+      											<td width="7%">设备 </td>
+      											<td width="5%">动作</td>
+      											<td width="15%">描述</td>
+      										</tr>
+      									</thead>
+      									<tbody>
+      										
+      									</tbody>
+      								</table>
+      								<div class="show-page mt20 clearfix mb20">
+                                                            <ul>
+                                                                  <li class="prev-page"> <a href="javascript:void(0);">上一页</a> </li>
+                                                                  <li class="next-page"> <a href="javascript:void(0);">下一页</a> </li>
+                                                                  <li class="total-page">共<em></em>页</li>
+                                                                  <li class="to-page"> 去第 <span class="group">
+                                                                        <input type="text" name="pageNum" value="" />
+                                                                        <button name="goPage">确定</button>
+                                                                        </span> 页 </li>
+                                                            </ul>
+                                                      </div>
+                                                </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- content end --> </div>
+	<div id="footer">
+		<div class="footer-inner">
+			<p> Copyright <span style="font-family:Arial;">&copy;</span> 2013 南京天溯自动化控制系统有限公司 版权所有.客服电话：025-68552201 </p>
+			<p>版本号：V1.0</p>
+		</div>
+	</div>
+</div>
+
+<script id="list-tpl" type="text/html">
+{each rows as value index}
+{if index % 2 === 0}
+<tr>
+{else}
+<tr class="even">
+{/if}
+      <td>{value.id}</td>
+      <td>{value.time}</td>
+      <td>{value.project}</td>
+      <td>{value.station}</td>
+      <td>{value.devCname}</td>
+      <td class="cred">{value.action}</td>
+      <td>{value.description}</td>
+</tr>
+{/each}
+</script>
+<script type="text/javascript">
+var require = {
+      urlArgs: 'v=' + Date.now()
+}
+</script>
+<script data-main="/js/view/alarm_main.js" src="/js/lib/require/require.min.js"></script>
+<script type="text/javascript">
+   // window.onload = max;
+    function max() {alert(34);
+        var wscript = new ActiveXObject("Wscript.shell");
+        wscript.SendKeys("{F11}");
+    }
+    
+           
+</script> 
+</body>
+</html>

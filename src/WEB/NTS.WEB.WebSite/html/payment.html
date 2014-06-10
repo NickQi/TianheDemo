@@ -1,0 +1,340 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/main.css">
+	<link rel="stylesheet" href="/js/lib/tree/css/tree.css">
+	<link rel="stylesheet" href="/js/lib/jscrollpane/css/jscrollpane.css">
+	<title>充值缴费详情页</title>
+</head>
+<body>
+	<div class="wrapper">
+		<!-- header start -->
+		<div id="header">
+			<a class="brand"></a>
+			<span class="f14 cwhite ml10 software">用能计费系统软件V1.1</span>
+			<div class="pull-right">
+				<div class="sysflag"></div>
+				<div class="hd-userinfo">
+					<div class="user-name">
+						<span>您好，Admin</span>
+						<br/>
+						2013-12-19
+					</div>
+				</div>
+				<div class="divide"></div>
+				<div class="hd-logout">
+					<a href="#">安全退出</a>
+				</div>
+			</div>
+		</div>
+		<!-- header end -->
+		<div class="container">
+			<!-- sidebar start -->
+			<div id="sidebar">
+				<ul class="menu">
+					<li>
+						<a class="current" href="payment.html" class=""> <i class="payment"></i>
+							<span class="menu-name">充值缴费</span>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0);"> <i class="param"></i>
+							<span class="menu-name">数据分析</span>
+							<i class="father ml5"></i>
+						</a>
+						<ul style="display:none;" class="sub-menu">
+							<li>
+								<a href="paramter.html" title="设备参数">
+									<i class="icon"></i>
+									能耗分析
+								</a>
+							</li>
+							<li>
+								<a href="energy_order.html" title="系统参数">
+									<i class="icon"></i>
+									能耗排名
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="alarm.html">
+							<i class="alarm"></i>
+							<span class="menu-name">告警管理</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!-- sidebar end -->
+			<!-- content start -->
+			<div id="content">
+				<!-- 目录树开始 -->
+				<div id="tree-box">
+					<div id="tree-content">
+						<ul></ul>
+					</div>
+				</div>
+				<!-- 目录树结束 -->
+				<div id="main">
+					<div class="module mt10">
+						<div class="module-define">
+							<h3 class="title">电能耗排名</h3>
+							<div class="content clearfix">
+								<table id="device-list" class="text-center list">
+									<thead class="">
+										<tr class="table-title bg_blue cwhite f15">
+											<td width="25%">排名</td>
+											<td width="13%">时间</td>
+											<td width="15%">对象</td>
+											<td width="15%">能耗类型</td>
+											<td width="25%">能耗值</td>
+										</tr>
+									</thead>
+								</table>
+								<div class="scroll-tbody">
+									<table >
+										<tbody class="text-center">
+											<tr>
+												<td width="25%">排名</td>
+												<td width="13%">时间</td>
+												<td width="15%">对象</td>
+												<td width="15%">能耗类型</td>
+												<td width="25%">能耗值</td>
+											</tr>
+											<tr >
+												<td width="25%">排名</td>
+												<td width="13%">时间</td>
+												<td width="15%">对象</td>
+												<td width="15%">能耗类型</td>
+												<td width="25%">能耗值</td>
+											</tr>
+											<tr >
+												<td width="25%">排名</td>
+												<td width="13%">时间</td>
+												<td width="15%">对象</td>
+												<td width="15%">能耗类型</td>
+												<td width="25%">能耗值</td>
+											</tr>
+											<tr >
+												<td width="25%">排名</td>
+												<td width="13%">时间</td>
+												<td width="15%">对象</td>
+												<td width="15%">能耗类型</td>
+												<td width="25%">能耗值</td>
+											</tr>
+											<tr>
+												<td width="25%">排名</td>
+												<td width="13%">时间</td>
+												<td width="15%">对象</td>
+												<td width="15%">能耗类型</td>
+												<td width="25%">能耗值</td>
+											</tr>
+											<tr >
+												<td width="25%">排名</td>
+												<td width="13%">时间</td>
+												<td width="15%">对象</td>
+												<td width="15%">能耗类型</td>
+												<td width="25%">能耗值</td>
+											</tr>
+											<tr>
+												<td width="25%">排名</td>
+												<td width="13%">时间</td>
+												<td width="15%">对象</td>
+												<td width="15%">能耗类型</td>
+												<td width="25%">能耗值</td>
+											</tr>
+											<tr>
+												<td width="25%">排名</td>
+												<td width="13%">时间</td>
+												<td width="15%">对象</td>
+												<td width="15%">能耗类型</td>
+												<td width="25%">能耗值</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>					
+				</div>
+			</div>
+			<!-- content end -->
+		</div>
+		<div id="footer">
+			<div class="footer-inner">
+				<p>
+					Copyright
+					<span style="font-family:Arial;">&copy;</span>
+					2013 南京天溯自动化控制系统有限公司 版权所有.客服电话：025-68552201
+				</p>
+				<p>版本号：V1.0</p>
+			</div>
+		</div>
+	</div>
+	<!-- 列表页模板 -->
+	<script id="list-tpl" type="text/html">
+{each rows as value index}
+{if index % 2 === 0}
+<tr>
+{else}
+<tr class="even">
+{/if}
+	<td>{value.id}</td>
+	<td>{value.accountCode}</td>
+	<td>{value.roomCname}</td>
+	<td>{value.userCname}</td>
+	<td>{value.paymentCname}</td>
+	<td><a class="view-detail" data-roomid="{value.roomId}" href="javascript:void(0);">查看详情</a></td>
+</tr>
+{/each}
+</script>
+	<!-- 用户基本信息模板 -->
+	<script id="user-info-tpl" type="text/html">
+<tr>
+	<td width="33%">姓名：<span data-key="cname" class="ml20">{user.cname}</span></td>
+	<td width="33%">手机号：<span data-key="telNo" class="ml10">{user.telNoHide}</span></td>
+	<td width="34%">短信通知功能：<span data-key="smsEnable" class="ml10">{if user.smsEnable}开启{else}未开始{/if}</span></td>
+</tr>
+<tr>
+	<td>证件类型：<span data-key="certificate" class="ml10">{user.certificate}</span></td>
+	<td>证件号码：<span data-key="cerNo" class="ml10">{user.cerNoHide}</span></td>
+	<td>房号： <span data-key="roomCname" class="ml10">{user.roomCname}</span></td>
+</tr>
+</script>
+	<!-- 用户基本信息设备信息模板 -->
+	<script id="device-tpl" type="text/html">
+{each device as value index}
+<tr>
+	<td>{value.paymentCname}</td>
+	<td>{value.id}</td>
+	<td>{value.num}</td>
+	<td>{if value.paymentType === 1}
+			<a href="paramter.html?deviceId={value.id}">{value.cname}</a>
+		{else}
+			{value.cname}
+		{/if}
+	</td>
+	<td>{value.typeCname}</td>
+</tr>
+{/each}
+</script>
+	<!-- 电表信息模板 -->
+	<script id="elec-tpl" type="text/html">
+	<div class="module mt10">
+		<div>
+			<div class="module-define">
+				<h3 class="title cgray"> <i class="icon electricity mr5"></i>
+					电（预付费）
+				</h3>
+				<div class="content clearfix">
+					<table id="elec-info" class="text-left list mt20 ml40 mr40">
+						<tbody>
+							<tr>
+								<td width="20%">
+									<ul class="pull-left">
+										<li>透支电费</li>
+										<li>剩余电费</li>
+									</ul>
+									<ul class="ml40 pull-left">
+										<li>
+											<span data-key="overdraft">{ele.overdraft}</span>
+											元
+										</li>
+										<li>
+											<span data-key="residue">{ele.residue}</span>
+											元
+										</li>
+									</ul>
+								</td>
+								<td width="30%" class="text-top">
+									状态：
+									<span data-key="devStatusDesc" class="f14 {if ele.devStatus === 0}cred{else}cgreen{/if}">{ele.devStatusDesc}</span>
+									{if ele.devStatus != -1}<button id="poweron-btn" data-status="{ele.devStatus}" data-devid="{ele.devId}" class="btn btn-blue-small ml40">{if ele.devStatus === 0}通电{else}断电{/if}</button>{/if}
+								</td>
+								<td width="35%" class="text-top">
+									{if ele.devStatus}充缴
+									<input id="elec-paycount" type="text" class="w100"/>	
+									元
+									<button id="elec-paybtn" data-devid="{ele.devId}" class="btn btn-blue-small ml20">充值</button>{/if}
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="sawtooth"></div>
+			</div>
+		</div>
+	</div>
+</script>
+	<!-- 水表信息模板 -->
+	<script id="water-tpl" type="text/html">
+	<div class="module mt15">
+		<div>
+			<div class="module-define">
+				<h3 class="title cgray"> <i class="icon water mr5"></i>
+					水
+				</h3>
+				<div class="content clearfix">
+					<table id="water-info" class="text-left list mt20 ml40 mr40">
+						<tbody>
+							<tr>
+								<td width="20%">
+									<ul class="pull-left">
+										<li>上次读数</li>
+										<li>本次读数</li>
+										<li>本次用量</li>
+										<li>单价</li>
+										<li>应缴费用</li>
+									</ul>
+									<ul class="ml40 pull-left">
+										<li>
+											<span data-key="startCount">{water.startCount}</span>
+											m <sup>3</sup>
+										</li>
+										<li>
+											<span data-key="endCount">{water.endCount}</span>
+											m <sup>3</sup>
+										</li>
+										<li>
+											<span data-key="usedCount">{water.usedCount}</span>
+											m
+											<sup>3</sup>
+										</li>
+										<li>
+											<span data-key="price">{water.price}</span>
+											元
+										</li>
+										<li>
+											<span data-key="payCount">{water.payCount}</span>
+											元
+										</li>
+									</ul>
+								</td>
+								<td width="30%" class="text-top"></td>
+								<td width="35%" class="text-top">
+									{if water.startCount}充缴
+									<input id="water-paycount" type="text" class="w100"/>	
+									元
+									<button id="water-paybtn" data-devid="{water.devId}" class="btn btn-blue-small ml20">缴费</button>{/if}
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="sawtooth"></div>
+			</div>
+		</div>
+	</div>
+</script>
+<script type="text/javascript">
+var require = {
+      urlArgs: "v=@@hash"
+}
+</script>
+	<script data-main="/js/view/payment_main.js" src="/js/lib/require/require.min.js"></script>
+</body>
+</html>

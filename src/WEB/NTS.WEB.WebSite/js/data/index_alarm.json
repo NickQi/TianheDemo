@@ -1,0 +1,20 @@
+{
+    "ActionInfo": {
+        "Success": true
+    },
+    "AllAlarm":{
+        "Value": 34,
+        "YesterdayValue": 40,
+        "CompareValue": "-55%"
+    },
+    "UndoAlarm":{
+        "Value": 10,
+        "YesterdayValue": 12,
+        "CompareValue": "-2%"
+    },
+    "ProcessedAlarm":{
+        "Value": 34,
+        "YesterdayValue": 30,
+        "CompareValue": "3%"
+    }
+}

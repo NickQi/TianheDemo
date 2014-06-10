@@ -1,0 +1,18 @@
+{
+    "ActionInfo": {
+        "Success": true,
+        "ExceptionMsg": null,
+        "ActionName": null,
+        "ActionUser": null,
+        "ActionTime": "/Date(-62135596800000+0800)/"
+    },
+    "Unit": "T",
+    "TotalValue": 11261.9,
+    "LastMonthTotalValue": 10672.76,
+    "LastMonthCompare": "5.52%",
+    "LastYearTotalValue": 10961.02,
+    "LastYearCompare": "2.75%",
+    "MaxValue": 1039.68,
+    "MinValue": 2.76,
+    "AverageValue": 469.25
+}

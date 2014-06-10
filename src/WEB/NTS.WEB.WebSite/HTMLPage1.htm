@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="Scripts/Library/jquery-1.8.2.min.js" type="text/javascript"></script>
+    <script>
+       
+
+
+        var menulist = {
+            "menulist": [
+               { "MID": "M001", "MName": "首页", "Url": "#", "menulist": "" },
+               { "MID": "M002", "MName": "车辆买卖", "Url": "#", "menulist":
+                   [
+                        { "MID": "M003", "MName": "新车", "Url": "#", "menulist":
+                           [
+                               { "MID": "M006", "MName": "奥迪", "Url": "#", "menulist": "" },
+                               { "MID": "M007", "MName": "别克", "Url": "#", "menulist": "" }
+                           ]
+                        },
+                        { "MID": "M004", "MName": "二手车", "Url": "#", "menulist": "" },
+                        { "MID": "M005", "MName": "改装车", "Url": "#", "menulist": "" }
+                   ]
+               },
+               { "MID": "M006", "MName": "宠物", "Url": "#", "menulist": "" }
+         ]
+        };
+        var AreaTree;
+
+        $(function () {
+
+            $.ajax({
+                url: "action.ashx?action=GetAreaTree",
+                type: 'Post',
+                dataType: 'text',
+                contentType: "application/x-www-form-urlencoded; charset=utf-8",
+                data: {},
+
+                success: function (data) {
+                    AreaTree = JSON.parse(data);
+                }
+            });
+
+            $("#btn_bianli").click(function () {
+                var showlist = $("<ul></ul>");
+                showall(AreaTree, showlist);
+                $("#div_menu").append(showlist);
+            });
+        });
+
+        //menu_list为json数据
+        //parent为要组合成html的容器
+        function showall(menu_list, parent) {
+            for (var menu in menu_list) {
+                //如果有子节点，则遍历该子节点
+                if (menu_list[menu].children != undefined) {
+                    if (menu_list[menu].children.length > 0) {
+                        //创建一个子节点li
+                        var li = $("<li></li>");
+                        //将li的文本设置好，并马上添加一个空白的ul子节点，并且将这个li添加到父亲节点中
+                        $(li).append(menu_list[menu].text).append("<ul></ul>").appendTo(parent);
+                        //将空白的ul作为下一个递归遍历的父亲节点传入
+                        showall(menu_list[menu].children, $(li).children().eq(0));
+                    }
+                }
+               
+                //如果该节点没有子节点，则直接将该节点li以及文本创建好直接添加到父亲节点中
+                else {
+                    $("<li></li>").append(menu_list[menu].text).appendTo(parent);
+                }
+            }
+        }
+
+        $(function () {
+            $("#btn_bianli2").click(function () {
+                var showlist = $("<ul></ul>");
+                showall2(menulist.menulist, showlist);
+                $("#div_menu").append(showlist);
+            });
+        });
+
+        //menu_list为json数据
+        //parent为要组合成html的容器
+        function showall2(menu_list, parent) {
+            for (var menu in menu_list) {
+                //如果有子节点，则遍历该子节点
+                if (menu_list[menu].menulist.length > 0) {
+                    //创建一个子节点li
+                    var li = $("<li></li>");
+                    //将li的文本设置好，并马上添加一个空白的ul子节点，并且将这个li添加到父亲节点中
+                    $(li).append(menu_list[menu].MName).append("<ul></ul>").appendTo(parent);
+                    //将空白的ul作为下一个递归遍历的父亲节点传入
+                    showall2(menu_list[menu].menulist, $(li).children().eq(0));
+                }
+                //如果该节点没有子节点，则直接将该节点li以及文本创建好直接添加到父亲节点中
+                else {
+                    $("<li></li>").append(menu_list[menu].MName).appendTo(parent);
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <input id="btn_bianli" type="button" value="button"  />
+      <input id="btn_bianli2" type="button" value="button2"  />
+        <div id="div_menu"></div>
+</body>
+</html>

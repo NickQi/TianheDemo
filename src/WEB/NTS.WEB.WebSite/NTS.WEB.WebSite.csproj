@@ -1,0 +1,785 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{57EC5E28-9ED3-4EA8-AA56-26E144B66A55}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NTS.WEB.WebSite</RootNamespace>
+    <AssemblyName>NTS.WEB.WebSite</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Framework.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Framework.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NTS.WEB.DAL">
+      <HintPath>..\..\WCF\libs\NTS.WEB.DAL.dll</HintPath>
+    </Reference>
+    <Reference Include="NVelocity, Version=1.1.1.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\NVelocity.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="URLRewriter">
+      <HintPath>..\Libs\URLRewriter.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\common.css" />
+    <Content Include="css\content.css" />
+    <Content Include="css\main.css" />
+    <Content Include="Gruntfile.js" />
+    <Content Include="Ajax\ServerTimePaser.ashx" />
+    <Content Include="Configs\ajax.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Configs\BaseMsg.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Configs\Database.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Configs\GlobalSettings.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Configs\project.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Configs\server.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Configs\template.config">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Configs\UrlRewrite.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Configs\WCF.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="..\..\WCF\ServiceIIS\configs\data\BaseData.config">
+      <Link>Configs\data\BaseData.config</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Configs\data\SysLog.config" />
+    <Content Include="Configs\data\User.config" />
+    <None Include="fonts\framd.ttf" />
+    <None Include="fonts\framdit.ttf" />
+    <None Include="html\alarm.vm" />
+    <None Include="html\alarm_inquiry.vm" />
+    <None Include="html\analyse.vm" />
+    <None Include="html\device.vm" />
+    <None Include="html\energy_contrast.vm">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="html\energy_ranking.vm" />
+    <None Include="html\equipment_monitoring.vm" />
+    <None Include="html\fee_apportion.vm" />
+    <None Include="html\home.vm" />
+    <None Include="html\load_forecast.vm" />
+    <None Include="html\login.vm" />
+    <None Include="html\footer.vm" />
+    <None Include="html\header.vm">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="html\index.vm">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="html\jslib.vm" />
+    <Content Include="HTMLPage1.htm" />
+    <Content Include="html\electrical-topology.htm" />
+    <Content Include="html\energy_contrast.html" />
+    <Content Include="html\environmental-monitoring.htm" />
+    <Content Include="html\main.htm" />
+    <Content Include="html\statement.html" />
+    <Content Include="img\balance_btn.png" />
+    <Content Include="img\bg.png" />
+    <Content Include="img\bottom-line-gray.png" />
+    <Content Include="img\bottom-line.png" />
+    <Content Include="img\btn.jpg" />
+    <Content Include="img\clock.png" />
+    <Content Include="img\device-status-1.png" />
+    <Content Include="img\device-status-2.png" />
+    <Content Include="img\device-status-3.png" />
+    <Content Include="img\diagnosis.png" />
+    <Content Include="img\energy-mod.jpg" />
+    <Content Include="img\export.png" />
+    <Content Include="img\fee.png" />
+    <Content Include="img\home.jpg" />
+    <Content Include="img\icon.png" />
+    <Content Include="img\icon2.png" />
+    <Content Include="img\index.png" />
+    <Content Include="img\loading.gif" />
+    <Content Include="img\loading1.gif" />
+    <Content Include="img\loading_false.png" />
+    <Content Include="img\loading_success.gif" />
+    <Content Include="img\login-bg.png" />
+    <Content Include="img\login-btn.png" />
+    <Content Include="img\login_bg.jpg" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\logout.png" />
+    <Content Include="img\menu.png" />
+    <Content Include="img\notexist.jpg" />
+    <Content Include="img\nts.png" />
+    <Content Include="img\num.png" />
+    <Content Include="img\project.jpg" />
+    <Content Include="img\project1.jpg" />
+    <Content Include="img\sprite2.png" />
+    <Content Include="img\sprites_03.png" />
+    <Content Include="img\sprites_06.png" />
+    <Content Include="img\step.png" />
+    <Content Include="img\step.sct" />
+    <Content Include="img\system.png" />
+    <Content Include="img\temp\energy_line.png" />
+    <Content Include="img\temp\energy_peakvalley.png" />
+    <Content Include="img\temp\energy_pie.png" />
+    <Content Include="img\temp\energy_ratio.png" />
+    <Content Include="img\temp\equip_chart.jpg" />
+    <Content Include="img\top-line-gray.png" />
+    <Content Include="img\top-line.png" />
+    <Content Include="img\user_face.png" />
+    <Content Include="index.aspx" />
+    <Content Include="js\base.js" />
+    <Content Include="js\chartsmod\appDiff.js" />
+    <Content Include="js\chartsmod\appDinge.js" />
+    <Content Include="js\chartsmod\appFee.js" />
+    <Content Include="js\chartsmod\appFeeApportion.js" />
+    <Content Include="js\chartsmod\appFeeApportionPie.js" />
+    <Content Include="js\chartsmod\appFeePie.js" />
+    <Content Include="js\chartsmod\appFenjie.js" />
+    <Content Include="js\chartsmod\appFenxi.js" />
+    <Content Include="js\chartsmod\appLoadForecast.js" />
+    <Content Include="js\chartsmod\appNHdb.js" />
+    <Content Include="js\chartsmod\appNHpm.js" />
+    <Content Include="js\chartsmod\appQushi.js" />
+    <Content Include="js\chartsmod\appTrend.js" />
+    <Content Include="js\chartsmod\appZonglan.js" />
+    <Content Include="js\chartsmod\charts.js" />
+    <Content Include="js\common.js" />
+    <Content Include="js\data\alarm_item_select.js" />
+    <Content Include="js\data\alarm_list.js" />
+    <Content Include="js\data\contrast_objList.js" />
+    <Content Include="js\data\device_device_info.js" />
+    <Content Include="js\data\diagnosis_abnormal.js" />
+    <Content Include="js\data\get_areaTree.js" />
+    <Content Include="js\data\get_tree.js" />
+    <Content Include="js\data\get_userinfo.js" />
+    <Content Include="js\data\index_chart.js" />
+    <Content Include="js\data\load_forecast_chartdata.js" />
+    <Content Include="js\data\load_forecast_tbldata.js" />
+    <Content Include="js\data\menu.js" />
+    <Content Include="js\data\payment_detail.js" />
+    <Content Include="js\data\payment_detail_elec.js" />
+    <Content Include="js\data\payment_detail_user.js" />
+    <Content Include="js\data\payment_detail_water.js" />
+    <Content Include="js\data\payment_list.js" />
+    <Content Include="js\data\pay_success.js" />
+    <Content Include="js\data\quota_data.js" />
+    <Content Include="js\data\select.js" />
+    <Content Include="js\lib\blockui\blockui-2.66.0.js" />
+    <Content Include="js\lib\blockui\blockui.min.js" />
+    <Content Include="js\lib\cookie\cookie.js" />
+    <Content Include="js\lib\cookie\cookie.min.js" />
+    <Content Include="js\lib\cookie\jquery.cookie.js" />
+    <Content Include="js\lib\datepicker\css\datepicker.css" />
+    <Content Include="js\lib\datepicker\datepicker.js" />
+    <Content Include="js\lib\datepicker\img\arrow_left.png" />
+    <Content Include="js\lib\datepicker\img\arrow_right.png" />
+    <Content Include="js\lib\highcharts\highcharts-more.js" />
+    <Content Include="js\lib\highcharts\highcharts.js" />
+    <Content Include="js\lib\highcharts\highcharts.src.js" />
+    <Content Include="js\lib\highcharts\modules\annotations.js" />
+    <Content Include="js\lib\highcharts\modules\annotations.src.js" />
+    <Content Include="js\lib\highcharts\modules\canvas-tools.js" />
+    <Content Include="js\lib\highcharts\modules\canvas-tools.src.js" />
+    <Content Include="js\lib\highcharts\modules\data.js" />
+    <Content Include="js\lib\highcharts\modules\data.src.js" />
+    <Content Include="js\lib\highcharts\modules\drilldown.js" />
+    <Content Include="js\lib\highcharts\modules\drilldown.src.js" />
+    <Content Include="js\lib\highcharts\modules\exporting.js" />
+    <Content Include="js\lib\highcharts\modules\exporting.src.js" />
+    <Content Include="js\lib\highcharts\modules\funnel.js" />
+    <Content Include="js\lib\highcharts\modules\funnel.src.js" />
+    <Content Include="js\lib\highcharts\modules\heatmap.js" />
+    <Content Include="js\lib\highcharts\modules\heatmap.src.js" />
+    <Content Include="js\lib\highcharts\modules\map.js" />
+    <Content Include="js\lib\highcharts\modules\map.src.js" />
+    <Content Include="js\lib\highcharts\modules\no-data-to-display.js" />
+    <Content Include="js\lib\highcharts\modules\no-data-to-display.src.js" />
+    <Content Include="js\lib\highcharts\themes\dark-blue.js" />
+    <Content Include="js\lib\highcharts\themes\dark-green.js" />
+    <Content Include="js\lib\highcharts\themes\gray.js" />
+    <Content Include="js\lib\highcharts\themes\grid.js" />
+    <Content Include="js\lib\highcharts\themes\skies.js" />
+    <Content Include="js\lib\jquery\jquery-1.10.1.js" />
+    <Content Include="js\lib\jquery\jquery.min.js" />
+    <Content Include="js\lib\jscrollpane\css\jscrollpane.css" />
+    <Content Include="js\lib\jscrollpane\jscrollpane.js" />
+    <Content Include="js\lib\jscrollpane\jscrollpane.min.js" />
+    <Content Include="js\lib\jscrollpane\mousewheel.js" />
+    <Content Include="js\lib\md5\md5.js" />
+    <Content Include="js\lib\md5\md5.min.js" />
+    <Content Include="js\lib\require\require-2.1.9.js" />
+    <Content Include="js\lib\require\require.min.js" />
+    <Content Include="js\lib\select2\select2-bootstrap.css" />
+    <Content Include="js\lib\select2\select2-spinner.gif" />
+    <Content Include="js\lib\select2\select2.css" />
+    <Content Include="js\lib\select2\select2.js" />
+    <Content Include="js\lib\select2\select2.min.js" />
+    <Content Include="js\lib\select2\select2.png" />
+    <Content Include="js\lib\select2\select2x2.png" />
+    <Content Include="js\lib\select2\select2_locale_zh-CN.js" />
+    <Content Include="js\lib\template\template-2.0.2.js" />
+    <Content Include="js\lib\template\template-syntax.js" />
+    <Content Include="js\lib\template\template-syntax.min.js" />
+    <Content Include="js\lib\template\template.min.js" />
+    <Content Include="js\lib\tree\css\tree.css" />
+    <Content Include="js\lib\tree\img\loading.gif" />
+    <Content Include="js\lib\tree\img\nts.png" />
+    <Content Include="js\lib\tree\img\tree_icons.png" />
+    <Content Include="js\lib\tree\jquery.parser.js" />
+    <Content Include="js\lib\tree\jquery.tree.js" />
+    <Content Include="js\lib\tree\tree.js" />
+    <Content Include="js\lib\tree\tree.min.js" />
+    <Content Include="js\view\alarm.js" />
+    <Content Include="js\view\alarm_main.js" />
+    <Content Include="js\view\energy_analyses.js" />
+    <Content Include="js\view\energy_analyses_main.js" />
+    <Content Include="js\view\energy_contrast.js" />
+    <Content Include="js\view\energy_contrast_main.js" />
+    <Content Include="js\view\energy_order.js" />
+    <Content Include="js\view\energy_order_main.js" />
+    <Content Include="js\view\fee_search.js" />
+    <Content Include="js\view\fee_search_main.js" />
+    <Content Include="js\view\index.js" />
+    <Content Include="js\view\index_main.js" />
+    <Content Include="js\view\login_main.js" />
+    <Content Include="js\view\management_diagnosis.js" />
+    <Content Include="js\view\management_diagnosis_main.js" />
+    <Content Include="js\view\payment.js" />
+    <Content Include="js\view\payment_main.js" />
+    <Content Include="js\view\quota_analyses.js" />
+    <Content Include="js\view\quota_analyses_main.js" />
+    <Content Include="js\view\report.js" />
+    <Content Include="js\view\report_main.js" />
+    <Content Include="Scripts\Js_UrlConfig.js" />
+    <Content Include="Scripts\alarm.js" />
+    <Content Include="Scripts\alarm_analysis.js" />
+    <Content Include="Scripts\Bll\admin\additional.js" />
+    <Content Include="Scripts\Bll\admin\area.js" />
+    <Content Include="Scripts\Bll\admin\areamaxvalue.js" />
+    <Content Include="Scripts\Bll\admin\bom.js" />
+    <Content Include="Scripts\Bll\admin\buildextent.js" />
+    <Content Include="Scripts\Bll\admin\building.js" />
+    <Content Include="Scripts\Bll\admin\buildingedit.js" />
+    <Content Include="Scripts\Bll\admin\buildings.js" />
+    <Content Include="Scripts\Bll\admin\buildmaxvalue.js" />
+    <Content Include="Scripts\Bll\admin\cmaindevice.js" />
+    <Content Include="Scripts\Bll\admin\collectoruse.js" />
+    <Content Include="Scripts\Bll\admin\comarea.js" />
+    <Content Include="Scripts\Bll\admin\Comm.js" />
+    <Content Include="Scripts\Bll\admin\datacenter.js" />
+    <Content Include="Scripts\Bll\admin\department.js" />
+    <Content Include="Scripts\Bll\admin\devicemaxvalue.js" />
+    <Content Include="Scripts\Bll\admin\eleprice.js" />
+    <Content Include="Scripts\Bll\admin\expertdiagnosis.js" />
+    <Content Include="Scripts\Bll\admin\export.js" />
+    <Content Include="Scripts\Bll\admin\importdata.js" />
+    <Content Include="Scripts\Bll\admin\Js_department.js" />
+    <Content Include="Scripts\Bll\admin\js_login.js" />
+    <Content Include="Scripts\Bll\admin\mainarea.js" />
+    <Content Include="Scripts\Bll\admin\maindevice.js" />
+    <Content Include="Scripts\Bll\admin\mainquery.js" />
+    <Content Include="Scripts\Bll\admin\maxreport.js" />
+    <Content Include="Scripts\Bll\admin\maxvalue.js" />
+    <Content Include="Scripts\Bll\admin\menu\menu.js" />
+    <Content Include="Scripts\Bll\admin\realdata.js" />
+    <Content Include="Scripts\Bll\admin\sysnotice.js" />
+    <Content Include="Scripts\Bll\admin\systemaccount.js" />
+    <Content Include="Scripts\Bll\admin\systemrole.js" />
+    <Content Include="Scripts\Bll\admin\txzt.js" />
+    <Content Include="Scripts\Bll\admin\warmnote.js" />
+    <Content Include="Scripts\Bll\collector.js" />
+    <Content Include="Scripts\Bll\jquery.pagination.js" />
+    <Content Include="Scripts\Bll\login\login.js" />
+    <Content Include="Scripts\Bll\login\UserPass.js" />
+    <Content Include="Scripts\Bll\main.js" />
+    <Content Include="Scripts\Bll\weekdate.js" />
+    <Content Include="Scripts\Business\DataRanking.js" />
+    <Content Include="Scripts\Business\DeviceCompare.js" />
+    <Content Include="Scripts\Business\RealTimeData.js" />
+    <Content Include="Scripts\comm.js" />
+    <Content Include="Scripts\ElePrice.js" />
+    <Content Include="Scripts\jquery.form.js" />
+    <Content Include="Scripts\jquery.killie6.js" />
+    <Content Include="Scripts\jquery.plugins.js" />
+    <Content Include="Scripts\jquery.tmpl.min.js" />
+    <Content Include="Scripts\jsinit.js" />
+    <Content Include="Scripts\Library\artDialog\artDialog.js" />
+    <Content Include="Scripts\Library\artDialog\artDialog.min.js" />
+    <Content Include="Scripts\Library\artDialog\jquery.artDialog.js" />
+    <Content Include="Scripts\Library\artDialog\jquery.artDialog.min.js" />
+    <Content Include="Scripts\Library\artDialog\plugins\CustomTools.js" />
+    <Content Include="Scripts\Library\artDialog\plugins\iframeTools.js" />
+    <Content Include="Scripts\Library\artDialog\plugins\iframeTools.min.js" />
+    <Content Include="Scripts\Library\artDialog\skins\aero.css" />
+    <Content Include="Scripts\Library\artDialog\skins\aero\aero_s.png" />
+    <Content Include="Scripts\Library\artDialog\skins\aero\aero_s2.png" />
+    <Content Include="Scripts\Library\artDialog\skins\aero\ie6\aui_close.hover.png" />
+    <Content Include="Scripts\Library\artDialog\skins\aero\ie6\aui_close.png" />
+    <Content Include="Scripts\Library\artDialog\skins\aero\ie6\aui_e.png" />
+    <Content Include="Scripts\Library\artDialog\skins\aero\ie6\aui_n.png" />
+    <Content Include="Scripts\Library\artDialog\skins\aero\ie6\aui_ne.png" />
+    <Content Include="Scripts\Library\artDialog\skins\aero\ie6\aui_nw.png" />
+    <Content Include="Scripts\Library\artDialog\skins\aero\ie6\aui_s.png" />
+    <Content Include="Scripts\Library\artDialog\skins\aero\ie6\aui_se.png" />
+    <Content Include="Scripts\Library\artDialog\skins\aero\ie6\aui_sw.png" />
+    <Content Include="Scripts\Library\artDialog\skins\aero\ie6\aui_title_icon.png" />
+    <Content Include="Scripts\Library\artDialog\skins\aero\ie6\aui_w.png" />
+    <Content Include="Scripts\Library\artDialog\skins\black.css" />
+    <Content Include="Scripts\Library\artDialog\skins\black\bg.png" />
+    <Content Include="Scripts\Library\artDialog\skins\black\bg2.png" />
+    <Content Include="Scripts\Library\artDialog\skins\black\bg_css3.png" />
+    <Content Include="Scripts\Library\artDialog\skins\black\bg_css3_2.png" />
+    <Content Include="Scripts\Library\artDialog\skins\black\ie6\close.hover.png" />
+    <Content Include="Scripts\Library\artDialog\skins\black\ie6\close.png" />
+    <Content Include="Scripts\Library\artDialog\skins\black\ie6\e.png" />
+    <Content Include="Scripts\Library\artDialog\skins\black\ie6\n.png" />
+    <Content Include="Scripts\Library\artDialog\skins\black\ie6\ne.png" />
+    <Content Include="Scripts\Library\artDialog\skins\black\ie6\nw.png" />
+    <Content Include="Scripts\Library\artDialog\skins\black\ie6\s.png" />
+    <Content Include="Scripts\Library\artDialog\skins\black\ie6\se.png" />
+    <Content Include="Scripts\Library\artDialog\skins\black\ie6\sw.png" />
+    <Content Include="Scripts\Library\artDialog\skins\black\ie6\w.png" />
+    <Content Include="Scripts\Library\artDialog\skins\blue.css" />
+    <Content Include="Scripts\Library\artDialog\skins\blue\bg.png" />
+    <Content Include="Scripts\Library\artDialog\skins\blue\bg2.png" />
+    <Content Include="Scripts\Library\artDialog\skins\blue\bg_css3.png" />
+    <Content Include="Scripts\Library\artDialog\skins\blue\bg_css3_2.png" />
+    <Content Include="Scripts\Library\artDialog\skins\blue\ie6\close.hover.png" />
+    <Content Include="Scripts\Library\artDialog\skins\blue\ie6\close.png" />
+    <Content Include="Scripts\Library\artDialog\skins\blue\ie6\e.png" />
+    <Content Include="Scripts\Library\artDialog\skins\blue\ie6\n.png" />
+    <Content Include="Scripts\Library\artDialog\skins\blue\ie6\ne.png" />
+    <Content Include="Scripts\Library\artDialog\skins\blue\ie6\nw.png" />
+    <Content Include="Scripts\Library\artDialog\skins\blue\ie6\s.png" />
+    <Content Include="Scripts\Library\artDialog\skins\blue\ie6\se.png" />
+    <Content Include="Scripts\Library\artDialog\skins\blue\ie6\sw.png" />
+    <Content Include="Scripts\Library\artDialog\skins\blue\ie6\w.png" />
+    <Content Include="Scripts\Library\artDialog\skins\chrome.css" />
+    <Content Include="Scripts\Library\artDialog\skins\chrome\border.png" />
+    <Content Include="Scripts\Library\artDialog\skins\chrome\chrome_s.png" />
+    <Content Include="Scripts\Library\artDialog\skins\default.css" />
+    <Content Include="Scripts\Library\artDialog\skins\green.css" />
+    <Content Include="Scripts\Library\artDialog\skins\green\bg.png" />
+    <Content Include="Scripts\Library\artDialog\skins\green\bg2.png" />
+    <Content Include="Scripts\Library\artDialog\skins\green\bg_css3.png" />
+    <Content Include="Scripts\Library\artDialog\skins\green\bg_css3_2.png" />
+    <Content Include="Scripts\Library\artDialog\skins\green\color_bg.png" />
+    <Content Include="Scripts\Library\artDialog\skins\green\ie6\close.hover.png" />
+    <Content Include="Scripts\Library\artDialog\skins\green\ie6\close.png" />
+    <Content Include="Scripts\Library\artDialog\skins\green\ie6\e.png" />
+    <Content Include="Scripts\Library\artDialog\skins\green\ie6\n.png" />
+    <Content Include="Scripts\Library\artDialog\skins\green\ie6\ne.png" />
+    <Content Include="Scripts\Library\artDialog\skins\green\ie6\nw.png" />
+    <Content Include="Scripts\Library\artDialog\skins\green\ie6\s.png" />
+    <Content Include="Scripts\Library\artDialog\skins\green\ie6\se.png" />
+    <Content Include="Scripts\Library\artDialog\skins\green\ie6\sw.png" />
+    <Content Include="Scripts\Library\artDialog\skins\green\ie6\w.png" />
+    <Content Include="Scripts\Library\artDialog\skins\icons\error.png" />
+    <Content Include="Scripts\Library\artDialog\skins\icons\face-sad.png" />
+    <Content Include="Scripts\Library\artDialog\skins\icons\face-smile.png" />
+    <Content Include="Scripts\Library\artDialog\skins\icons\loading.gif" />
+    <Content Include="Scripts\Library\artDialog\skins\icons\question.png" />
+    <Content Include="Scripts\Library\artDialog\skins\icons\succeed.png" />
+    <Content Include="Scripts\Library\artDialog\skins\icons\warning.png" />
+    <Content Include="Scripts\Library\artDialog\skins\idialog.css" />
+    <Content Include="Scripts\Library\artDialog\skins\idialog\idialog_s.png" />
+    <Content Include="Scripts\Library\artDialog\skins\idialog\idialog_s2.png" />
+    <Content Include="Scripts\Library\artDialog\skins\idialog\ie6\aui_close.hover.png" />
+    <Content Include="Scripts\Library\artDialog\skins\idialog\ie6\aui_close.png" />
+    <Content Include="Scripts\Library\artDialog\skins\idialog\ie6\aui_e.png" />
+    <Content Include="Scripts\Library\artDialog\skins\idialog\ie6\aui_n.png" />
+    <Content Include="Scripts\Library\artDialog\skins\idialog\ie6\aui_ne.png" />
+    <Content Include="Scripts\Library\artDialog\skins\idialog\ie6\aui_nw.png" />
+    <Content Include="Scripts\Library\artDialog\skins\idialog\ie6\aui_s.png" />
+    <Content Include="Scripts\Library\artDialog\skins\idialog\ie6\aui_se.png" />
+    <Content Include="Scripts\Library\artDialog\skins\idialog\ie6\aui_sw.png" />
+    <Content Include="Scripts\Library\artDialog\skins\idialog\ie6\aui_w.png" />
+    <Content Include="Scripts\Library\artDialog\skins\opera.css" />
+    <Content Include="Scripts\Library\artDialog\skins\opera\ie6\aui_close.hover.png" />
+    <Content Include="Scripts\Library\artDialog\skins\opera\ie6\aui_close.png" />
+    <Content Include="Scripts\Library\artDialog\skins\opera\ie6\aui_e.png" />
+    <Content Include="Scripts\Library\artDialog\skins\opera\ie6\aui_n.png" />
+    <Content Include="Scripts\Library\artDialog\skins\opera\ie6\aui_ne.png" />
+    <Content Include="Scripts\Library\artDialog\skins\opera\ie6\aui_nw.png" />
+    <Content Include="Scripts\Library\artDialog\skins\opera\ie6\aui_s.png" />
+    <Content Include="Scripts\Library\artDialog\skins\opera\ie6\aui_se.png" />
+    <Content Include="Scripts\Library\artDialog\skins\opera\ie6\aui_sw.png" />
+    <Content Include="Scripts\Library\artDialog\skins\opera\ie6\aui_w.png" />
+    <Content Include="Scripts\Library\artDialog\skins\opera\s1.png" />
+    <Content Include="Scripts\Library\artDialog\skins\opera\s2.png" />
+    <Content Include="Scripts\Library\artDialog\skins\simple.css" />
+    <Content Include="Scripts\Library\artDialog\skins\twitter.css" />
+    <Content Include="Scripts\Library\Highcharts\highcharts.js" />
+    <Content Include="Scripts\Library\Highcharts\highcharts.min.js" />
+    <Content Include="Scripts\Library\Highcharts\modules\canvas-tools.js" />
+    <Content Include="Scripts\Library\Highcharts\modules\canvas-tools.src.js" />
+    <Content Include="Scripts\Library\Highcharts\modules\data.js" />
+    <Content Include="Scripts\Library\Highcharts\modules\data.src.js" />
+    <Content Include="Scripts\Library\Highcharts\modules\exporting.js" />
+    <Content Include="Scripts\Library\Highcharts\modules\exporting.src.js" />
+    <Content Include="Scripts\Library\Highcharts\themes\dark-blue.js" />
+    <Content Include="Scripts\Library\Highcharts\themes\dark-green.js" />
+    <Content Include="Scripts\Library\Highcharts\themes\gray.js" />
+    <Content Include="Scripts\Library\Highcharts\themes\grid.js" />
+    <Content Include="Scripts\Library\Highcharts\themes\skies.js" />
+    <Content Include="Scripts\Library\jquery-1.8.2.js" />
+    <Content Include="Scripts\Library\jquery-1.8.2.min.js" />
+    <Content Include="Scripts\Library\jquery.jqpagination.js" />
+    <Content Include="Scripts\Library\jquery.jqpagination.min.js" />
+    <Content Include="Scripts\Library\JqueryUI\smoothness\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Scripts\Library\JqueryUI\smoothness\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Scripts\Library\JqueryUI\smoothness\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Scripts\Library\JqueryUI\smoothness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Scripts\Library\JqueryUI\smoothness\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Scripts\Library\JqueryUI\smoothness\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Scripts\Library\JqueryUI\smoothness\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Scripts\Library\JqueryUI\smoothness\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Scripts\Library\JqueryUI\smoothness\images\ui-icons_222222_256x240.png" />
+    <Content Include="Scripts\Library\JqueryUI\smoothness\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Scripts\Library\JqueryUI\smoothness\images\ui-icons_454545_256x240.png" />
+    <Content Include="Scripts\Library\JqueryUI\smoothness\images\ui-icons_888888_256x240.png" />
+    <Content Include="Scripts\Library\JqueryUI\smoothness\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Scripts\Library\JqueryUI\smoothness\jquery-ui-1.9.1.css" />
+    <Content Include="Scripts\Library\JqueryUI\smoothness\jquery-ui-1.9.1.min.css" />
+    <Content Include="Scripts\Library\JqueryUI\smoothness\jquery-ui-1.9.1.smoothness.js" />
+    <Content Include="Scripts\Library\JqueryUI\smoothness\jquery-ui-1.9.1.smoothness.min.js" />
+    <Content Include="Scripts\Library\knockout-2.1.0.js" />
+    <Content Include="Scripts\Library\knockout-2.1.0.min.js" />
+    <Content Include="Scripts\Library\knockout.mapping.js" />
+    <Content Include="Scripts\Library\knockout.mapping.min.js" />
+    <Content Include="Scripts\login.js" />
+    <Content Include="Scripts\mainreport.js" />
+    <Content Include="Scripts\reportconfig.js" />
+    <Content Include="Scripts\singleupload.js" />
+    <Content Include="Scripts\validator.js" />
+    <Content Include="Test.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <None Include="html\balance_analyse.vm" />
+    <None Include="html\report.vm" />
+    <None Include="html\energy_order.vm" />
+    <None Include="html\energy_analyses.vm">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="html\sidebar.vm">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="html\quota_analyses.vm" />
+    <None Include="html\副本 footer.vm" />
+    <None Include="html\副本 index.vm" />
+    <None Include="html\management_diagnosis.vm" />
+    <None Include="html\fee_search.vm" />
+    <None Include="img\PSD\diagnosis.psd" />
+    <None Include="img\PSD\sprites_03.psd" />
+    <None Include="img\PSD\sprites_06.psd" />
+    <None Include="img\PSD\system.psd" />
+    <None Include="img\PSD\首页.psd" />
+    <None Include="img\未标题-1.psd" />
+    <None Include="js\data\chartsdata\appFenjieData.json" />
+    <None Include="js\data\chartsdata\appFenxiAddData.json" />
+    <None Include="js\data\chartsdata\appFenxiDanweiData.json" />
+    <None Include="js\data\chartsdata\appFenxiData.json" />
+    <None Include="js\data\chartsdata\appNHdbDanweiData.json" />
+    <None Include="js\data\chartsdata\appNHdbData.json" />
+    <None Include="js\data\chartsdata\appNHpmDanweiData.json" />
+    <None Include="js\data\chartsdata\appNHpmData - 拷贝.json" />
+    <None Include="js\data\chartsdata\appNHpmData.json" />
+    <None Include="js\data\chartsdata\appNHpmRenjunData.json" />
+    <None Include="js\data\chartsdata\appNYZhanbiData.json" />
+    <None Include="js\data\chartsdata\appQushiData.json" />
+    <None Include="js\data\chartsdata\appZonglanData.json" />
+    <None Include="js\data\chartsdata\DataDemo.json" />
+    <None Include="js\data\feeapportion_data.json" />
+    <None Include="js\data\feequery_data.json" />
+    <None Include="template\区域能耗查询.xls" />
+    <None Include="template\新能耗排名表.xls" />
+    <None Include="template\电量计费.xls" />
+    <None Include="template\综合报表.xls" />
+    <None Include="template\能耗对比表.xls" />
+    <None Include="template\能耗排名表.xls" />
+    <None Include="template\能耗查询.xls" />
+    <None Include="template\设备能耗查询.xls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ajax\ServerTimePaser.ashx.cs">
+      <DependentUpon>ServerTimePaser.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitignore" />
+    <None Include="img\PSD\icon.psd" />
+    <None Include="img\PSD\icon2.psd" />
+    <None Include="img\PSD\menu.psd" />
+    <None Include="img\PSD\nts.psd" />
+    <None Include="img\PSD\step.psd" />
+    <None Include="package.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Scripts\Business\.svn\prop-base\" />
+    <Folder Include="Scripts\Business\.svn\props\" />
+    <Folder Include="Scripts\Business\.svn\text-base\" />
+    <Folder Include="Scripts\Business\.svn\tmp\prop-base\" />
+    <Folder Include="Scripts\Business\.svn\tmp\props\" />
+    <Folder Include="Scripts\Business\.svn\tmp\text-base\" />
+    <Folder Include="Scripts\Library\.svn\prop-base\" />
+    <Folder Include="Scripts\Library\.svn\props\" />
+    <Folder Include="Scripts\Library\.svn\text-base\" />
+    <Folder Include="Scripts\Library\.svn\tmp\prop-base\" />
+    <Folder Include="Scripts\Library\.svn\tmp\props\" />
+    <Folder Include="Scripts\Library\.svn\tmp\text-base\" />
+    <Folder Include="Scripts\Library\artDialog\.svn\prop-base\" />
+    <Folder Include="Scripts\Library\artDialog\.svn\props\" />
+    <Folder Include="Scripts\Library\artDialog\.svn\text-base\" />
+    <Folder Include="Scripts\Library\artDialog\.svn\tmp\prop-base\" />
+    <Folder Include="Scripts\Library\artDialog\.svn\tmp\props\" />
+    <Folder Include="Scripts\Library\artDialog\.svn\tmp\text-base\" />
+    <Folder Include="Scripts\Library\artDialog\plugins\.svn\prop-base\" />
+    <Folder Include="Scripts\Library\artDialog\plugins\.svn\props\" />
+    <Folder Include="Scripts\Library\artDialog\plugins\.svn\text-base\" />
+    <Folder Include="Scripts\Library\artDialog\plugins\.svn\tmp\prop-base\" />
+    <Folder Include="Scripts\Library\artDialog\plugins\.svn\tmp\props\" />
+    <Folder Include="Scripts\Library\artDialog\plugins\.svn\tmp\text-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\.svn\prop-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\.svn\props\" />
+    <Folder Include="Scripts\Library\artDialog\skins\.svn\text-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\.svn\tmp\prop-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\.svn\tmp\props\" />
+    <Folder Include="Scripts\Library\artDialog\skins\.svn\tmp\text-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\aero\.svn\prop-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\aero\.svn\props\" />
+    <Folder Include="Scripts\Library\artDialog\skins\aero\.svn\text-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\aero\.svn\tmp\prop-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\aero\.svn\tmp\props\" />
+    <Folder Include="Scripts\Library\artDialog\skins\aero\.svn\tmp\text-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\aero\ie6\.svn\prop-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\aero\ie6\.svn\props\" />
+    <Folder Include="Scripts\Library\artDialog\skins\aero\ie6\.svn\text-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\aero\ie6\.svn\tmp\prop-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\aero\ie6\.svn\tmp\props\" />
+    <Folder Include="Scripts\Library\artDialog\skins\aero\ie6\.svn\tmp\text-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\black\.svn\prop-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\black\.svn\props\" />
+    <Folder Include="Scripts\Library\artDialog\skins\black\.svn\text-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\black\.svn\tmp\prop-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\black\.svn\tmp\props\" />
+    <Folder Include="Scripts\Library\artDialog\skins\black\.svn\tmp\text-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\black\ie6\.svn\prop-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\black\ie6\.svn\props\" />
+    <Folder Include="Scripts\Library\artDialog\skins\black\ie6\.svn\text-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\black\ie6\.svn\tmp\prop-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\black\ie6\.svn\tmp\props\" />
+    <Folder Include="Scripts\Library\artDialog\skins\black\ie6\.svn\tmp\text-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\blue\.svn\prop-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\blue\.svn\props\" />
+    <Folder Include="Scripts\Library\artDialog\skins\blue\.svn\text-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\blue\.svn\tmp\prop-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\blue\.svn\tmp\props\" />
+    <Folder Include="Scripts\Library\artDialog\skins\blue\.svn\tmp\text-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\blue\ie6\.svn\prop-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\blue\ie6\.svn\props\" />
+    <Folder Include="Scripts\Library\artDialog\skins\blue\ie6\.svn\text-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\blue\ie6\.svn\tmp\prop-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\blue\ie6\.svn\tmp\props\" />
+    <Folder Include="Scripts\Library\artDialog\skins\blue\ie6\.svn\tmp\text-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\chrome\.svn\prop-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\chrome\.svn\props\" />
+    <Folder Include="Scripts\Library\artDialog\skins\chrome\.svn\text-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\chrome\.svn\tmp\prop-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\chrome\.svn\tmp\props\" />
+    <Folder Include="Scripts\Library\artDialog\skins\chrome\.svn\tmp\text-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\green\.svn\prop-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\green\.svn\props\" />
+    <Folder Include="Scripts\Library\artDialog\skins\green\.svn\text-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\green\.svn\tmp\prop-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\green\.svn\tmp\props\" />
+    <Folder Include="Scripts\Library\artDialog\skins\green\.svn\tmp\text-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\green\ie6\.svn\prop-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\green\ie6\.svn\props\" />
+    <Folder Include="Scripts\Library\artDialog\skins\green\ie6\.svn\text-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\green\ie6\.svn\tmp\prop-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\green\ie6\.svn\tmp\props\" />
+    <Folder Include="Scripts\Library\artDialog\skins\green\ie6\.svn\tmp\text-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\icons\.svn\prop-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\icons\.svn\props\" />
+    <Folder Include="Scripts\Library\artDialog\skins\icons\.svn\text-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\icons\.svn\tmp\prop-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\icons\.svn\tmp\props\" />
+    <Folder Include="Scripts\Library\artDialog\skins\icons\.svn\tmp\text-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\idialog\.svn\prop-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\idialog\.svn\props\" />
+    <Folder Include="Scripts\Library\artDialog\skins\idialog\.svn\text-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\idialog\.svn\tmp\prop-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\idialog\.svn\tmp\props\" />
+    <Folder Include="Scripts\Library\artDialog\skins\idialog\.svn\tmp\text-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\idialog\ie6\.svn\prop-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\idialog\ie6\.svn\props\" />
+    <Folder Include="Scripts\Library\artDialog\skins\idialog\ie6\.svn\text-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\idialog\ie6\.svn\tmp\prop-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\idialog\ie6\.svn\tmp\props\" />
+    <Folder Include="Scripts\Library\artDialog\skins\idialog\ie6\.svn\tmp\text-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\opera\.svn\prop-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\opera\.svn\props\" />
+    <Folder Include="Scripts\Library\artDialog\skins\opera\.svn\text-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\opera\.svn\tmp\prop-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\opera\.svn\tmp\props\" />
+    <Folder Include="Scripts\Library\artDialog\skins\opera\.svn\tmp\text-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\opera\ie6\.svn\prop-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\opera\ie6\.svn\props\" />
+    <Folder Include="Scripts\Library\artDialog\skins\opera\ie6\.svn\text-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\opera\ie6\.svn\tmp\prop-base\" />
+    <Folder Include="Scripts\Library\artDialog\skins\opera\ie6\.svn\tmp\props\" />
+    <Folder Include="Scripts\Library\artDialog\skins\opera\ie6\.svn\tmp\text-base\" />
+    <Folder Include="Scripts\Library\JqueryUI\.svn\prop-base\" />
+    <Folder Include="Scripts\Library\JqueryUI\.svn\props\" />
+    <Folder Include="Scripts\Library\JqueryUI\.svn\text-base\" />
+    <Folder Include="Scripts\Library\JqueryUI\.svn\tmp\prop-base\" />
+    <Folder Include="Scripts\Library\JqueryUI\.svn\tmp\props\" />
+    <Folder Include="Scripts\Library\JqueryUI\.svn\tmp\text-base\" />
+    <Folder Include="Scripts\Library\JqueryUI\smoothness\.svn\prop-base\" />
+    <Folder Include="Scripts\Library\JqueryUI\smoothness\.svn\props\" />
+    <Folder Include="Scripts\Library\JqueryUI\smoothness\.svn\text-base\" />
+    <Folder Include="Scripts\Library\JqueryUI\smoothness\.svn\tmp\prop-base\" />
+    <Folder Include="Scripts\Library\JqueryUI\smoothness\.svn\tmp\props\" />
+    <Folder Include="Scripts\Library\JqueryUI\smoothness\.svn\tmp\text-base\" />
+    <Folder Include="Scripts\Library\JqueryUI\smoothness\images\.svn\prop-base\" />
+    <Folder Include="Scripts\Library\JqueryUI\smoothness\images\.svn\props\" />
+    <Folder Include="Scripts\Library\JqueryUI\smoothness\images\.svn\text-base\" />
+    <Folder Include="Scripts\Library\JqueryUI\smoothness\images\.svn\tmp\prop-base\" />
+    <Folder Include="Scripts\Library\JqueryUI\smoothness\images\.svn\tmp\props\" />
+    <Folder Include="Scripts\Library\JqueryUI\smoothness\images\.svn\tmp\text-base\" />
+    <Folder Include="temp_file\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NTS.WEB.AjaxController\NTS.WEB.AjaxController.csproj">
+      <Project>{303BD02C-C2DE-44AE-B42B-4FFC0E50F533}</Project>
+      <Name>NTS.WEB.AjaxController</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NTS.WEB.VM\NTS.WEB.VM.csproj">
+      <Project>{54A99049-6D03-4088-ABF2-48E8C4595AD1}</Project>
+      <Name>NTS.WEB.VM</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>9000</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
