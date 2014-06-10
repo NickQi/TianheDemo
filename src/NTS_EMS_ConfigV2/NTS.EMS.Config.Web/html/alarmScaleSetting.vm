@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>$Config.SystemName</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<!-- stylesheets -->
+				<!--<link rel="stylesheet" type="text/css" href="$Config.Skin/resources/css/main.css" />-->
+		<link rel="stylesheet" type="text/css" href="$Config.Skin/resources/css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="$Config.Skin/resources/css/style.css" media="screen" />
+		<link id="color" rel="stylesheet" type="text/css" href="$Config.Skin/resources/css/colors/blue.css" />
+		<!-- scripts (jquery) -->
+		<script src="$Config.Skin/resources/scripts/jquery-1.4.2.min.js" type="text/javascript"></script>
+		<!--[if IE]><script language="javascript" type="text/javascript" src="resources/scripts/excanvas.min.js"></script><![endif]-->
+		<script src="$Config.Skin/resources/scripts/jquery-ui-1.8.custom.min.js" type="text/javascript"></script>
+		<script src="$Config.Skin/resources/scripts/jquery.ui.selectmenu.js" type="text/javascript"></script>
+		<script src="$Config.Skin/resources/scripts/tiny_mce/tiny_mce.js" type="text/javascript"></script>
+		<script src="$Config.Skin/resources/scripts/tiny_mce/jquery.tinymce.js" type="text/javascript"></script>
+		<!-- scripts (custom) -->
+		<script src="$Config.Skin/resources/scripts/smooth.js" type="text/javascript"></script>
+		<script src="$Config.Skin/resources/scripts/smooth.menu.js" type="text/javascript"></script>
+		<!--<script src="$Config.Skin/resources/scripts/smooth.table.js" type="text/javascript"></script>-->
+		<script src="$Config.Skin/resources/scripts/smooth.form.js" type="text/javascript"></script>
+		<!--<script src="$Config.Skin/resources/scripts/smooth.dialog.js" type="text/javascript"></script>-->
+		<script src="$Config.Skin/resources/scripts/smooth.autocomplete.js" type="text/javascript"></script>
+		<script src="$Config.Skin/resources/scripts/jquery.ntspadding.js" type="text/javascript"></script>
+
+		<script src="$Config.Skin/resources/scripts/jsrc/lib/artTemplate/template.min.js" type="text/javascript"></script>
+		<script src="$Config.Skin/resources/scripts/jsrc/view/alarmScaleSetting.js" type="text/javascript"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function () {
+			    style_path = "$Config.Skin/resources/css/colors";
+
+				$("#date-picker").datepicker();
+
+				$("#box-tabs, #box-left-tabs").tabs();
+			});
+		</script>
+		<style type="text/css">
+		#content div.box table td {
+			text-align:center;
+		}
+		#content div.box table td .operater {
+			cursor: pointer;
+			text-decoration: underline;
+		}
+
+		</style>
+	</head>
+	<body>
+
+    #parse("html/_header.vm")
+	<div id="content" style="background-image: none;margin-top:0px;">
+		<!-- table -->
+			<div class="box" style="margin-left: 60px; margin-right: 60px;">
+				<!-- box / title -->
+				<div class="title">
+					<h5>告警分值配制</h5>
+					
+				</div>
+				<!-- end box / title -->
+				<div class="table">
+					<form action="" method="post">
+					<table>
+						<thead>
+							<tr>
+								<!--<th class="left">序号</th>-->
+								<th style="width: 60px;">序号</th>
+								<th style="width: 150px;">告警类型</th>
+								<th style="">分值</th>
+								<th class="last" style="width: 60px;">操作</th>
+							</tr>
+						</thead>
+						<tbody id="tbl_lst">
+							
+						</tbody>
+					</table>
+					<!-- pagination -->
+						<div id="pagination">
+						</div>
+						<!-- end pagination -->
+					
+					</form>
+				</div>
+			</div>
+			<!-- end table -->
+	</div>
+		<!-- footer -->
+		#parse("html/_footer.vm")
+		<!-- end footert -->
+		<!--告警分值配制 list-->
+		<script id="alarmLst-tpl" type="text/html">
+		<%for(i = 0; i < AlarmScaleList.length; i ++) {%>
+		<tr>
+			<td><%==(Page.Current -1 ) * 10 +(i+1)%></td>
+			<td><%==AlarmScaleList[i].AlarmName %></td>
+			<td>
+			<div id="divShow<%==(Page.Current -1 ) * 10 +(i+1)%>" style="display:block;">
+				<% if(AlarmScaleList[i].ID==0) { %>
+					<span style="color:red;">未赋值</span>
+				<% } else { %>
+				<%==AlarmScaleList[i].Scale %>
+				<% } %>
+			</div>
+			<div id="divEdit<%==(Page.Current -1 ) * 10 +(i+1)%>" style="display:none;">
+				<input id="iptScale<%==(Page.Current -1 ) * 10 +(i+1)%>" type="text" value="<%==AlarmScaleList[i].Scale %>" width="80px" maxlength="10">
+			</div>
+			</td>
+			<td class="last">
+			<span class="dialog-editSwitch operater" alarmType="<%==AlarmScaleList[i].AlarmType %>" alarmScaleId="<%==AlarmScaleList[i].ID %>" number="<%==(Page.Current -1 ) * 10 +(i+1)%>" >修改</span>
+
+			<% if(AlarmScaleList[i].ID!=0) { %>
+			&nbsp;<span class="dialog-deleteSwitch operater" alarmScaleId="<%==AlarmScaleList[i].ID %>" >删除</span>
+			<% } %>
+			</td>
+		</tr>
+		<%}%>
+		</script>
+	
+	</body>
+</html>

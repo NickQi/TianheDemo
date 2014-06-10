@@ -1,0 +1,45 @@
+1.告警的列表信息查询，
+数据来源表：TB_ALARMTYPE和TB_ALARMEVENT做联合查询(关系1对N)
+
+其中：告警类型 对应 TB_ALARMTYPE.NAME 字段
+      等级  对应 TB_ALARMTYPE.ALARMLEVEL 字段
+
+      触发事件：对应TB_ALARMEVENT中的记录数，取其中的PLUGIN字段的值(中文名对应：插件dll文件名：播放音频alarm_wav.dll;tts语音alarm_tts.dll;短信alarm_sms.dll;推视频alarm_video.dll;推画面alarm_view.dll)
+
+
+
+修改操作：触发事件:按照记录字段和PLUGIN字段5种定义值匹配。（5种类型写死：
+
+  分别对应的文本和值如下：
+
+   播放音频alarm_wav.dll;
+   tts语音alarm_tts.dll;
+   短信alarm_sms.dll;
+   推视频alarm_video.dll;
+   推画面alarm_view.dll
+
+）
+
+
+
+
+事件点击：
+
+触发方式 是TB_ALARMEVENT表中的TRIGMODE，如果复选的话，把四种类型值的选择值进行或运算，然后把值保存进该字段。
+
+
+执行方式: 当选择（”执行1遍“或“执行3遍”）， TB_ALARMEVENT.RUNMODE保存为1，同时TB_ALARMEVENT.RUNCOUNT保存为1或者3
+          当选择（”执行10秒“或“执行30秒”），TB_ALARMEVENT.RUNMODE保存为2，同时TB_ALARMEVENT.RUNTIME保存为10或者30
+          当选择（“重复执行至确认”），TB_ALARMEVENT.RUNMODE保存为3
+
+
+音频文件或者接收用户组：把选择的值的文本以（TEXT1,TEXT2,TEXT3....）的模式保存到TB_ALARMEVENT.OPTIONS字段中
+
+其中用户组的数据是从表 TB_USERGROUP取出列表，音频文件是写死的（“音频文件1”、“音频文件2”、“音频文件3”） 
+
+
+
+
+
+
+

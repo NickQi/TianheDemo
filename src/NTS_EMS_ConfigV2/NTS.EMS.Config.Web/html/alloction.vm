@@ -1,0 +1,242 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>$Config.SystemName</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<!-- stylesheets -->
+				<!--<link rel="stylesheet" type="text/css" href="$Config.Skin/resources/css/main.css" />-->
+				<link rel="stylesheet" type="text/css" href="$Config.Skin/resources/css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="$Config.Skin/resources/css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="$Config.Skin/resources/css/style.css" media="screen" />
+		<link id="color" rel="stylesheet" type="text/css" href="$Config.Skin/resources/css/colors/blue.css" />
+		<!-- scripts (jquery) -->
+		<script src="$Config.Skin/resources/scripts/jquery-1.4.2.min.js" type="text/javascript"></script>
+		<!--[if IE]><script language="javascript" type="text/javascript" src="resources/scripts/excanvas.min.js"></script><![endif]-->
+		<script src="$Config.Skin/resources/scripts/jquery-ui-1.8.custom.min.js" type="text/javascript"></script>
+		<script src="$Config.Skin/resources/scripts/jquery.ui.selectmenu.js" type="text/javascript"></script>
+		<script src="$Config.Skin/resources/scripts/tiny_mce/tiny_mce.js" type="text/javascript"></script>
+		<script src="$Config.Skin/resources/scripts/tiny_mce/jquery.tinymce.js" type="text/javascript"></script>
+		<!-- scripts (custom) -->
+		<script src="$Config.Skin/resources/scripts/smooth.js" type="text/javascript"></script>
+		<script src="$Config.Skin/resources/scripts/smooth.menu.js" type="text/javascript"></script>
+		<script src="$Config.Skin/resources/scripts/smooth.table.js" type="text/javascript"></script>
+		<script src="$Config.Skin/resources/scripts/smooth.form.js" type="text/javascript"></script>
+		<script src="$Config.Skin/resources/scripts/smooth.dialog.js" type="text/javascript"></script>
+		<script src="$Config.Skin/resources/scripts/smooth.autocomplete.js" type="text/javascript"></script>
+
+		<script src="$Config.Skin/resources/scripts/jsrc/lib/artTemplate/template.min.js"></script>	
+		  <link rel="stylesheet" href="$Config.Skin/resources/css/zTreeStyle/zTreeStyle.css" type="text/css" />
+		  <script type="text/javascript" src="$Config.Skin/resources/scripts/jquery.ztree.core-3.5.js"></script>
+		    <script src="$Config.Skin/resources/scripts/jquery.ntspadding.js" type="text/javascript"></script>
+        <script type="text/javascript" src="$Config.Skin/resources/scripts/jquery.form.js"></script>
+
+		<script type="text/javascript">
+	
+			$(document).ready(function () {
+			    style_path = "$Config.Skin/resources/css/colors";
+
+				$("#date-picker").datepicker();
+
+				$("#box-tabs, #tree-tabs").tabs();
+			});
+		</script>
+	</head>
+	<body>
+    #parse("html/_header.vm")
+	<div id="content">
+	#parse("html/left.vm")
+<input class="title querybtn" id="btn_load" type="submit" name="submit" value="" onclick="GetTreeObj();" />
+			<div id="right">
+				<div class="box">
+				 <div class="title">
+						<h5>查询条件</h5>
+						<div class="search">
+						</div>
+					</div>
+				<div class="table">
+					<table>
+							<thead>
+								<tr>
+									<th class="left">
+								<select id="item" style="width:120px">
+								   #foreach($itemcode in $allitemcodeList) 
+										#if($itemcode.ParentID==0)
+											<option name="$itemcode.unit" value="$itemcode.ItemCodeNumber">├$itemcode.ItemCodeName</option>
+										#else
+										  <option name="$itemcode.unit" value="$itemcode.ItemCodeNumber">├└$itemcode.ItemCodeName</option>
+										#end 
+								   #end
+								 </select>
+								 <select id="ftType" style="width:120px;">
+									<option value="1">按能耗分摊</option>
+									<option value="2">按面积分摊</option>
+								 </select>&nbsp;&nbsp;分摊结算日：
+								 <input type="text" id="iptDate" name="input.date" class="date" readonly="readonly" style="width:150px" onChange="GetTreeObj();" value="$CuttureDate.Day"/>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									
+									</th>
+								</tr>
+							</thead>
+					</table>
+				</div>
+					<div class="title">
+						<h5 id="showTitle">分摊配置</h5>
+					</div>
+					<div class="table">
+						<div id="divTemp">
+							<table>
+								<tr>
+									<td style="border-right:0 !important;">
+										推荐分摊费用：￥<label id="lblMoney"></label>&nbsp; 元
+									</td>
+									<td style="border-right:0 !important;">
+										实际分摊费用：￥ <input type="text" id="iptMoney" maxlength="10" />&nbsp; 元
+									</td>
+									<td align="right" style="border-right:0 !important;">
+										分摊月份：<label id="lblMonth"></label>
+									</td>
+								<tr>
+							</table>
+						</div>
+						<div id="divConfig">
+							<table id="tblSetting">
+								<thead>
+									<tr>
+										<th>名称</th>
+										<th>能耗(<span class="labUnit">kwh</span>)</th>
+										<th>分摊前费用(元)</th>
+										<th class="tdNH">分摊推荐值</th>
+										<th class="tdNH">分摊推荐比例</th>
+										<th class="tdMJ">按面积分摊推荐值</th>
+										<th class="tdMJ">按面积分摊推荐比例</th>
+										<th>分摊实际比例</th>
+									</tr>
+								</thead>
+								<tbody>
+								
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div style="text-align:right; margin-right:20px;" id="divSave">
+						<input type="button" value="保存" onclick="SaveData();">
+					</div>
+
+				    <div class="title">
+						<h5>分摊日志</h5>
+						<div class="search">
+								<div class="input">
+									<input type="text" id="date1" name="input.date" class="date" readonly="readonly" style="width:150px"/> - <input type="text" id="date2" name="input.date" class="date" readonly="readonly" style="width:150px"/>
+								</div>
+								<div class="button">
+									<input id="btn_search" type="button" value="查询" />
+								</div>
+								<div style="display:none">
+								<input type="text" id="startTime" value="1900-01-01"/>
+								<input type="text" id="endTime" value="1900-01-01"/>
+								</div>
+						</div>
+					</div>
+					<div class="table">
+					<div id="divLog">
+						<div>
+						<table>
+							<thead>
+								<tr>
+									<th class="left">序号</th>
+									<th>操作人员</th>
+									<th>时间</th>
+									<th>操作对象</th>
+									<th>分摊内容</th>
+									<th>写日志时间</th>
+								</tr>
+							</thead>
+							<tbody>
+								
+							</tbody>
+						</table>
+						</div> 
+						
+						<!-- pagination -->
+						<div id="pagination">
+						</div>
+						<!-- end pagination -->
+					</div>
+					</div>
+				</div>
+				<!-- end table -->
+			</div>
+</div>
+		<!-- footer -->
+		#parse("html/_footer.vm")
+		<!-- end footert -->
+
+		<script data-main="$Config.Skin/resources/scripts/jsrc/view/alloction-main" src="$Config.Skin/resources/scripts/jsrc/lib/require/require.min.js"></script>
+
+		<script id="treeItem" type="text/html">
+	<% for (var i = 0; i < ListTreeObjList.length; i++) { %>
+	<tr>
+                        <td>
+							<input type="hidden" id="hifAreaId<%== (i+1) %>" value="<%== ListTreeObjList[i].TreeObjID %>" >
+							<input type="hidden" id="hifID<%== (i+1) %>" value="<%== ListTreeObjList[i].ID %>">
+							<%== ListTreeObjList[i].TreeObjName %>
+                        </td>
+                        <td>
+                            <%== ListTreeObjList[i].AreaEnergyValue %>
+                        </td>
+						<td>
+							<%== ListTreeObjList[i].AreaEnergyFTValue %>
+						</td>
+						<td class="tdNH">
+							<% if(ListTreeObjList[i].AreaFTTJZ==0) { %>
+								-
+							<% } else { %>
+								<%== ListTreeObjList[i].AreaFTTJZ %>
+							<% } %>
+						</td>
+						<td class="tdNH">
+							<% if(ListTreeObjList[i].AreaFTTJBL==0) { %>
+								-
+							<% } else { %>
+								<%== ListTreeObjList[i].AreaFTTJBL %>&nbsp;%
+							<% } %>
+						</td>
+
+						<td class="tdMJ">
+							<% if(ListTreeObjList[i].AreaMJFTTJZ==0) { %>
+								-
+							<% } else { %>
+								<%== ListTreeObjList[i].AreaMJFTTJZ %>
+							<% } %>
+						</td>
+						<td class="tdMJ">
+							<% if(ListTreeObjList[i].AreaMJFTTJBL==0) { %>
+								-
+							<% } else { %>
+								<%== ListTreeObjList[i].AreaMJFTTJBL %>&nbsp;%
+							<% } %>
+						</td>
+
+						<td>
+						<div id="divBL<%== (i+1) %>">
+							<input type="text" id="iptSJBL<%== (i+1)%>" value="<%== ListTreeObjList[i].AreaFTSJBL %>" style="width:50px !important;"> &nbsp;%
+							</div>
+						</td>
+                    </tr>
+<% } %>
+</script>
+
+<script id="configLogItem" type="text/html">
+<% for (var i = 0; i < LogList.length; i++) { %>
+	<tr>
+		<td><%==(Page.Current -1 ) * 10 +(i+1)%></td>
+		<td ><%== LogList[i].OPTIONUSER %></td>
+		<td><%== LogList[i].CFGDATE %></td>
+		<td ><%== LogList[i].CNAME %></td>
+		<td ><a href="javascript:ShowDetail('<%==LogList[i].SysNo %>');">点击显示详情</td>
+		<td ><%== LogList[i].OPTIONTIME %></td>
+	</tr>
+<% } %>
+</script>
+	</body>
+</html>

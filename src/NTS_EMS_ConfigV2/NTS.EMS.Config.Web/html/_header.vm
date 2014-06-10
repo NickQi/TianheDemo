@@ -1,0 +1,145 @@
+﻿<!--	<div id="colors-switcher" class="color">
+			<a href="" class="blue" title="Blue"></a>
+			<a href="" class="green" title="Green"></a>
+			<a href="" class="brown" title="Brown"></a>
+			<a href="" class="purple" title="Purple"></a>
+			<a href="" class="red" title="Red"></a>
+			<a href="" class="greyblue" title="GreyBlue"></a>
+		</div>-->
+<!-- header -->
+<div id="header">
+  <!-- logo -->
+  <div id="logo">
+    <h1>$Config.SystemName 运维管理控制面板</h1>
+  </div>
+  <!-- end logo -->
+  <!-- user -->
+  <ul id="user">
+    <li class="first" style="color:#fff">欢迎您归来，$LoginUser</li>
+    <li>
+      <a href="action.ashx?action=Logout">退出系统</a>
+    </li>
+  </ul>
+  <!-- end user -->
+  <div id="header-inner">
+    <div id="home">
+      <a href="/home.html" title="Home"></a>
+    </div>
+    <!-- quick -->
+    <ul id="quick">
+      <li>
+        <a href="index.html" title="定额配置">
+          <span class="icon">
+            <img src="$Config.Skin/resources/images/icons/quota.png" alt="定额配置" />
+          </span>
+          <span>定额配置</span>
+        </a>
+        <ul>
+          <li>
+            <a href="index.html">定额配置</a>
+          </li>
+          <li class="last">
+            <a href="quotaAlarmConfig.html">定额告警配置</a>
+          </li>
+        </ul>
+      </li>
+      
+      <li>
+        <a href="rate.html" title="费率配置">
+          <span class="icon">
+            <img src="$Config.Skin/resources/images/icons/fee.png" alt="费率配置" />
+          </span>
+          <span>费率配置</span>
+        </a>
+
+      </li>
+      <li>
+        <a href="alloction.html" title="分摊配置">
+          <span class="icon">
+            <img src="$Config.Skin/resources/images/icons/fentan.png" alt="分摊配置" />
+          </span>
+          <span>分摊配置</span>
+        </a>
+
+      </li>
+      <li>
+        <a href="systemlog.html" title="日志管理">
+          <span class="icon">
+            <img src="$Config.Skin/resources/images/icons/blog.png" alt="日志管理" />
+          </span>
+          <span>日志管理</span>
+        </a>
+
+      </li>
+      <li>
+        <a href="userGroupConfig.html" title="权限配置">
+          <span class="icon">
+            <img src="$Config.Skin/resources/images/icons/user.png" alt="权限配置" />
+          </span>
+          <span>权限配置</span>
+        </a>
+        <ul>
+          <li>
+            <a href="userGroupConfig.html">用户组配置</a>
+          </li>
+          <li class="last">
+            <a href="userConfig.html">用户配置</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="alarmSetting.html" title="告警配置">
+          <span class="icon">
+            <img src="$Config.Skin/resources/images/icons/flag.png" alt="告警配置" />
+          </span>
+          <span>告警配置</span>
+        </a>
+        <ul>
+          <li>
+            <a href="alarmSetting.html">告警配置</a>
+          </li>
+          <li>
+            <a href="alarmScaleSetting.html">告警分值配置</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="import.html" title="人工导入">
+          <span class="icon">
+            <img src="$Config.Skin/resources/images/icons/drive_go.png" alt="人工导入" />
+          </span>
+          <span>人工导入</span>
+        </a>
+
+      </li>
+      <li>
+        <a href="deviceItemConfig.html" title="设备-能源配置">
+          <span class="icon">
+            <img src="$Config.Skin/resources/images/icons/nengyuan.png" alt="区域-设备配置" />
+          </span>
+          <span>设备-能源</span>
+        </a>
+      </li>
+      <li>
+        <a href="devicePayTypeConfig.html" title="设备-费率配置">
+          <span class="icon">
+            <img src="$Config.Skin/resources/images/icons/application_double.png" alt="区域-设备配置" />
+          </span>
+          <span>设备-费率</span>
+        </a>
+      </li>
+      <li>
+        <a href="area_DeviceConfig.html" title="区域-设备配置">
+          <span class="icon">
+            <img src="$Config.Skin/resources/images/icons/area.png" alt="区域-设备配置" />
+          </span>
+          <span>设备-区域</span>
+        </a>
+      </li>
+    </ul>
+    <!-- end quick -->
+    <div class="corner tl"></div>
+    <div class="corner tr"></div>
+  </div>
+</div>
+<!-- end header -->

@@ -1,0 +1,399 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>$Config.SystemName</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<!-- stylesheets -->
+				<!--<link rel="stylesheet" type="text/css" href="$Config.Skin/resources/css/main.css" />-->
+		<link rel="stylesheet" type="text/css" href="$Config.Skin/resources/css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="$Config.Skin/resources/css/style.css" media="screen" />
+		<link id="color" rel="stylesheet" type="text/css" href="$Config.Skin/resources/css/colors/blue.css" />
+		<!-- scripts (jquery) -->
+		<script src="$Config.Skin/resources/scripts/jquery-1.4.2.min.js" type="text/javascript"></script>
+		<!--[if IE]><script language="javascript" type="text/javascript" src="resources/scripts/excanvas.min.js"></script><![endif]-->
+		<script src="$Config.Skin/resources/scripts/jquery-ui-1.8.custom.min.js" type="text/javascript"></script>
+		<script src="$Config.Skin/resources/scripts/jquery.ui.selectmenu.js" type="text/javascript"></script>
+		<script src="$Config.Skin/resources/scripts/tiny_mce/tiny_mce.js" type="text/javascript"></script>
+		<script src="$Config.Skin/resources/scripts/tiny_mce/jquery.tinymce.js" type="text/javascript"></script>
+		<!-- scripts (custom) -->
+		<script src="$Config.Skin/resources/scripts/smooth.js" type="text/javascript"></script>
+		<script src="$Config.Skin/resources/scripts/smooth.menu.js" type="text/javascript"></script>
+		<!--<script src="$Config.Skin/resources/scripts/smooth.table.js" type="text/javascript"></script>-->
+		<script src="$Config.Skin/resources/scripts/smooth.form.js" type="text/javascript"></script>
+		<!--<script src="$Config.Skin/resources/scripts/smooth.dialog.js" type="text/javascript"></script>-->
+		<script src="$Config.Skin/resources/scripts/smooth.autocomplete.js" type="text/javascript"></script>
+		<script src="$Config.Skin/resources/scripts/jquery.ntspadding.js" type="text/javascript"></script>
+
+		<script src="$Config.Skin/resources/scripts/jsrc/lib/artTemplate/template.min.js" type="text/javascript"></script>
+		<script src="$Config.Skin/resources/scripts/jsrc/view/alarmSetting.js" type="text/javascript"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function () {
+			    style_path = "$Config.Skin/resources/css/colors";
+
+				$("#date-picker").datepicker();
+
+				$("#box-tabs, #box-left-tabs").tabs();
+			});
+		</script>
+		<style type="text/css">
+		#content div.box table td {
+			text-align:center;
+		}
+		#content div.box table td .operater {
+			cursor: pointer;
+			text-decoration: underline;
+		}
+
+		/* -----------------------------------------------------------
+			content -> right -> box / tables
+		----------------------------------------------------------- */
+		#dialog-form-play div.form div.fields div.field div.table
+		{
+			margin: 0;
+			padding: 0 10px 0 10px;
+			clear: both;
+			overflow: hidden;
+		}
+
+		#dialog-form-play div.form div.fields div.field table
+		{
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			border-collapse: collapse;
+		}
+
+		#dialog-form-play div.form div.fields div.field table th
+		{
+			padding: 10px;
+			background: #eeeeee;
+			border-right: 1px solid #cdcdcd;
+			border-bottom: 1px solid #cdcdcd;
+		}
+
+		#dialog-form-play div.form div.fields div.field table th.last
+		{
+			border-right: none;	
+		}
+
+		#dialog-form-play div.form div.fields div.field table th.left
+		{
+			text-align: left;   
+		}
+
+		#dialog-form-play div.form div.fields div.field table th.right
+		{
+			text-align: right;   
+		}
+
+		#dialog-form-play div.form div.fields div.field table th.center
+		{
+			text-align: center;   
+		}
+
+		#dialog-form-play div.form div.fields div.field table th.selected
+		{
+			padding: 0;
+			vertical-align: middle;
+		}
+
+		#dialog-form-play div.form div.fields div.field table th.selected input
+		{
+			margin: 0;	
+		}
+
+		#dialog-form-play div.form div.fields div.field table td
+		{
+			padding: 10px;
+			background: #ffffff;
+			border-right: 1px solid #cdcdcd;
+			border-bottom: 1px solid #cdcdcd;
+		}
+
+		#dialog-form-play div.form div.fields div.field table td.last
+		{
+			border-right: none;	
+		}
+
+		#dialog-form-play div.form div.fields div.field table tr.selected td
+		{
+			background: #FFFFCC;
+		}
+
+		#dialog-form-play div.form div.fields div.field table td.selected
+		{
+			padding: 0;
+			width: 10%;
+			text-align: center;
+			vertical-align: middle;
+		}
+
+		#dialog-form-play div.form div.fields div.field table td.selected input
+		{
+			margin: 0;	
+		}
+
+		#dialog-form-play div.form div.fields div.field table td.no
+		{
+			width: 15%;
+			text-align: center;
+		}
+
+		#dialog-form-play div.form div.fields div.field table td.groupname
+		{
+			width: 60%;
+			text-align: center;
+		}
+		</style>
+	</head>
+	<body>
+	<!-- dialogs -->
+
+        <div id="dialog-form-powerSwitch" title="开关量变位" style="display:none;">
+            <form action="" method="post">
+            <div class="form">
+                <div class="fields">
+                    <div class="field field-first">
+							<div class="label" style="float:left;">
+								<label for="select">告警等级:</label>
+							</div>
+							<div class="select" style="float:left;margin-left:70px;">
+								<select id="select" name="select" style="width: 140px;">
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+									<option value="7">7</option>
+									<option value="8">8</option>
+									<option value="9">9</option>
+									<option value="10">10</option>
+								</select>
+							</div>
+					</div>
+					<div class="field">
+							<div class="label" style="float:left;">
+								<label for="checkbox">触发事件:</label>
+								<input type="hidden" id="hifAlarmType">
+							</div>
+							<div class="checkboxes" style="float:left;margin-left:70px;">
+								<div class="checkbox">
+									<input type="checkbox" id="checkbox-1" name="checkboxex" plugIn="alarm_wav.dll"/>
+									<label for="checkbox-1">播放音频</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" id="checkbox-4" name="checkboxex" plugIn='alarm_tts.dll'/>
+									<label for="checkbox-4">TTS语音</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" id="checkbox-5" name="checkboxex" plugIn='alarm_sms.dll'/>
+									<label for="checkbox-5">发送短信</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" id="checkbox-2" name="checkboxex" plugIn='alarm_video.dll'/>
+									<label for="checkbox-2">推视频</label>
+								</div>
+								<div class="checkbox">
+									<input type="checkbox" id="checkbox-3" name="checkboxex" plugIn='alarm_view.dll'/>
+									<label for="checkbox-3">推画面</label>
+								</div>
+							</div>
+					</div>
+                </div>
+            </div>
+            </form>
+        </div>
+        <div id="dialog-form-play" title="播放音频" style="display:none;">
+            <form action="" method="post">
+            <div class="form">
+                <div class="fields">
+                    <div class="field field-first">
+							<div class="label" style="float:left;">
+								<label for="checkbox">触发时间:</label>
+							</div>
+							<div class="checkboxes" style="float:left;margin-left:70px;">
+								<div style="float:left">
+									<div class="checkbox">
+										<input type="checkbox" id="checkbox-1" name="checkboxex" />
+										<label for="checkbox-1">告警产生</label>
+										<input type="hidden" id="hifConfig">
+									</div>
+									<div class="checkbox">
+										<input type="checkbox" id="checkbox-2" name="checkboxex" />
+										<label for="checkbox-2">告警确认</label>
+									</div>
+								</div>
+								<div style="float:left;padding-left:10px;">
+									<div class="checkbox">
+										<input type="checkbox" id="checkbox-4" name="checkboxex" />
+										<label for="checkbox-4">告警恢复</label>
+									</div>
+								<!--	<div class="checkbox">
+										<input type="checkbox" id="checkbox-3" name="checkboxex" />
+										<label for="checkbox-3">告警取消</label>
+									</div> -->
+								</div>
+							</div>
+					</div>
+                    <div class="field">
+							<div class="label" style="float:left;">
+								<label for="select">执行方式:</label>
+							</div>
+							<div class="select" style="float:left;margin-left:70px;">
+								<select id="select" name="trigMode" style="width: 140px;">
+									<option value="1_1">执行1遍</option>
+									<option value="1_3">执行3遍</option>
+									<option value="3">重复执行至确认</option>
+									<option value="4">重复执行至恢复</option>
+									<option value="2_10">执行10秒</option>
+									<option value="2_30">执行30秒</option>
+								</select>
+							</div>
+					</div>
+					<div class="field">
+							<div class="label" style="float:left;">
+								<label for="select">音频文件:</label>
+							</div>
+							<div class="select" style="float:left;margin-left:70px;">
+								<select id="select" name="options" style="width: 140px;">
+									<option value="1">音频文件1</option>
+									<option value="2">音频文件2</option>
+									<option value="3">音频文件3</option>
+								</select>
+							</div>
+					</div>
+					<div class="field">
+							<div class="label">
+								<label for="table">接收用户组:</label>
+							</div>
+							<div class="table">
+								<table>
+									<thead>
+										<tr>
+											<th class="selected"><input type="checkbox" class="checkall" /></th>
+											<th>序号</th>
+											<th class="last">用户组</th>
+										</tr>
+									</thead>
+									<tbody id="tbl_usergroup">
+										
+									</tbody>
+								</table>
+							</div>
+					</div>
+                </div>
+            </div>
+            </form>
+        </div>
+   <!-- end dialogs -->
+
+    #parse("html/_header.vm")
+	<div id="content" style="background-image: none;margin-top:0px;">
+		<!-- table -->
+			<div class="box" style="margin-left: 60px; margin-right: 60px;">
+				<!-- box / title -->
+				<div class="title">
+					<h5>告警配制</h5>
+					<div class="search" style="display:none;">
+						<form action="#" method="post">
+							<div class="input">
+								<input type="text" id="search" name="search" />
+							</div>
+							<div class="button">
+								<input type="submit" name="submit" value="Search" />
+							</div>
+						</form>
+					</div>
+				</div>
+				<!-- end box / title -->
+				<div class="table">
+					<form action="" method="post">
+					<table>
+						<thead>
+							<tr>
+								<!--<th class="left">序号</th>-->
+								<th style="width: 60px;">序号</th>
+								<th style="width: 120px;">告警类型</th>
+								<th style="width: 60px;">等级</th>
+								<th style="">触发事件</th>
+								<!--<th class="selected last"><input type="checkbox" class="checkall" /></th>-->
+								<th class="last" style="width: 60px;">操作</th>
+							</tr>
+						</thead>
+						<tbody id="tbl_lst">
+							
+						</tbody>
+					</table>
+					<!-- pagination -->
+						<div id="pagination">
+						</div>
+						<!-- end pagination -->
+					<!-- table action -->
+					<div class="action" style="display:none;">
+						<select name="action">
+							<option value="" class="locked">Set status to Deleted</option>
+							<option value="" class="unlocked">Set status to Published</option>
+							<option value="" class="folder-open">Move to Category</option>
+						</select>
+						<div class="button">
+							<input type="submit" name="submit" value="Apply to Selected" />
+						</div>
+					</div>
+					<!-- end table action -->
+					</form>
+				</div>
+			</div>
+			<input type="hidden" id="xxx" value="100">
+			<!-- end table -->
+	</div>
+		<!-- footer -->
+		#parse("html/_footer.vm")
+		<!-- end footert -->
+		<!--告警配制 list-->
+		<script id="alarmLst-tpl" type="text/html">
+		<%for(i = 0; i < AlarmTypeList.length; i ++) {%>
+		<tr>
+			<td><%==(Page.Current -1 ) * 10 +(i+1)%></td>
+			<td><%==AlarmTypeList[i].Name%></td>
+			<td><%==AlarmTypeList[i].AlarmLevel%></td>
+			<td>
+			<%for(j = 0; j < AlarmTypeList[i].PlugIns.length; j ++) {%>
+				<%if (AlarmTypeList[i].PlugIns[j].PlugIn === 'alarm_wav.dll') { %>
+				<span class="dialog-play operater" config="1" alarmEventId="<%==AlarmTypeList[i].PlugIns[j].ID%>" trigMode="<%==AlarmTypeList[i].PlugIns[j].TrigMode%>" runMode="<%==AlarmTypeList[i].PlugIns[j].RunMode%>" runCount="<%==AlarmTypeList[i].PlugIns[j].RunCount%>" runTime="<%==AlarmTypeList[i].PlugIns[j].RunTime%>" options="<%==AlarmTypeList[i].PlugIns[j].Options%>" >播放音频</span>
+				<%} else if (AlarmTypeList[i].PlugIns[j].PlugIn === 'alarm_tts.dll') { %>
+				<span class="dialog-play operater" config="4" alarmEventId="<%==AlarmTypeList[i].PlugIns[j].ID%>" trigMode="<%==AlarmTypeList[i].PlugIns[j].TrigMode%>" runMode="<%==AlarmTypeList[i].PlugIns[j].RunMode%>" runCount="<%==AlarmTypeList[i].PlugIns[j].RunCount%>" runTime="<%==AlarmTypeList[i].PlugIns[j].RunTime%>" options="<%==AlarmTypeList[i].PlugIns[j].Options%>" >TTS语音</span>
+				<%} else if (AlarmTypeList[i].PlugIns[j].PlugIn === 'alarm_sms.dll') { %>
+				<span class="dialog-play operater" config="5" alarmEventId="<%==AlarmTypeList[i].PlugIns[j].ID%>" trigMode="<%==AlarmTypeList[i].PlugIns[j].TrigMode%>" runMode="<%==AlarmTypeList[i].PlugIns[j].RunMode%>" runCount="<%==AlarmTypeList[i].PlugIns[j].RunCount%>" runTime="<%==AlarmTypeList[i].PlugIns[j].RunTime%>" options="<%==AlarmTypeList[i].PlugIns[j].Options%>" >发送短信</span>
+				<%} else if (AlarmTypeList[i].PlugIns[j].PlugIn === 'alarm_video.dll') { %>
+				<span class="dialog-play operater" config="2" alarmEventId="<%==AlarmTypeList[i].PlugIns[j].ID%>" trigMode="<%==AlarmTypeList[i].PlugIns[j].TrigMode%>" runMode="<%==AlarmTypeList[i].PlugIns[j].RunMode%>" runCount="<%==AlarmTypeList[i].PlugIns[j].RunCount%>" runTime="<%==AlarmTypeList[i].PlugIns[j].RunTime%>" options="<%==AlarmTypeList[i].PlugIns[j].Options%>" >推视频</span>
+				<%} else if (AlarmTypeList[i].PlugIns[j].PlugIn === 'alarm_view.dll') { %>
+				<span class="dialog-play operater" config="3" alarmEventId="<%==AlarmTypeList[i].PlugIns[j].ID%>" trigMode="<%==AlarmTypeList[i].PlugIns[j].TrigMode%>" runMode="<%==AlarmTypeList[i].PlugIns[j].RunMode%>" runCount="<%==AlarmTypeList[i].PlugIns[j].RunCount%>" runTime="<%==AlarmTypeList[i].PlugIns[j].RunTime%>" options="<%==AlarmTypeList[i].PlugIns[j].Options%>" >推画面</span>
+				<%}%>
+			<%}%>
+			</td>
+			<td class="last">
+			<% if(AlarmTypeList[i].ProjectId==0) { %>
+				修改
+			<% } else { %>
+			<span class="dialog-powerSwitch operater" alarmTypeId="<%==AlarmTypeList[i].Type %>" alarmLevelId="<%==AlarmTypeList[i].AlarmLevel %>" >修改</span>
+			<% } %>
+			</td>
+		</tr>
+		<%}%>
+		</script>
+		<!--用户列表 list-->
+		<script id="userLst-tpl" type="text/html">
+			<% for(i=0;i<UserGroupList.length;i++) { %>
+				<tr>
+			<td class="selected"><input id="chbUser<%== UserGroupList[i].Id %>" type="checkbox" name="checkboxUser" userId="<%== UserGroupList[i].Id %>" />
+			</td>
+			<td class="no"><%== (Page.Current -1 ) * 10 +(i+1) %></td>
+			<td class="groupname last"><%== UserGroupList[i].Name %></td>
+		</tr>
+			<% } %>
+		</script>
+	
+	</body>
+</html>

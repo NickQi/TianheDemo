@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{13221EBE-3601-47B1-82B7-7D4B0730B603}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NTS.EMS.Config.Model</RootNamespace>
+    <AssemblyName>NTS.EMS.Config.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Framework.Configuration">
+      <HintPath>..\Libs\Framework.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Framework.DataConfiguration">
+      <HintPath>..\Libs\Framework\Framework.DataConfiguration.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BussinessLogModel.cs" />
+    <Compile Include="Config.cs" />
+    <Compile Include="EneryBillingConfig.cs" />
+    <Compile Include="EneryBillingType.cs" />
+    <Compile Include="Import.cs" />
+    <Compile Include="Itemcode.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryFile\QueryAlarmSetting.cs" />
+    <Compile Include="QueryFile\QueryAlloction.cs" />
+    <Compile Include="QueryFile\QueryBussinessLog.cs" />
+    <Compile Include="QueryFile\QueryConfigLog.cs" />
+    <Compile Include="QueryFile\QueryQuotaContact.cs" />
+    <Compile Include="QueryFile\QuerySysLogContact.cs" />
+    <Compile Include="QueryFile\QueryTreeObj.cs" />
+    <Compile Include="QueryFile\QuotaDataContact.cs" />
+    <Compile Include="QueryFile\QueryUserContact.cs" />
+    <Compile Include="QueryFile\QueryUserGroupContact.cs" />
+    <Compile Include="QueryFile\QueryDevicePropContact.cs" />
+    <Compile Include="QueryFile\QueryDeviceItemContact.cs" />
+    <Compile Include="QueryFile\QueryDevicePayTypeContact.cs" />
+    <Compile Include="QueryFile\QueryQuotaAlarmContact.cs" />
+    <Compile Include="ResultViewFile\ExecuteResult.cs" />
+    <Compile Include="ResultViewFile\ItemList.cs" />
+    <Compile Include="ResultViewFile\ResultAlarmSetting.cs" />
+    <Compile Include="ResultViewFile\ResultConfigLog.cs" />
+    <Compile Include="ResultViewFile\ResultImport.cs" />
+    <Compile Include="ResultViewFile\ResultQuotaInfo.cs" />
+    <Compile Include="ResultViewFile\ResultSysLog.cs" />
+    <Compile Include="ResultViewFile\ResultTreeObj.cs" />
+    <Compile Include="ResultViewFile\ResultUser.cs" />
+    <Compile Include="ResultViewFile\ResultUserGroup.cs" />
+    <Compile Include="ResultViewFile\ResultDeviceProp.cs" />
+    <Compile Include="ResultViewFile\ResultQuotaAlarm.cs" />
+    <Compile Include="SysLog.cs" />
+    <Compile Include="TB_AlarmEvent.cs" />
+    <Compile Include="TB_AlarmType.cs" />
+    <Compile Include="TB_ALLOCTION_CONFIG.cs" />
+    <Compile Include="TB_ALLOCTION_CONFIG_History.cs" />
+    <Compile Include="TB_AREA_Info.cs" />
+    <Compile Include="TB_BECM_COUNTTYPE.cs" />
+    <Compile Include="TB_MULTI_STEP.cs" />
+    <Compile Include="TB_PAR_VALUE_SET.cs" />
+    <Compile Include="TB_Quota.cs" />
+    <Compile Include="TB_TIME_PERIOD_SET.cs" />
+    <Compile Include="TE_Alarm_Scale.cs" />
+    <Compile Include="TS_FEE_DAY.cs" />
+    <Compile Include="TS_Quota_Log.cs" />
+    <Compile Include="QueryFile\QueryRateInfo.cs" />
+    <Compile Include="ResultViewFile\ResultRate.cs" />
+    <Compile Include="TB_BillItem.cs" />
+    <Compile Include="TB_Price_CommBill.cs" />
+    <Compile Include="TB_Price_RateBill.cs" />
+    <Compile Include="TB_Price_TimeBill.cs" />
+    <Compile Include="TB_Rule_RateBill.cs" />
+    <Compile Include="TB_Rule_TimeBill.cs" />
+    <Compile Include="TB_User.cs" />
+    <Compile Include="TB_UserGroup.cs" />
+    <Compile Include="TB_DeviceProp.cs" />
+    <Compile Include="TB_Ems_Quota_Percent.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>Copy "$(TargetDir)" "$(SolutionDir)libs\"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

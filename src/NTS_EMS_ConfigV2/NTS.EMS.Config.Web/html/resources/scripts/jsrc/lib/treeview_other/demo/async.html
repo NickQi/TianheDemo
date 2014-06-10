@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1"/>
+	<title>jQuery async treeview</title>
+
+	<link rel="stylesheet" href="../css/treeview.css" />
+<!--
+<script src="http://localhost:8090/jsrc/lib/jquery/jquery.min.js"></script>
+	<script src="../treeview.js" type="text/javascript"></script>
+	<script src="../treeview_edit.js" type="text/javascript"></script>
+	<script src="../treeview_async.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+	function initTrees() {
+		/*$("#black").treeview({
+			url: "source.js"
+		})*/
+		var url = "source.js";
+		$("#tree-box").treeview({
+			url: "http://localhost:8090/jsrc/data/get_tree.js",
+			// add some additional, dynamic data and request with POST
+			ajax: {
+				data: {
+					"additional": function() {
+						return "yeah: " + new Date;
+					}
+				},
+				type: "get"
+			},
+			slide: function(slide) {
+				console.log(slide);
+			},
+			select: function() {
+				var len = $(this).siblings(".selected").length,
+					cls = $(this).attr("class");
+				if (len === 0) {
+					$(this).after('<div style="top:' + ($(this).position().top - 7) + 'px" class="selected"></div>');
+					$(this).addClass(cls + "-selected");
+				} else {
+					cls = cls.split(" ");
+					if (cls[0].length < cls[1].length) {
+						cls = cls[1];
+					} else if (cls[0].length > cls[1].length) {
+						cls = cls[0];
+					}
+					$(this).removeClass(cls);
+					$(this).siblings(".selected").remove();
+				}
+				/*$(".selected").click(function() {
+					$(this).remove();
+				});*/
+			}
+		});
+	}
+	$(document).ready(function(){
+		initTrees();
+		/*$("#refresh").click(function() {
+			console.log(url);
+			$("#black").empty();
+			$("#mixed").empty();
+			initTrees();
+		});*/
+	});
+	</script>
+	-->
+	</head>
+	<body>
+
+	<h1 id="banner"><a href="http://bassistance.de/jquery-plugins/jquery-plugin-treeview/">jQuery Treeview Plugin</a> Demo</h1>
+	<div id="main">
+
+	<ul>
+		<li><a href=".">Main Demo</a></li>
+		<li><a href="source.phps">Server component used</a></li>
+	</ul>
+
+	<h4>Lazy-loading tree</h4>
+
+	<ul id="tree-box">
+	</ul>
+
+	<h4>Mixed pre and lazy-loading</h4>
+
+	<ul id="mixed">
+		<li><span>Item 1</span>
+			<ul>
+				<li><span>Item 1.0</span>
+					<ul>
+						<li><span>Item 1.0.0</span></li>
+					</ul>
+				</li>
+				<li><span>Item 1.1</span></li>
+			</ul>
+		</li>
+		<li id="36" class="hasChildren">
+			<span>Item 2</span>
+			<ul>
+				<li><span class="placeholder">&nbsp;</span></li>
+			</ul>
+		</li>
+		<li>
+			<span>Item 3</span>
+		</li>
+	</ul>
+
+	<button id="refresh">Refresh both Trees</button>
+
+</div>
+<script data-main="main.js" src="/jsrc/lib/require/require.min.js"></script>
+</body></html>

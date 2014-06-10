@@ -1,0 +1,397 @@
+﻿*********************************************************************************************
+ErrorTime:2014-4-28 17:07:14
+ErrorFun:mscorlib
+ErrorDetail:   在 System.Threading.Thread.AbortInternal()
+   在 System.Threading.Thread.Abort(Object stateInfo)
+   在 System.Web.HttpResponse.End()
+   在 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   在 System.Web.HttpResponse.Redirect(String url)
+   在 NTS.EMS.Config.AjaxHandler.AjaxUser.Logout() 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.AjaxHandler\AjaxUser.cs:行号 146,正在中止线程。
+*********************************************************************************************
+
+
+*********************************************************************************************
+ErrorTime:2014-4-28 17:07:27
+ErrorFun:mscorlib
+ErrorDetail:   在 System.Threading.Thread.AbortInternal()
+   在 System.Threading.Thread.Abort(Object stateInfo)
+   在 System.Web.HttpResponse.End()
+   在 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   在 System.Web.HttpResponse.Redirect(String url)
+   在 NTS.EMS.Config.AjaxHandler.AjaxUser.Logout() 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.AjaxHandler\AjaxUser.cs:行号 146,正在中止线程。
+*********************************************************************************************
+
+
+*********************************************************************************************
+ErrorTime:2014-4-28 17:07:34
+ErrorFun:mscorlib
+ErrorDetail:   在 System.Threading.Thread.AbortInternal()
+   在 System.Threading.Thread.Abort(Object stateInfo)
+   在 System.Web.HttpResponse.End()
+   在 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   在 System.Web.HttpResponse.Redirect(String url)
+   在 NTS.EMS.Config.AjaxHandler.AjaxUser.Logout() 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.AjaxHandler\AjaxUser.cs:行号 146,正在中止线程。
+*********************************************************************************************
+
+
+*********************************************************************************************
+ErrorTime:2014-4-28 17:18:16
+ErrorFun:NTS.EMS.Config.AjaxHandler
+ErrorDetail:   在 NTS.EMS.Config.AjaxHandler.AjaxUser.Logout() 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.AjaxHandler\AjaxUser.cs:行号 155,正在中止线程。
+*********************************************************************************************
+
+
+*********************************************************************************************
+ErrorTime:2014-4-28 17:20:03
+ErrorFun:mscorlib
+ErrorDetail:   在 System.Threading.Thread.AbortInternal()
+   在 System.Threading.Thread.Abort(Object stateInfo)
+   在 System.Web.HttpResponse.End()
+   在 NTS.EMS.Config.AjaxHandler.AjaxUser.Logout() 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.AjaxHandler\AjaxUser.cs:行号 146,正在中止线程。
+*********************************************************************************************
+
+
+*********************************************************************************************
+ErrorTime:2014-4-28 17:20:12
+ErrorFun:mscorlib
+ErrorDetail:   在 System.Threading.Thread.AbortInternal()
+   在 System.Threading.Thread.Abort(Object stateInfo)
+   在 System.Web.HttpResponse.End()
+   在 NTS.EMS.Config.AjaxHandler.AjaxUser.Logout() 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.AjaxHandler\AjaxUser.cs:行号 146,正在中止线程。
+*********************************************************************************************
+
+
+*********************************************************************************************
+ErrorTime:2014-4-28 17:27:56
+ErrorFun:mscorlib
+ErrorDetail:   在 System.Threading.Thread.AbortInternal()
+   在 System.Threading.Thread.Abort(Object stateInfo)
+   在 System.Web.HttpResponse.End()
+   在 NTS.EMS.Config.AjaxHandler.AjaxUser.Logout() 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.AjaxHandler\AjaxUser.cs:行号 146,正在中止线程。
+*********************************************************************************************
+
+
+*********************************************************************************************
+ErrorTime:2014-4-28 17:28:48
+ErrorFun:mscorlib
+ErrorDetail:   在 System.Threading.Thread.AbortInternal()
+   在 System.Threading.Thread.Abort(Object stateInfo)
+   在 System.Web.HttpResponse.End()
+   在 NTS.EMS.Config.AjaxHandler.AjaxUser.Logout() 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.AjaxHandler\AjaxUser.cs:行号 146,正在中止线程。
+*********************************************************************************************
+
+
+*********************************************************************************************
+ErrorTime:2014-4-28 17:29:06
+ErrorFun:mscorlib
+ErrorDetail:   在 System.Threading.Thread.AbortInternal()
+   在 System.Threading.Thread.Abort(Object stateInfo)
+   在 System.Web.HttpResponse.End()
+   在 NTS.EMS.Config.AjaxHandler.AjaxUser.Logout() 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.AjaxHandler\AjaxUser.cs:行号 146,正在中止线程。
+*********************************************************************************************
+
+
+*********************************************************************************************
+ErrorTime:2014-4-28 17:30:27
+ErrorFun:mscorlib
+ErrorDetail:   在 System.Threading.Thread.AbortInternal()
+   在 System.Threading.Thread.Abort(Object stateInfo)
+   在 System.Web.HttpResponse.End()
+   在 NTS.EMS.Config.AjaxHandler.AjaxUser.Logout() 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.AjaxHandler\AjaxUser.cs:行号 146,正在中止线程。
+*********************************************************************************************
+
+
+*********************************************************************************************
+ErrorTime:2014-4-28 17:31:02
+ErrorFun:mscorlib
+ErrorDetail:   在 System.Threading.Thread.AbortInternal()
+   在 System.Threading.Thread.Abort(Object stateInfo)
+   在 System.Web.HttpResponse.End()
+   在 NTS.EMS.Config.AjaxHandler.AjaxUser.Logout() 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.AjaxHandler\AjaxUser.cs:行号 146,正在中止线程。
+*********************************************************************************************
+
+
+*********************************************************************************************
+ErrorTime:2014-4-28 17:31:42
+ErrorFun:mscorlib
+ErrorDetail:   在 System.Threading.Thread.AbortInternal()
+   在 System.Threading.Thread.Abort(Object stateInfo)
+   在 System.Web.HttpResponse.End()
+   在 NTS.EMS.Config.AjaxHandler.AjaxUser.Logout() 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.AjaxHandler\AjaxUser.cs:行号 146,正在中止线程。
+*********************************************************************************************
+
+
+*********************************************************************************************
+ErrorTime:2014-4-28 17:36:57
+ErrorFun:mscorlib
+ErrorDetail:   在 System.Threading.Thread.AbortInternal()
+   在 System.Threading.Thread.Abort(Object stateInfo)
+   在 System.Web.HttpResponse.End()
+   在 NTS.EMS.Config.AjaxHandler.AjaxUser.Logout() 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.AjaxHandler\AjaxUser.cs:行号 146,正在中止线程。
+*********************************************************************************************
+
+
+*********************************************************************************************
+ErrorTime:2014-4-28 17:38:52
+ErrorFun:mscorlib
+ErrorDetail:   在 System.Threading.Thread.AbortInternal()
+   在 System.Threading.Thread.Abort(Object stateInfo)
+   在 System.Web.HttpResponse.End()
+   在 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   在 System.Web.HttpResponse.Redirect(String url)
+   在 NTS.EMS.Config.AjaxHandler.AjaxUser.Logout() 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.AjaxHandler\AjaxUser.cs:行号 145,正在中止线程。
+*********************************************************************************************
+
+
+*********************************************************************************************
+ErrorTime:2014-4-28 17:39:02
+ErrorFun:mscorlib
+ErrorDetail:   在 System.Threading.Thread.AbortInternal()
+   在 System.Threading.Thread.Abort(Object stateInfo)
+   在 System.Web.HttpResponse.End()
+   在 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   在 System.Web.HttpResponse.Redirect(String url)
+   在 NTS.EMS.Config.AjaxHandler.AjaxUser.Logout() 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.AjaxHandler\AjaxUser.cs:行号 145,正在中止线程。
+*********************************************************************************************
+
+
+*********************************************************************************************
+ErrorTime:2014-4-28 17:46:31
+ErrorFun:mscorlib
+ErrorDetail:   在 System.Threading.Thread.AbortInternal()
+   在 System.Threading.Thread.Abort(Object stateInfo)
+   在 System.Web.HttpResponse.End()
+   在 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   在 System.Web.HttpResponse.Redirect(String url)
+   在 NTS.EMS.Config.AjaxHandler.AjaxUser.Logout() 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.AjaxHandler\AjaxUser.cs:行号 145,正在中止线程。
+*********************************************************************************************
+
+
+*********************************************************************************************
+ErrorTime:2014-4-28 19:45:49
+ErrorFun:Framework.Data
+ErrorDetail:   在 Framework.Data.DataCommand.ExecuteDataSet() 位置 E:\FrameWork\Framework.Data\Framework.Data\DataCommand.cs:行号 326
+   在 NTS.EMS.Config.DAL.Import.GetObjectName(Int32 isarea, Int32 id) 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.DAL\Import.cs:行号 72
+   在 NTS.EMS.Config.DAL.Import.GetResultImportList(HistoryQuery import, Int32 action) 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.DAL\Import.cs:行号 61
+   在 NTS.EMS.Config.BLL.ImportBll.GetResultImportList(HistoryQuery query) 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.BLL\ImportBll.cs:行号 30
+   在 NTS.EMS.Config.AjaxHandler.AjaxImport.ShowImportDataList() 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.AjaxHandler\AjaxImport.cs:行号 139,无法绑定由多个部分组成的标识符 "a.cname"。
+*********************************************************************************************
+
+
+*********************************************************************************************
+ErrorTime:2014-4-28 20:38:19
+ErrorFun:Framework.Data
+ErrorDetail:   在 Framework.Data.DataCommand.ExecuteDataSet() 位置 E:\FrameWork\Framework.Data\Framework.Data\DataCommand.cs:行号 326
+   在 NTS.EMS.Config.DAL.Import.GetObjectName(Int32 isarea, Int32 id) 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.DAL\Import.cs:行号 72
+   在 NTS.EMS.Config.DAL.Import.GetResultImportList(HistoryQuery import, Int32 action) 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.DAL\Import.cs:行号 61
+   在 NTS.EMS.Config.BLL.ImportBll.GetResultImportList(HistoryQuery query) 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.BLL\ImportBll.cs:行号 30
+   在 NTS.EMS.Config.AjaxHandler.AjaxImport.ShowImportDataList() 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.AjaxHandler\AjaxImport.cs:行号 139,无法绑定由多个部分组成的标识符 "a.cname"。
+*********************************************************************************************
+
+
+*********************************************************************************************
+ErrorTime:2014-4-28 20:38:22
+ErrorFun:Framework.Data
+ErrorDetail:   在 Framework.Data.DataCommand.ExecuteDataSet() 位置 E:\FrameWork\Framework.Data\Framework.Data\DataCommand.cs:行号 326
+   在 NTS.EMS.Config.DAL.Import.GetObjectName(Int32 isarea, Int32 id) 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.DAL\Import.cs:行号 72
+   在 NTS.EMS.Config.DAL.Import.GetResultImportList(HistoryQuery import, Int32 action) 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.DAL\Import.cs:行号 61
+   在 NTS.EMS.Config.BLL.ImportBll.GetResultImportList(HistoryQuery query) 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.BLL\ImportBll.cs:行号 30
+   在 NTS.EMS.Config.AjaxHandler.AjaxImport.ShowImportDataList() 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.AjaxHandler\AjaxImport.cs:行号 139,无法绑定由多个部分组成的标识符 "a.cname"。
+*********************************************************************************************
+
+
+*********************************************************************************************
+ErrorTime:2014-4-28 20:38:27
+ErrorFun:Framework.Data
+ErrorDetail:   在 Framework.Data.DataCommand.ExecuteDataSet() 位置 E:\FrameWork\Framework.Data\Framework.Data\DataCommand.cs:行号 326
+   在 NTS.EMS.Config.DAL.Import.GetObjectName(Int32 isarea, Int32 id) 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.DAL\Import.cs:行号 72
+   在 NTS.EMS.Config.DAL.Import.GetResultImportList(HistoryQuery import, Int32 action) 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.DAL\Import.cs:行号 61
+   在 NTS.EMS.Config.BLL.ImportBll.GetResultImportList(HistoryQuery query) 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.BLL\ImportBll.cs:行号 30
+   在 NTS.EMS.Config.AjaxHandler.AjaxImport.ShowImportDataList() 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.AjaxHandler\AjaxImport.cs:行号 139,无法绑定由多个部分组成的标识符 "a.cname"。
+*********************************************************************************************
+
+
+*********************************************************************************************
+ErrorTime:2014-4-28 20:38:38
+ErrorFun:Framework.Data
+ErrorDetail:   在 Framework.Data.DataCommand.ExecuteDataSet() 位置 E:\FrameWork\Framework.Data\Framework.Data\DataCommand.cs:行号 326
+   在 NTS.EMS.Config.DAL.Import.GetObjectName(Int32 isarea, Int32 id) 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.DAL\Import.cs:行号 72
+   在 NTS.EMS.Config.DAL.Import.GetResultImportList(HistoryQuery import, Int32 action) 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.DAL\Import.cs:行号 61
+   在 NTS.EMS.Config.BLL.ImportBll.GetResultImportList(HistoryQuery query) 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.BLL\ImportBll.cs:行号 30
+   在 NTS.EMS.Config.AjaxHandler.AjaxImport.ShowImportDataList() 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.AjaxHandler\AjaxImport.cs:行号 139,无法绑定由多个部分组成的标识符 "a.cname"。
+*********************************************************************************************
+
+
+*********************************************************************************************
+ErrorTime:2014-4-28 20:55:11
+ErrorFun:Framework.Data
+ErrorDetail:   在 Framework.Data.DataCommand.ExecuteDataSet() 位置 E:\FrameWork\Framework.Data\Framework.Data\DataCommand.cs:行号 326
+   在 NTS.EMS.Config.DAL.Import.GetObjectName(Int32 isarea, Int32 id) 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.DAL\Import.cs:行号 72
+   在 NTS.EMS.Config.DAL.Import.GetResultImportList(HistoryQuery import, Int32 action) 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.DAL\Import.cs:行号 61
+   在 NTS.EMS.Config.BLL.ImportBll.GetResultImportList(HistoryQuery query) 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.BLL\ImportBll.cs:行号 30
+   在 NTS.EMS.Config.AjaxHandler.AjaxImport.ShowImportDataList() 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.AjaxHandler\AjaxImport.cs:行号 139,无法绑定由多个部分组成的标识符 "a.cname"。
+*********************************************************************************************
+
+
+*********************************************************************************************
+ErrorTime:2014-4-28 21:02:55
+ErrorFun:Framework.Data
+ErrorDetail:   在 Framework.Data.DataCommand.ExecuteDataSet() 位置 E:\FrameWork\Framework.Data\Framework.Data\DataCommand.cs:行号 326
+   在 NTS.EMS.Config.DAL.Import.GetObjectName(Int32 isarea, Int32 id) 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.DAL\Import.cs:行号 75
+   在 NTS.EMS.Config.DAL.Import.GetResultImportList(HistoryQuery import, Int32 action) 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.DAL\Import.cs:行号 64
+   在 NTS.EMS.Config.BLL.ImportBll.GetResultImportList(HistoryQuery query) 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.BLL\ImportBll.cs:行号 30
+   在 NTS.EMS.Config.AjaxHandler.AjaxImport.ShowImportDataList() 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.AjaxHandler\AjaxImport.cs:行号 139,无法绑定由多个部分组成的标识符 "a.cname"。
+*********************************************************************************************
+
+
+*********************************************************************************************
+ErrorTime:2014-4-28 21:03:09
+ErrorFun:Framework.Data
+ErrorDetail:   在 Framework.Data.DataCommand.ExecuteDataSet() 位置 E:\FrameWork\Framework.Data\Framework.Data\DataCommand.cs:行号 326
+   在 NTS.EMS.Config.DAL.Import.GetObjectName(Int32 isarea, Int32 id) 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.DAL\Import.cs:行号 75
+   在 NTS.EMS.Config.DAL.Import.GetResultImportList(HistoryQuery import, Int32 action) 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.DAL\Import.cs:行号 64
+   在 NTS.EMS.Config.BLL.ImportBll.GetResultImportList(HistoryQuery query) 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.BLL\ImportBll.cs:行号 30
+   在 NTS.EMS.Config.AjaxHandler.AjaxImport.ShowImportDataList() 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.AjaxHandler\AjaxImport.cs:行号 139,无法绑定由多个部分组成的标识符 "a.cname"。
+*********************************************************************************************
+
+
+*********************************************************************************************
+ErrorTime:2014-4-28 21:03:38
+ErrorFun:Framework.Data
+ErrorDetail:   在 Framework.Data.DataCommand.ExecuteDataSet() 位置 E:\FrameWork\Framework.Data\Framework.Data\DataCommand.cs:行号 326
+   在 NTS.EMS.Config.DAL.Import.GetObjectName(Int32 isarea, Int32 id) 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.DAL\Import.cs:行号 75
+   在 NTS.EMS.Config.DAL.Import.GetResultImportList(HistoryQuery import, Int32 action) 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.DAL\Import.cs:行号 64
+   在 NTS.EMS.Config.BLL.ImportBll.GetResultImportList(HistoryQuery query) 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.BLL\ImportBll.cs:行号 30
+   在 NTS.EMS.Config.AjaxHandler.AjaxImport.ShowImportDataList() 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.AjaxHandler\AjaxImport.cs:行号 139,无法绑定由多个部分组成的标识符 "a.cname"。
+*********************************************************************************************
+
+
+*********************************************************************************************
+ErrorTime:2014-4-28 21:03:54
+ErrorFun:Framework.Data
+ErrorDetail:   在 Framework.Data.DataCommand.ExecuteDataSet() 位置 E:\FrameWork\Framework.Data\Framework.Data\DataCommand.cs:行号 326
+   在 NTS.EMS.Config.DAL.Import.GetObjectName(Int32 isarea, Int32 id) 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.DAL\Import.cs:行号 75
+   在 NTS.EMS.Config.DAL.Import.GetResultImportList(HistoryQuery import, Int32 action) 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.DAL\Import.cs:行号 64
+   在 NTS.EMS.Config.BLL.ImportBll.GetResultImportList(HistoryQuery query) 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.BLL\ImportBll.cs:行号 30
+   在 NTS.EMS.Config.AjaxHandler.AjaxImport.ShowImportDataList() 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.AjaxHandler\AjaxImport.cs:行号 139,无法绑定由多个部分组成的标识符 "a.cname"。
+*********************************************************************************************
+
+
+*********************************************************************************************
+ErrorTime:2014-4-28 21:03:58
+ErrorFun:Framework.Data
+ErrorDetail:   在 Framework.Data.DataCommand.ExecuteDataSet() 位置 E:\FrameWork\Framework.Data\Framework.Data\DataCommand.cs:行号 326
+   在 NTS.EMS.Config.DAL.Import.GetObjectName(Int32 isarea, Int32 id) 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.DAL\Import.cs:行号 75
+   在 NTS.EMS.Config.DAL.Import.GetResultImportList(HistoryQuery import, Int32 action) 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.DAL\Import.cs:行号 64
+   在 NTS.EMS.Config.BLL.ImportBll.GetResultImportList(HistoryQuery query) 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.BLL\ImportBll.cs:行号 30
+   在 NTS.EMS.Config.AjaxHandler.AjaxImport.ShowImportDataList() 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.AjaxHandler\AjaxImport.cs:行号 139,无法绑定由多个部分组成的标识符 "a.cname"。
+*********************************************************************************************
+
+
+*********************************************************************************************
+ErrorTime:2014-4-28 21:04:12
+ErrorFun:Framework.Data
+ErrorDetail:   在 Framework.Data.DataCommand.ExecuteDataSet() 位置 E:\FrameWork\Framework.Data\Framework.Data\DataCommand.cs:行号 326
+   在 NTS.EMS.Config.DAL.Import.GetObjectName(Int32 isarea, Int32 id) 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.DAL\Import.cs:行号 75
+   在 NTS.EMS.Config.DAL.Import.GetResultImportList(HistoryQuery import, Int32 action) 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.DAL\Import.cs:行号 64
+   在 NTS.EMS.Config.BLL.ImportBll.GetResultImportList(HistoryQuery query) 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.BLL\ImportBll.cs:行号 30
+   在 NTS.EMS.Config.AjaxHandler.AjaxImport.ShowImportDataList() 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.AjaxHandler\AjaxImport.cs:行号 139,无法绑定由多个部分组成的标识符 "a.cname"。
+*********************************************************************************************
+
+
+*********************************************************************************************
+ErrorTime:2014-4-28 21:04:52
+ErrorFun:Framework.Data
+ErrorDetail:   在 Framework.Data.DataCommand.ExecuteDataSet() 位置 E:\FrameWork\Framework.Data\Framework.Data\DataCommand.cs:行号 326
+   在 NTS.EMS.Config.DAL.Import.GetObjectName(Int32 isarea, Int32 id) 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.DAL\Import.cs:行号 75
+   在 NTS.EMS.Config.DAL.Import.GetResultImportList(HistoryQuery import, Int32 action) 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.DAL\Import.cs:行号 64
+   在 NTS.EMS.Config.BLL.ImportBll.GetResultImportList(HistoryQuery query) 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.BLL\ImportBll.cs:行号 30
+   在 NTS.EMS.Config.AjaxHandler.AjaxImport.ShowImportDataList() 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.AjaxHandler\AjaxImport.cs:行号 139,无法绑定由多个部分组成的标识符 "a.cname"。
+*********************************************************************************************
+
+
+*********************************************************************************************
+ErrorTime:2014-4-28 21:05:24
+ErrorFun:Framework.Data
+ErrorDetail:   在 Framework.Data.DataCommand.ExecuteDataSet() 位置 E:\FrameWork\Framework.Data\Framework.Data\DataCommand.cs:行号 326
+   在 NTS.EMS.Config.DAL.Import.GetObjectName(Int32 isarea, Int32 id) 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.DAL\Import.cs:行号 75
+   在 NTS.EMS.Config.DAL.Import.GetResultImportList(HistoryQuery import, Int32 action) 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.DAL\Import.cs:行号 64
+   在 NTS.EMS.Config.BLL.ImportBll.GetResultImportList(HistoryQuery query) 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.BLL\ImportBll.cs:行号 30
+   在 NTS.EMS.Config.AjaxHandler.AjaxImport.ShowImportDataList() 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.AjaxHandler\AjaxImport.cs:行号 139,无法绑定由多个部分组成的标识符 "a.cname"。
+*********************************************************************************************
+
+
+*********************************************************************************************
+ErrorTime:2014-4-28 21:06:52
+ErrorFun:Framework.Data
+ErrorDetail:   在 Framework.Data.DataCommand.ExecuteDataSet() 位置 E:\FrameWork\Framework.Data\Framework.Data\DataCommand.cs:行号 326
+   在 NTS.EMS.Config.DAL.Import.GetObjectName(Int32 isarea, Int32 id) 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.DAL\Import.cs:行号 75
+   在 NTS.EMS.Config.DAL.Import.GetResultImportList(HistoryQuery import, Int32 action) 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.DAL\Import.cs:行号 64
+   在 NTS.EMS.Config.BLL.ImportBll.GetResultImportList(HistoryQuery query) 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.BLL\ImportBll.cs:行号 30
+   在 NTS.EMS.Config.AjaxHandler.AjaxImport.ShowImportDataList() 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.AjaxHandler\AjaxImport.cs:行号 139,无法绑定由多个部分组成的标识符 "a.cname"。
+*********************************************************************************************
+
+
+*********************************************************************************************
+ErrorTime:2014-4-28 21:07:06
+ErrorFun:Framework.Data
+ErrorDetail:   在 Framework.Data.DataCommand.ExecuteDataSet() 位置 E:\FrameWork\Framework.Data\Framework.Data\DataCommand.cs:行号 326
+   在 NTS.EMS.Config.DAL.Import.GetObjectName(Int32 isarea, Int32 id) 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.DAL\Import.cs:行号 75
+   在 NTS.EMS.Config.DAL.Import.GetResultImportList(HistoryQuery import, Int32 action) 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.DAL\Import.cs:行号 64
+   在 NTS.EMS.Config.BLL.ImportBll.GetResultImportList(HistoryQuery query) 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.BLL\ImportBll.cs:行号 30
+   在 NTS.EMS.Config.AjaxHandler.AjaxImport.ShowImportDataList() 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.AjaxHandler\AjaxImport.cs:行号 139,无法绑定由多个部分组成的标识符 "a.cname"。
+*********************************************************************************************
+
+
+*********************************************************************************************
+ErrorTime:2014-4-28 21:08:16
+ErrorFun:Framework.Data
+ErrorDetail:   在 Framework.Data.DataCommand.ExecuteDataSet() 位置 E:\FrameWork\Framework.Data\Framework.Data\DataCommand.cs:行号 326
+   在 NTS.EMS.Config.DAL.Import.GetObjectName(Int32 isarea, Int32 id) 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.DAL\Import.cs:行号 75
+   在 NTS.EMS.Config.DAL.Import.GetResultImportList(HistoryQuery import, Int32 action) 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.DAL\Import.cs:行号 64
+   在 NTS.EMS.Config.BLL.ImportBll.GetResultImportList(HistoryQuery query) 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.BLL\ImportBll.cs:行号 30
+   在 NTS.EMS.Config.AjaxHandler.AjaxImport.ShowImportDataList() 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.AjaxHandler\AjaxImport.cs:行号 139,无法绑定由多个部分组成的标识符 "a.cname"。
+*********************************************************************************************
+
+
+*********************************************************************************************
+ErrorTime:2014-4-28 21:09:31
+ErrorFun:Framework.Data
+ErrorDetail:   在 Framework.Data.DataCommand.ExecuteDataSet() 位置 E:\FrameWork\Framework.Data\Framework.Data\DataCommand.cs:行号 326
+   在 NTS.EMS.Config.DAL.Import.GetObjectName(Int32 isarea, Int32 id) 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.DAL\Import.cs:行号 75
+   在 NTS.EMS.Config.DAL.Import.GetResultImportList(HistoryQuery import, Int32 action) 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.DAL\Import.cs:行号 64
+   在 NTS.EMS.Config.BLL.ImportBll.GetResultImportList(HistoryQuery query) 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.BLL\ImportBll.cs:行号 30
+   在 NTS.EMS.Config.AjaxHandler.AjaxImport.ShowImportDataList() 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.AjaxHandler\AjaxImport.cs:行号 139,无法绑定由多个部分组成的标识符 "a.cname"。
+*********************************************************************************************
+
+
+*********************************************************************************************
+ErrorTime:2014-4-28 21:10:38
+ErrorFun:NTS.WEB.DAL
+ErrorDetail:   在 NTS.WEB.DAL.BigDataComm.GetBaseEneryDataList(BaseQueryModel model)
+   在 NTS.WEB.DAL.ReportBase.GetBaseEneryDataList(BaseQueryModel model)
+   在 NTS.EMS.Config.AjaxHandler.AjaxImport.GetObjectEnery() 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.AjaxHandler\AjaxImport.cs:行号 86,未将对象引用设置到对象的实例。
+*********************************************************************************************
+
+
+*********************************************************************************************
+ErrorTime:2014-4-28 21:27:36
+ErrorFun:NTS.WEB.DAL
+ErrorDetail:   在 NTS.WEB.DAL.BigDataComm.GetBaseEneryDataList(BaseQueryModel model)
+   在 NTS.WEB.DAL.ReportBase.GetBaseEneryDataList(BaseQueryModel model)
+   在 NTS.EMS.Config.AjaxHandler.AjaxImport.GetObjectEnery() 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.AjaxHandler\AjaxImport.cs:行号 86,未将对象引用设置到对象的实例。
+*********************************************************************************************
+
+
+*********************************************************************************************
+ErrorTime:2014-5-5 21:25:19
+ErrorFun:mscorlib
+ErrorDetail:   在 System.Threading.Thread.AbortInternal()
+   在 System.Threading.Thread.Abort(Object stateInfo)
+   在 System.Web.HttpResponse.End()
+   在 System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   在 System.Web.HttpResponse.Redirect(String url)
+   在 NTS.EMS.Config.AjaxHandler.AjaxUser.Logout() 位置 E:\MyWorks\项目资料\封闭src\src\NTS.EMS.Config.AjaxHandler\AjaxUser.cs:行号 154,正在中止线程。
+*********************************************************************************************
+
+

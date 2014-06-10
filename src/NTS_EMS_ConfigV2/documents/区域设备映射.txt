@@ -1,0 +1,29 @@
+1.功能说明：需要将设备一一对应到所属的区域上。
+
+
+2界面元素：1）业态树+区域树  2）分类分项的下拉框 3）设备选择树
+
+
+
+3.表结构：
+
+设备表：TB_DEVICE 
+
+设备表区域映射表及字段：TB_DEVICE_PROPERTY ， AREAID1：是映射区域树中的区域id，AREAID2：是映射业态树中的区域id
+
+
+分类分项表视图：Becm_ItemCode
+
+
+
+界面初始化：显示所有的设备，当选择分类分项的下拉框时，根据选择的分类分项的信息，筛选出相应的设备出来，（如果选择的是大类，需要筛选出自身以及子类下的设备）
+
+程序表：查询 Becm_ItemCode 找到ItemCodeNumber，找到对应ID，然后根据ID到TB_DEVICE_PROPERTY中找出DEVICE_ITEMCODE=Becm_ItemCode中ID的值的所有记录作为设备的信息。
+
+
+
+
+选中保存按钮是：将所有设备树中选中的设备，向业态树和区域树中映射。
+
+Update  TB_DEVICE_PROPERTY  ，修改AreaID1和AreaId2的值。
+ 

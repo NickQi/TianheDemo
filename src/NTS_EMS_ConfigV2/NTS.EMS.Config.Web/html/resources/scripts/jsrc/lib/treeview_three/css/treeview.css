@@ -1,0 +1,33 @@
+.treeview { margin: 0; padding: 0; list-style: none; font-size: 14px; position: relative; white-space: nowrap;}
+.treeview ul { margin: 6px 0 0 0; padding: 0; list-style: none; background: #fff; }
+.treeview .hitarea { margin-left: -16px; width: 16px; height: 16px; background: url(../images/treeview-nts.png) no-repeat 4px -25px; cursor: pointer; display: inline-block; vertical-align: middle; position: relative; z-index: 10; }
+/* fix for IE6 */
+* html .hitarea { display: inline; float:none; }
+.treeview li { margin: 0; padding: 3px 0 0 16px; min-height: 27px; position: relative;}
+.treeview li.collapsable { height: auto; }
+.treeview a.selected { background-color: #eee; }
+#treecontrol { margin: 1em 0; display: none; }
+.treeview .hover { color: red; cursor: pointer; }
+.treeview .expandable-hitarea { background-position: 4px 4px; }
+.treeview div.lastCollapsable-hitarea { background-position: 4px -25px; }
+.treeview div.lastExpandable-hitarea { background-position: 4px 4px; }
+.treeview li.lastCollapsable, .treeview li.lastExpandable { /* display: inline-block;  */vertical-align: middle; }
+/* .treeview .placeholder { background: url(../images/loader.gif) 0 0 no-repeat; height: 16px; width: 16px; display: block; }
+.treeview-nts li li li div.hitarea { display: none; } */
+.selected { border: 1px solid #b9dde6; height: 25px; width: 100%; position: absolute; z-index: 9; left: 0; background: #f6fbfc; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; }
+.building, .floor, .shop, .equip, .buildings { margin-left: 10px; padding-left: 28px; height: 16px; display: inline-block; background: url(../images/nts.png) no-repeat; vertical-align: middle; line-height: 14px; position: relative; z-index: 10; cursor: pointer; }
+/*revised 130827 by luyy*/
+/*.building, .floor, .shop, .equip, .buildings { background-position: 0 0; }
+.building-selected, .floor-selected, .shop-selected, .equip-selected, .buildings-selected { background-position: 0 -26px; }*/
+.building{ background-position: 0 0; }
+.floor{background-position: 0 -61px;}
+.shop{background-position: 0 -89px;}
+.equip{background-position:  0 -119px;}
+.buildings{background-position: 0 -32px;}
+.public{background-position: 0 -152px;}
+.building-selected{ background-position: 0 -16px;}
+.floor-selected{background-position:  0 -75px;}
+.shop-selected{background-position:  0 -103px;}
+.equip-selected{background-position: 0 -135px;}
+.buildings-selected{background-position:  0 -47px;}
+.public-selected{background-position: 0 -168px;}

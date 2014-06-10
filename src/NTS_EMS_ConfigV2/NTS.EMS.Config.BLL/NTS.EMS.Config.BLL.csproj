@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4A92BCFE-7510-44A6-9DC7-5F88B29DAE2E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NTS.EMS.Config.BLL</RootNamespace>
+    <AssemblyName>NTS.EMS.Config.BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Framework.Common">
+      <HintPath>..\Libs\Framework\Framework.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="NTS.WEB.BLL">
+      <HintPath>..\Libs\3PartLibs\EMSV1.1\NTS.WEB.BLL.dll</HintPath>
+    </Reference>
+    <Reference Include="NTS.WEB.Common, Version=3.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\3PartLibs\EMSV1.1\NTS.WEB.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="NTS.WEB.DAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\3PartLibs\EMSV1.1\NTS.WEB.DAL.dll</HintPath>
+    </Reference>
+    <Reference Include="NTS.WEB.DataContact, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\3PartLibs\EMSV1.1\NTS.WEB.DataContact.dll</HintPath>
+    </Reference>
+    <Reference Include="NTS.WEB.Model">
+      <HintPath>..\Libs\3PartLibs\EMSV1.1\NTS.WEB.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="NTS.WEB.ProductInteface">
+      <HintPath>..\Libs\3PartLibs\EMSV1.1\NTS.WEB.ProductInteface.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlarmSettingBLL.cs" />
+    <Compile Include="AlloctionBLL.cs" />
+    <Compile Include="BaseTree.cs" />
+    <Compile Include="ImportBll.cs" />
+    <Compile Include="LayerObjectBll.cs" />
+    <Compile Include="LogAndExpiction.cs" />
+    <Compile Include="OperateQuotaBll.cs" />
+    <Compile Include="OperateUserGroupBll.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuerySysLogBll.cs" />
+    <Compile Include="RateBLL.cs" />
+    <Compile Include="OperateUserBll.cs" />
+    <Compile Include="RightBll.cs" />
+    <Compile Include="OperateDevicePropBll.cs" />
+    <Compile Include="OperateDeviceItemBll.cs" />
+    <Compile Include="OperateDevicePayTypeBll.cs" />
+    <Compile Include="OperateQuotaAlarmBll.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NTS.EMS.Config.Model\NTS.EMS.Config.Model.csproj">
+      <Project>{13221EBE-3601-47B1-82B7-7D4B0730B603}</Project>
+      <Name>NTS.EMS.Config.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NTS.EMS.Config.ProductInteface\NTS.EMS.Config.ProductInteface.csproj">
+      <Project>{99A4A31F-ACDE-4380-8A55-27E91364C515}</Project>
+      <Name>NTS.EMS.Config.ProductInteface</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>Copy "$(TargetDir)" "$(SolutionDir)libs\"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

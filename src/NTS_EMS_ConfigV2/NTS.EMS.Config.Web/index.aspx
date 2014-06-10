@@ -1,0 +1,1 @@
+﻿<%@ Page Inherits="NTS.EMS.Config.Controler.BasePage" %>

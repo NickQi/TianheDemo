@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Symbols xmlns="http://schemas.postsharp.org/2.0/symbols">
+  <Class Class="#1=T:[Framework.LogAndException]Framework.LogAndException.CustomExceptionAttribute">
+    <Instance Declaration="#2=M:[NTS.EMS.Config.AjaxHandler]NTS.EMS.Config.AjaxHandler.AjaxUserInfo::InsertUser()" Id="29e70da0a1aeacf">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3=Wrapped by advice(s) OnException" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#4=M:[NTS.EMS.Config.AjaxHandler]NTS.EMS.Config.AjaxHandler.AjaxUserInfo::UpdateUser()" Id="29e70daad1646eb">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#5=M:[NTS.EMS.Config.AjaxHandler]NTS.EMS.Config.AjaxHandler.AjaxUserInfo::GetUserInfo()" Id="29e70da04b97290">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#6=M:[NTS.EMS.Config.AjaxHandler]NTS.EMS.Config.AjaxHandler.AjaxUserInfo::GetUserList()" Id="29e70daad4ec3c3">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#7=M:[NTS.EMS.Config.AjaxHandler]NTS.EMS.Config.AjaxHandler.AjaxUserInfo::DeleteUser()" Id="29e70da4757980c">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#8=M:[NTS.EMS.Config.AjaxHandler]NTS.EMS.Config.AjaxHandler.AjaxUserInfo::GetAllUserGroup()" Id="29e70daa90eeb9d">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#9=M:[NTS.EMS.Config.AjaxHandler]NTS.EMS.Config.AjaxHandler.AjaxUserInfo::ValidatePara(NTS.EMS.Config.Model.UserDataContact)" Id="29e70dac49c872e">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#10=M:[NTS.EMS.Config.AjaxHandler]NTS.EMS.Config.AjaxHandler.AjaxUserGroupInfo::SaveUserGroup()" Id="29e70da5738d027">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#11=M:[NTS.EMS.Config.AjaxHandler]NTS.EMS.Config.AjaxHandler.AjaxUserGroupInfo::GetUserGroupInfo()" Id="29e70da9686ea0b">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#12=M:[NTS.EMS.Config.AjaxHandler]NTS.EMS.Config.AjaxHandler.AjaxUserGroupInfo::GetUserGroupList()" Id="29e70da4b866a78">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#13=M:[NTS.EMS.Config.AjaxHandler]NTS.EMS.Config.AjaxHandler.AjaxUserGroupInfo::DeleteUserGroup()" Id="29e70dae7057ceb">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#14=M:[NTS.EMS.Config.AjaxHandler]NTS.EMS.Config.AjaxHandler.AjaxUserGroupInfo::ContainUser()" Id="29e70da223a7245">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#15=M:[NTS.EMS.Config.AjaxHandler]NTS.EMS.Config.AjaxHandler.AjaxImport::GetDeviceListByAreaId()" Id="29e70da18912052">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#16=M:[NTS.EMS.Config.AjaxHandler]NTS.EMS.Config.AjaxHandler.AjaxImport::GetObjectEnery()" Id="29e70da1e97cb6a">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#17=M:[NTS.EMS.Config.AjaxHandler]NTS.EMS.Config.AjaxHandler.AjaxImport::SaveObjectEnery()" Id="29e70dacb1e6604">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#18=M:[NTS.EMS.Config.AjaxHandler]NTS.EMS.Config.AjaxHandler.AjaxImport::ShowImportDataList()" Id="29e70da75414da3">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#19=M:[NTS.EMS.Config.AjaxHandler]NTS.EMS.Config.AjaxHandler.AjaxImport::ExcelImport()" Id="29e70dadf07787e">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#20=M:[NTS.EMS.Config.AjaxHandler]NTS.EMS.Config.AjaxHandler.AjaxUser::UserLogin()" Id="29e70da9257e31b">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#21=M:[NTS.EMS.Config.AjaxHandler]NTS.EMS.Config.AjaxHandler.AjaxUser::Logout()" Id="29e70da2e0e855b">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#22=M:[NTS.EMS.Config.AjaxHandler]NTS.EMS.Config.AjaxHandler.AjaxAlarmSetting::GetAlarmTypeList()" Id="29e70da11d73a54">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#23=M:[NTS.EMS.Config.AjaxHandler]NTS.EMS.Config.AjaxHandler.AjaxAlarmSetting::UpdateAlarmEvent()" Id="29e70dad6922484">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#24=M:[NTS.EMS.Config.AjaxHandler]NTS.EMS.Config.AjaxHandler.AjaxSysLog::GetSysLog()" Id="29e70daad4d6f19">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#25=M:[NTS.EMS.Config.AjaxHandler]NTS.EMS.Config.AjaxHandler.AjaxSysLog::ExportSysLogExcel()" Id="29e70da6beb6ca6">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#26=M:[NTS.EMS.Config.AjaxHandler]NTS.EMS.Config.AjaxHandler.AjaxRateManager::SaveCommPrice()" Id="29e70dac75e19e1">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#27=M:[NTS.EMS.Config.AjaxHandler]NTS.EMS.Config.AjaxHandler.AjaxRateManager::SaveRatePrice()" Id="29e70dad214e06f">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#28=M:[NTS.EMS.Config.AjaxHandler]NTS.EMS.Config.AjaxHandler.AjaxRateManager::SaveTimePrice()" Id="29e70dacea9daab">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#29=M:[NTS.EMS.Config.AjaxHandler]NTS.EMS.Config.AjaxHandler.AjaxRateManager::GetRateInfoList()" Id="29e70dac3e0e5e2">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#30=M:[NTS.EMS.Config.AjaxHandler]NTS.EMS.Config.AjaxHandler.AjaxRateManager::GetPeriodEnum()" Id="29e70da7319ad8c">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#31=M:[NTS.EMS.Config.AjaxHandler]NTS.EMS.Config.AjaxHandler.AjaxRateManager::IndexItem()" Id="29e70daead71769">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#32=M:[NTS.EMS.Config.AjaxHandler]NTS.EMS.Config.AjaxHandler.AjaxRateManager::DeleteStepByID()" Id="29e70da0fdae65c">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#33=M:[NTS.EMS.Config.AjaxHandler]NTS.EMS.Config.AjaxHandler.AjaxRateManager::DeletePeriodByID()" Id="29e70da4d16ac5b">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#34=M:[NTS.EMS.Config.AjaxHandler]NTS.EMS.Config.AjaxHandler.AjaxAlloction::GetTreeObj()" Id="29e70dac5ad39ac">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#35=M:[NTS.EMS.Config.AjaxHandler]NTS.EMS.Config.AjaxHandler.AjaxAlloction::SaveAlloctionAndLog()" Id="29e70da1c593319">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#36=M:[NTS.EMS.Config.AjaxHandler]NTS.EMS.Config.AjaxHandler.AjaxAlloction::GetConfigLog()" Id="29e70da6fd9cb5c">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#37=M:[NTS.EMS.Config.AjaxHandler]NTS.EMS.Config.AjaxHandler.AjaxAlloction::GetConfigLogDetail()" Id="29e70da9b693294">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#38=M:[NTS.EMS.Config.AjaxHandler]NTS.EMS.Config.AjaxHandler.AjaxDevicePayType::SaveDeviceProp()" Id="29e70da9237d4f6">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#39=M:[NTS.EMS.Config.AjaxHandler]NTS.EMS.Config.AjaxHandler.AjaxDevicePayType::GetDeviceProp()" Id="29e70da050abcd4">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#40=M:[NTS.EMS.Config.AjaxHandler]NTS.EMS.Config.AjaxHandler.AjaxDeviceProp::SaveDeviceProp()" Id="29e70daef517077">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#41=M:[NTS.EMS.Config.AjaxHandler]NTS.EMS.Config.AjaxHandler.AjaxDeviceProp::GetDeviceProp()" Id="29e70da5abf05c9">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#42=M:[NTS.EMS.Config.AjaxHandler]NTS.EMS.Config.AjaxHandler.AjaxQuotaInfo::GetQuotaInfo()" Id="29e70daa621da35">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#43=M:[NTS.EMS.Config.AjaxHandler]NTS.EMS.Config.AjaxHandler.AjaxQuotaInfo::GetQuotaLogs()" Id="29e70daa9a9ab85">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#44=M:[NTS.EMS.Config.AjaxHandler]NTS.EMS.Config.AjaxHandler.AjaxQuotaInfo::DealQuota()" Id="29e70da3759bc75">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#45=M:[NTS.EMS.Config.AjaxHandler]NTS.EMS.Config.AjaxHandler.AjaxDeviceItem::SaveDeviceProp()" Id="29e70da18349baa">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" Ordinal="3" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#46=M:[NTS.EMS.Config.AjaxHandler]NTS.EMS.Config.AjaxHandler.AjaxDeviceItem::GetDeviceProp()" Id="29e70dae2ce1ab1">
+      <Target>
+        <JoinPoint Advising="#1" Description="#3" />
+      </Target>
+    </Instance>
+  </Class>
+  <Class Class="#47=T:[NTS.EMS.Config.AjaxHandler]NTS.EMS.Config.AjaxHandler.AjaxAopBussinessLogAttribute">
+    <Instance Declaration="#2" Id="29e70dab0867d12">
+      <Target>
+        <JoinPoint Description="#48=Wrapped by advice(s) OnEntry, OnSuccess, OnException, OnExit" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#4" Id="29e70dad6218b99">
+      <Target>
+        <JoinPoint Description="#48" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#7" Id="29e70da785ae6d8">
+      <Target>
+        <JoinPoint Description="#48" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#10" Id="29e70dadb686603">
+      <Target>
+        <JoinPoint Description="#48" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#13" Id="29e70dacb544a7e">
+      <Target>
+        <JoinPoint Description="#48" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#17" Id="29e70da5b2d0a6d">
+      <Target>
+        <JoinPoint Description="#48" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#23" Id="29e70da153aad9e">
+      <Target>
+        <JoinPoint Description="#48" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#26" Id="29e70da64ecaca8">
+      <Target>
+        <JoinPoint Description="#48" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#27" Id="29e70daa1df7bcf">
+      <Target>
+        <JoinPoint Description="#48" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#28" Id="29e70da89707691">
+      <Target>
+        <JoinPoint Description="#48" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#32" Id="29e70da07d73dc8">
+      <Target>
+        <JoinPoint Description="#48" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#33" Id="29e70da01ea4e54">
+      <Target>
+        <JoinPoint Description="#48" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#35" Id="29e70daccbdff26">
+      <Target>
+        <JoinPoint Description="#48" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#38" Id="29e70da1f6ae37f">
+      <Target>
+        <JoinPoint Description="#48" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#40" Id="29e70dac9ed5c3f">
+      <Target>
+        <JoinPoint Description="#48" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#44" Id="29e70da9a67c49b">
+      <Target>
+        <JoinPoint Description="#48" Ordinal="2" />
+      </Target>
+    </Instance>
+    <Instance Declaration="#45" Id="29e70da606e2fa9">
+      <Target>
+        <JoinPoint Description="#48" Ordinal="2" />
+      </Target>
+    </Instance>
+  </Class>
+</Symbols>

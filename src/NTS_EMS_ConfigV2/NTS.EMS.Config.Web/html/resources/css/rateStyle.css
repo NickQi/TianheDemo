@@ -1,0 +1,31 @@
+﻿body {
+}
+.iptText
+{
+    width: 100px; 
+    margin-left: 30px; 
+    margin-right: 30px;
+
+
+	background: #FFFFFF;
+	border-top: 1px solid #b3b3b3;
+	border-left: 1px solid #b3b3b3;
+	border-right: 1px solid #eaeaea;
+	border-bottom: 1px solid #eaeaea;
+	color: #000000;
+	font-family: Lucida Grande, Verdana, Lucida Sans Regular, Lucida Sans Unicode, Arial, sans-serif;
+	font-size: 11px;
+}
+.btn
+{
+    width:100px; 
+    height:40px;
+    margin: 0;
+	padding: 4px 8px 4px 8px;
+	background: #D4D0C8;
+	border-top: 1px solid #FFFFFF;
+	border-left: 1px solid #FFFFFF;
+	border-right: 1px solid #404040;
+	border-bottom: 1px solid #404040;
+	color: #000000;
+}

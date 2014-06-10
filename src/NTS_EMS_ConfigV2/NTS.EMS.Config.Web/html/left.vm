@@ -1,0 +1,108 @@
+﻿<div id="left">
+  <div id="tree-tabs" class="box" style="width:220px;float:right">
+    <div class="title">
+      <ul class="links">
+        <li>
+          <a href="#Tab1" onclick="TabChange(1);">
+            业态功能
+          </a>
+        </li>
+        <li>
+          <a href="#Tab2" onclick="TabChange(2);">
+            区域位置
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div id="Tab1" style="padding-left:5px;">
+      <ul id="LeftTree" class="ztree"></ul>
+    </div>
+    <div id="Tab2" style="padding-left:5px;">
+
+      <ul id="LeftAreaTree" class="ztree"></ul>
+    </div>
+    <!--scrollpane start-->
+    <link rel="stylesheet" type="text/css"
+
+    href="$Config.Skin/resources/js/jscrollpane/css/jscrollpane.css" media="screen" />
+    <script src="$Config.Skin/resources/js/jscrollpane/jscrollpane.min.js"
+
+    type="text/javascript"></script>
+    <!--scrollpane end-->
+    <script>
+      $(function(){
+      //scroll pane
+      var height = $(document).height()-250;
+      $("#Tab1").height(height);
+      $("#Tab2").height(height);
+      $("#Tab1").jScrollPane({
+      autoReinitialise: true,
+      mouseWheelSpeed: 20
+      });
+      $("#Tab2").jScrollPane({
+      autoReinitialise: true,
+      mouseWheelSpeed: 20
+      });
+      });
+    </script>
+  </div>
+</div>
+<input type="hidden" id="TreeObjectId"/>
+<input type="hidden" id="TreeObjectName"/>
+<input type="hidden" id="TreeInfo" value="1"/>
+<input type="button" id="btn_TreeClick" style="display:none" />
+<SCRIPT type="text/javascript">
+  function TabChange(id){
+  $("#TreeInfo").val(id);
+  $("#TreeObjectId").val("");
+  $("#TreeObjectName").val("");
+  if(id==1){
+  jQuery.fn.zTree.getZTreeObj("LeftAreaTree").cancelSelectedNode();
+  }else if(id == 2){
+  jQuery.fn.zTree.getZTreeObj("LeftTree").cancelSelectedNode();
+  }
+  }
+  <!--
+		var setting = {
+			data: {
+        key: {
+					title:"t"
+				},
+				simpleData: {
+					enable: true
+				}
+			},
+			callback: {
+				beforeClick: GetClickValue
+			}
+		};
+
+    var settingArea = {
+			    data: {
+            key: {
+					    title:"t"
+				    },
+				    simpleData: {
+					    enable: true
+				    }
+			    },
+			    callback: {
+				    beforeClick: GetClickValue
+			    }
+		    };
+   function GetClickValue(treeId, treeNode, clickFlag) {
+      $("#TreeObjectId").val(treeNode.id);
+      $("#TreeObjectName").val(treeNode.name);
+      $("#btn_TreeClick").trigger("click");
+		}
+    
+		var Nodes =$LeftTree;
+    var LeftAreaTreeNodes=$LeftAreaTree;
+		$(document).ready(function(){
+			var $j=$;
+			$j.fn.zTree.init($("#LeftTree"), setting, Nodes);
+      $j.fn.zTree.init($("#LeftAreaTree"), settingArea,LeftAreaTreeNodes );
+		});
+		//-->
+</SCRIPT>
+

@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>$Config.SystemName</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<!-- stylesheets -->
+		<!--<link rel="stylesheet" type="text/css" href="$Config.Skin/resources/css/main.css" />-->
+		<link rel="stylesheet" type="text/css" href="$Config.Skin/resources/css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="$Config.Skin/resources/css/style.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="$Config.Skin/resources/css/style_full.css" />
+		<link id="color" rel="stylesheet" type="text/css" href="$Config.Skin/resources/css/colors/blue.css" />
+		<!-- scripts (jquery) -->
+		<script src="$Config.Skin/resources/scripts/jquery-1.4.2.min.js" type="text/javascript"></script>
+		<!--[if IE]><script language="javascript" type="text/javascript" src="resources/scripts/excanvas.min.js"></script><![endif]-->
+		<script src="$Config.Skin/resources/scripts/jquery-ui-1.8.custom.min.js" type="text/javascript"></script>
+		<script src="$Config.Skin/resources/scripts/jquery.ui.selectmenu.js" type="text/javascript"></script>
+		<script src="$Config.Skin/resources/scripts/tiny_mce/tiny_mce.js" type="text/javascript"></script>
+		<script src="$Config.Skin/resources/scripts/tiny_mce/jquery.tinymce.js" type="text/javascript"></script>
+		<!-- scripts (custom) -->
+		<script src="$Config.Skin/resources/scripts/smooth.js" type="text/javascript"></script>
+		<script src="$Config.Skin/resources/scripts/smooth.menu.js" type="text/javascript"></script>
+		<script src="$Config.Skin/resources/scripts/smooth.table.js" type="text/javascript"></script>
+		<script src="$Config.Skin/resources/scripts/smooth.form.js" type="text/javascript"></script>
+		<script src="$Config.Skin/resources/scripts/smooth.dialog.js" type="text/javascript"></script>
+		<script src="$Config.Skin/resources/scripts/smooth.autocomplete.js" type="text/javascript"></script>
+
+		<script type="text/javascript">
+	
+			$(document).ready(function () {
+			    style_path = "$Config.Skin/resources/css/colors";
+
+				$("#date-picker").datepicker();
+				
+				
+			});
+		</script>
+	</head>
+	<body>
+    #parse("html/_header.vm")
+
+	<div id="content">
+	
+	
+    </div>
+		<!-- footer -->
+		#parse("html/_footer.vm")
+		<!-- end footert -->
+	</body>
+</html>

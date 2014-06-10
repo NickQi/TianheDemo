@@ -1,0 +1,526 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>$Config.SystemName</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <!-- stylesheets -->
+    <!--<link rel="stylesheet" type="text/css" href="$Config.Skin/resources/css/main.css" />-->
+    <link rel="stylesheet" type="text/css" href="$Config.Skin/resources/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="$Config.Skin/resources/css/style.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="$Config.Skin/resources/css/style_full.css" />
+    <link id="color" rel="stylesheet" type="text/css" href="$Config.Skin/resources/css/colors/blue.css" />
+	<link rel="stylesheet" href="$Config.Skin/resources/css/zTreeStyle/zTreeStyle.css" type="text/css">
+    <!-- scripts (jquery) -->
+    <script src="$Config.Skin/resources/scripts/jquery-1.4.2.min.js" type="text/javascript"></script>
+    <!--[if IE]><script language="javascript" type="text/javascript" src="resources/scripts/excanvas.min.js"></script><![endif]-->
+    <script src="$Config.Skin/resources/scripts/jquery-ui-1.8.custom.min.js" type="text/javascript"></script>
+    <script src="$Config.Skin/resources/scripts/jquery.ui.selectmenu.js" type="text/javascript"></script>
+    <script src="$Config.Skin/resources/scripts/tiny_mce/tiny_mce.js" type="text/javascript"></script>
+    <script src="$Config.Skin/resources/scripts/tiny_mce/jquery.tinymce.js" type="text/javascript"></script>
+    <!-- scripts (custom) -->
+    <script src="$Config.Skin/resources/scripts/smooth.js" type="text/javascript"></script>
+    <script src="$Config.Skin/resources/scripts/smooth.menu.js" type="text/javascript"></script>
+    <script src="$Config.Skin/resources/scripts/smooth.table.js" type="text/javascript"></script>
+    <script src="$Config.Skin/resources/scripts/smooth.form.js" type="text/javascript"></script>
+    <script src="$Config.Skin/resources/scripts/smooth.autocomplete.js" type="text/javascript"></script>
+	<!-- scripts () -->
+    <script src="$Config.Skin/resources/scripts/jquery.ntspadding.js" type="text/javascript"></script>
+	<script src="$Config.Skin/resources/scripts/jsrc/lib/artTemplate/template.min.js"></script>
+	
+	<!-- scripts (Tree) -->
+    <script src="$Config.Skin/resources/scripts/jquery.ztree.core-3.5.js" type="text/javascript"></script>
+    <script src="$Config.Skin/resources/scripts/jquery.ztree.excheck-3.5.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+	    var Nodes =$LeftTree;
+        var LeftAreaTreeNodes=$LeftAreaTree;
+	    var MenuTree = $MenuTree;
+		var objectRightDataList = "";
+		var menuRightDataList = "";
+
+        $(document).ready(function () {
+            style_path = "$Config.Skin/resources/css/colors";
+			jQuery.fn.zTree.init($("#treeMenu"), setting, MenuTree);
+			jQuery.fn.zTree.init($("#treeLiquid"), setting, Nodes);
+			jQuery.fn.zTree.init($("#treeArea"), setting, LeftAreaTreeNodes);
+
+            var _addBtn = $("#btn_Add");
+            var _userGroupName = $("#txtUserGroupName");
+            var _description = $("#txtDescription");
+            var _userGroupId = $("#userGroupId");
+
+			/**
+			* 新增点击事件
+			*/
+            $("#btn_Add").click(function () {
+                _userGroupName.val("");
+                _description.val("");
+                _userGroupId.val(0);
+				resetTree();
+                var titleTxt = "新增用户组";
+                var dlgForm = $("#dialog-form-userGroup");
+                dlgForm.dialog("option", "title", titleTxt);
+                dlgForm.dialog("open");
+            });
+
+			/**
+			* dialog弹出框
+			*/
+            $("#dialog-form-userGroup").dialog({
+                autoOpen: false,
+                resizable: false,
+                height: 400,
+                width: 1100,
+                modal: true,
+                buttons: {
+                    " 提 交 ": function () {
+                        var message = getErrorMessage();
+                        if (message != "") {
+                            alert(message);
+                        }
+                        else {
+                           var success = SubmitData();
+						   if(success){
+								$(this).dialog('close');
+							 }
+                        }
+                    },
+                    ' 重 置 ': function () {
+                        $(this).find('form')[0].reset();
+						if($("#userGroupId").val() != 0 && $("#userGroupId").val() != ""){
+							GetUserGroupInfo($("#userGroupId").val());
+						}
+                    }
+                },
+                close: function (event, ui) {
+                }
+            });
+
+			/**
+			* 修改点击事件
+			*/
+            $('span.dialog-edit').live('click', function () {
+			   var userGroupId = $(this).parent().next().text();
+			   GetUserGroupInfo(userGroupId);
+			   //设置diagle不可修改
+			   var userGroupName = $(this).parent().prev().prev().text();
+			   if(jQuery.trim(userGroupName) == "系统组"){
+				$("#txtUserGroupName").attr("disabled",true);
+			   }else{
+				$("#txtUserGroupName").removeAttr("disabled");
+			   }
+
+                var titleTxt = "修改用户组信息";
+                var dlgForm = $("#dialog-form-userGroup");
+                dlgForm.dialog("option", "title", titleTxt);
+                dlgForm.dialog("open");
+            });
+
+			/**
+			* 删除点击事件
+			*/
+			 $('span.dialog-delete').live('click', function () {
+                var userGroupId = $(this).parent().next().text();
+				var userGroupName = $(this).parent().prev().prev().text();
+				if(confirm("确认删除 '"+userGroupName+"' 用户组？" )){
+					if(userGroupId != 0 &&　userGroupId !=""){
+					  var containUser = isContainUser(userGroupId);
+					  if(containUser == 0){
+						DeleteData(userGroupId);
+					  }else if(containUser == 1){
+						if(confirm("删除该用户组将同时删除该用户组下的所有用户，是否继续删除？")){
+							DeleteData(userGroupId);
+						}
+					  }else if(containUser == -1){
+						alert("服务器错误，请联系管理员！");
+					  }
+					  
+					}
+				}
+            });
+        });
+
+		/**
+        * 获取状态值
+        */
+        function GetRightData() {
+		    var treeMenu = jQuery.fn.zTree.getZTreeObj("treeMenu"),
+            nodeMenu = treeMenu.getCheckedNodes(true);
+			var treeLiquid = jQuery.fn.zTree.getZTreeObj("treeLiquid"),
+            nodeLiquid = treeLiquid.getCheckedNodes(true);
+			var treeArea = jQuery.fn.zTree.getZTreeObj("treeArea"),
+            nodeArea = treeArea.getCheckedNodes(true);
+			menuRightDataList = "";
+			objectRightDataList = "";
+			if(nodeMenu.length >0){
+				menuRightDataList="[";
+				for(var i=0; i<nodeMenu.length; i++){
+					if(i==nodeMenu.length -1){
+						menuRightDataList += "{\"MenuId\":"+nodeMenu[i].id+"}";
+					}else{
+						menuRightDataList += "{\"MenuId\":"+nodeMenu[i].id+"},";
+					}
+				}
+				menuRightDataList += "]";
+			}
+			
+			if(nodeLiquid.length >0 || nodeArea.length >0){
+				objectRightDataList="[";
+				for(var i=0; i<nodeLiquid.length; i++){
+					objectRightDataList += "{\"ObjdetId\":" + nodeLiquid[i].id + ",\"Type\":2},";
+				}
+				for(var i=0; i<nodeArea.length; i++){
+					objectRightDataList += "{\"ObjdetId\":"+nodeArea[i].id+ ",\"Type\":1},";
+				}
+				objectRightDataList = objectRightDataList.substr(0,objectRightDataList.length -1);
+				objectRightDataList += "]";
+			}
+			if(menuRightDataList == ""){
+				menuRightDataList="\"\"";
+			}
+			if(objectRightDataList == ""){
+				objectRightDataList="\"\"";
+			}
+        }
+
+		/**
+        * 设置状态值（修改框）
+        */
+        function SetRightChecked(json) {
+            var treeMenu = jQuery.fn.zTree.getZTreeObj("treeMenu");
+			var treeLiquid = jQuery.fn.zTree.getZTreeObj("treeLiquid");
+			var treeArea = jQuery.fn.zTree.getZTreeObj("treeArea");
+			if(json.MenuRightList != null){
+				for(var i=0; i<json.MenuRightList.length; i++){
+					var id = json.MenuRightList[i].MenuRightId;
+					var node = treeMenu.getNodeByParam("id",id);
+					treeMenu.checkNode(node, true, false, false);
+				}
+			}
+
+			if(json.ObjectRightList != null){
+				for(var i=0; i<json.ObjectRightList.length; i++){
+					var id = json.ObjectRightList[i].ObjectId;
+					if(json.ObjectRightList[i].Type==2){
+						var node = treeLiquid.getNodeByParam("id",id);
+						treeLiquid.checkNode(node, true, false, false);
+					}
+					else if(json.ObjectRightList[i].Type==1){
+						var node = treeArea.getNodeByParam("id",id);
+						treeArea.checkNode(node, true, false, false);
+					}
+				}
+			}
+        }
+
+		/**
+        * 保存前校验
+        */
+        function getErrorMessage() {
+            var _userGroupName = $("#txtUserGroupName");
+            var userGroupName = jQuery.trim(_userGroupName.val());
+            if (userGroupName == "") {
+                return "请填写用户组名！";
+            }
+            return "";
+        }
+
+		/**
+        * 保存时jsonData
+        */
+        function GetJsonData() {
+            var _userGroupName = $("#txtUserGroupName");
+			var _description = $("#txtDescription");
+            var userGroupId = jQuery.trim($("#userGroupId").val());
+            var userGroupName = jQuery.trim(_userGroupName.val());
+            var description = jQuery.trim(_description.val());
+			GetRightData();
+			
+			var ugdata =  "{\"ID\":"+userGroupId + ",\"Name\":\"" + userGroupName + "\",\"Description\":\"" + description+"\"}";
+			var data = "{\"UGData\":"+ugdata+",\"UGMenuRightDataList\":"+menuRightDataList+",\"UGObjectRightDataList\":"+objectRightDataList+"}";
+            return data;
+        }
+
+		/**
+        * 提交数据
+        */
+		function SubmitData(){
+			var success = false;
+			var data = GetJsonData();
+			var userGroupid = $("#userGroupId").val();
+			var url = new loadPage().getAction().SaveUserGroup;
+            jQuery.ajax({
+                url: url,
+                dataType: "json",
+                type: "POST",
+				contentType: "application/x-www-form-urlencoded; charset=utf-8",
+				async:false,
+                data: { "Inputs": data },
+                success: function (json) {
+                    if (json.Success) {
+                        new loadPage().searchAction(1, false);
+						success = true;
+						alert("保存成功!");
+                    } else {
+                        alert("保存失败："+json.ExceptionMsg);			
+                    }                
+                },
+                error: function (msg) {
+                    alert("服务器错误，请联系管理员！");
+                }
+            });
+			return success;
+		}
+
+		/**
+        * 删除数据前是否包含用户判断
+        */
+		function isContainUser(userGroupid){
+		var result = -1;
+			jQuery.ajax({
+                url: new loadPage().getAction().IsContainUser,
+                dataType: "json",
+                type: "POST",
+				async:false,
+                data: { "Inputs": userGroupid },
+                success: function (json) {
+                    result = json;              
+                },
+                error: function (msg) {
+                    result = -1;
+                }
+            });
+			return result;
+		}
+
+		/**
+        * 删除数据
+        */
+		function DeleteData(userGroupid){
+		   jQuery.ajax({
+                url: new loadPage().getAction().DeleteUserGroup,
+                dataType: "json",
+                type: "POST",
+                data: { "Inputs": userGroupid },
+                success: function (json) {
+                    if (json.Success) {
+                        new loadPage().searchAction(1, false);
+						alert("删除成功!");
+                    } else {
+                        alert("删除失败："+json.ExceptionMsg);			
+                    }                
+                },
+                error: function (msg) {
+                    alert("服务器错误，请联系管理员");
+                }
+            });
+		}
+
+		/**
+        * 获取用户信息
+        */
+		function GetUserGroupInfo(userGroupId){
+		   jQuery.ajax({
+                url: new loadPage().getAction().GetUserGroupInfo,
+                dataType: "json",
+                type: "POST",
+				async: false,
+                data: { "Inputs": userGroupId },
+                success: function (json) {
+                    if (json.ResultInfo.Success) {
+                        SetFormValue(json);
+                    } else {
+                        		
+                    }                
+                },
+                error: function (msg) {
+                    alert("服务器错误，请联系管理员");
+                }
+            });
+		}
+
+
+		/**
+        * 设置dialog值
+        */
+		function SetFormValue(json){
+			$("#txtUserGroupName").val(json.UserGroupInfo.Name);
+			$("#txtDescription").val(json.UserGroupInfo.Description);
+			$("#userGroupId").val(json.UserGroupInfo.Id);
+			resetTree();
+			SetRightChecked(json);
+			
+		}
+
+		/**
+        * 设置树--------------------begin-----------
+        */
+		var setting = {
+            check: {
+                enable: true
+            },
+            data: {
+                simpleData: {
+                    enable: true
+                }
+            },
+            callback: {
+                
+            }
+        };
+
+		function resetTree(){
+			jQuery.fn.zTree.init($("#treeMenu"), setting, MenuTree);
+			jQuery.fn.zTree.init($("#treeLiquid"), setting, Nodes);
+			jQuery.fn.zTree.init($("#treeArea"), setting, LeftAreaTreeNodes);
+		}
+		
+		
+
+		/**
+        * 设置树--------------------end-----------
+        */
+    </script>
+    <style type="text/css">
+		label
+		{
+			font-size: 12px;
+		}
+		.label{ line-height:1.1;}
+
+        #content div.box table td .operater {
+			cursor: pointer;
+			text-decoration: underline;
+		}
+		#content div.box table td .operater:hover{
+			color:red;
+		}
+    </style>
+</head>
+<body>
+    <div id="dialog-form-userGroup" title="新增用户组" style="display: none;">
+        <form action="" method="post">
+        <div class="form">
+            <div class="fields">
+                <div class="field field-first">
+                    <div class="label" style="float: left; width:80px;">
+                        <label for="select">
+                            组名称:</label>
+                    </div>
+                    <div class="select" style="float: left; margin-left: 5px;">
+                        <input id="txtUserGroupName" type="text" style="width: 170px" maxlength="30" />
+                    </div>
+                </div>
+               
+                <div class="field">
+                    <div class="label" style="float: left; width:80px;">
+                        <label for="select">
+                            描述:</label>
+                    </div>
+                    <div class="select" style="float: left; margin-left: 5px;">
+                        <input id="txtDescription" type="text" style="width: 170px" maxlength="50" />
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="label" style="float: left; width:80px;">
+                        <label for="select">
+                            权限设置:</label>
+                    </div>
+                    <div class="select" style="float: left; margin-left: 5px;">
+					    <br/><br/>
+					    <div class="label"><label>页面权限</label></div>
+                        <div >
+							<ul id="treeMenu" class="ztree"></ul>
+						</div>
+					</div>
+					<div class="select" style="float: left; margin-left: 5px;">
+					     <br/><br/>
+					     <div class="label"><label>业态权限</label></div>
+						 <div >
+							<ul id="treeLiquid" class="ztree"></ul>
+						</div>
+					</div>
+					<div class="select" style="float: left; margin-left: 5px;">
+					     <br/><br/>
+					     <div class="label"><label>区域权限</label></div>
+						 <div >
+							<ul id="treeArea" class="ztree"></ul>
+						</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </form>
+		<input type="text" id="userGroupId" style="display:none"/>
+    </div>
+    #parse("html/_header.vm")
+    <div id="content">
+        <div class="box">
+            <div class="title">
+                <h5>
+                    用户组管理</h5>
+                <div class="search">
+                    <div class="button">
+                      &nbsp;&nbsp;&nbsp;<input id="btn_Add" type="submit" name="submit" value="添加" style="80px" />&nbsp;&nbsp;&nbsp; 
+                    </div>
+                </div>
+            </div>
+            <div class="table">
+                <div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width:10%;">
+                                    序号
+                                </th>
+                                <th style="width:30%">
+                                    组名称
+                                </th>
+                                <th style="width:45%">
+                                    描述
+                                </th>
+                                <th style="width:15%">
+                                    操作
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="padding" class="box">
+                </div>
+            </div>
+        </div>
+
+        <!-- end table -->
+    </div>
+    </div>
+    <!-- footer -->
+    #parse("html/_footer.vm")
+    <!-- end footert -->
+   <!--
+   <!-- <script data-main="$Config.Skin/resources/scripts/jsrc/view/userGroupConfig_main" src="$Config.Skin/resources/scripts/jsrc/lib/require/require.min.js"></script> -->
+	-->
+
+	
+    <script id="userGroupConfigItem" type="text/html">
+<% for (var i = 0; i < UserGroupList.length; i++) { %>
+	<tr>
+		<td align="center"><%==(Page.Current -1 ) * 10 +(i+1)%></td>
+		<td><%== UserGroupList[i].Name %></td>
+		<td><%== UserGroupList[i].Description %></td>
+		<td align="center"><span class="dialog-edit operater">修改</span>
+		<%if(UserGroupList[i].Name !="系统组"){%>
+		     &nbsp;&nbsp;&nbsp;
+		     <span class="dialog-delete operater">删除</span>
+			 <%}%>
+		</td>
+		<td style="display:none"><%== UserGroupList[i].Id %></td>
+	</tr>
+<% } %>
+</script>
+
+<script src="$Config.Skin/resources/scripts/jsrc/view/userGroupConfig_main.js"></script>
+</body>
+</html>
